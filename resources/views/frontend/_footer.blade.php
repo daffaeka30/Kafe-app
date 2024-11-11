@@ -5,7 +5,7 @@
             <div class="row">
                 <div class="col-lg-3 col-md-6">
                     <div class="footer-item">
-                        <h1 class="text-primary">Cater<span class="text-dark">Serv</span></h1>
+                        <h1 class="text-primary">Kanal Soc<span class="text-dark">ial Space</span></h1>
                         <p class="lh-lg mb-4">There cursus massa at urnaaculis estieSed aliquamellus vitae ultrs
                             condmentum leo massamollis its estiegittis miristum.</p>
                         <div class="footer-icon d-flex">
@@ -86,8 +86,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                    <span class="text-light"><a href="#"><i class="fas fa-copyright text-light me-2"></i>Your Site
-                            Name</a>, All right reserved.</span>
+                    <span class="text-light"><a href="#"><i class="fas fa-copyright text-light me-2"></i>Kanal Social Space</a>, All right reserved.</span>
                 </div>
                 <div class="col-md-6 my-auto text-center text-md-end text-white">
                     <!--/*** This template is free as long as you keep the below author’s credit link/attribution link/backlink. ***/-->

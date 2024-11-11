@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
 
-    <title>Payakumbuah Restoran - @yield('title')</title>
+    <title>Kanal Social Space - @yield('title')</title>
 
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
