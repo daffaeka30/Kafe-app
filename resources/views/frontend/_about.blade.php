@@ -50,11 +50,10 @@
                     <div class="row g-4">
                         <div class="col-sm-4 wow bounceInUp" data-wow-delay="0.3s">
                             <div class="faqt-item bg-primary rounded p-4 text-center">
+                                <i class="bi bi-info-circle text-dark" style="color: rgba(141,111,65,1);"></i>
                                 <img src="{{ asset('frontend/assets') }}/img/kopi1.jpg" alt="Arabica Coffee"
                                     class="img-fluid">
-                                <div style="color: rgba(141,111,65,1)">
-                                    <i class="bi bi-cart text-dark text-right" style="color: rgba(141,111,65,1);"></i>
-                                </div>
+                                <i class="bi bi-cart text-dark" style="color: rgba(141,111,65,1);"></i>
                                 <div class="text-white fw-bold"
                                     style="font-size: 0.75rem; background-color: rgba(141,111,65,1); padding: 10px; border-radius: 5px;">
                                     Arabica | Dark Roast
@@ -64,16 +63,28 @@
                         </div>
                         <div class="col-sm-4 wow bounceInUp" data-wow-delay="0.5s">
                             <div class="faqt-item bg-primary rounded p-4 text-center">
-                                <i class="fas fa-users-cog fa-4x mb-4 text-white"></i>
-                                <h1 class="display-4 fw-bold" data-toggle="counter-up">107</h1>
-                                <p class="text-dark text-uppercase fw-bold mb-0">Expert Chefs</p>
+                                <i class="bi bi-info-circle text-dark" style="color: rgba(141,111,65,1);"></i>
+                                <img src="{{ asset('frontend/assets') }}/img/kopi1.jpg" alt="Arabica Coffee"
+                                    class="img-fluid">
+                                <i class="bi bi-cart text-dark" style="color: rgba(141,111,65,1);"></i>
+                                <div class="text-white fw-bold"
+                                    style="font-size: 0.75rem; background-color: rgba(141,111,65,1); padding: 10px; border-radius: 5px;">
+                                    Arabica | Dark Roast
+                                </div>
+                                {{-- <button class="btn btn-light mt-3"><i class="bi bi-cart"></i></button> --}}
                             </div>
                         </div>
                         <div class="col-sm-4 wow bounceInUp" data-wow-delay="0.7s">
                             <div class="faqt-item bg-primary rounded p-4 text-center">
-                                <i class="fas fa-check fa-4x mb-4 text-white"></i>
-                                <h1 class="display-4 fw-bold" data-toggle="counter-up">253</h1>
-                                <p class="text-dark text-uppercase fw-bold mb-0">Events Complete</p>
+                                <i class="bi bi-info-circle text-dark" style="color: rgba(141,111,65,1);"></i>
+                                <img src="{{ asset('frontend/assets') }}/img/kopi1.jpg" alt="Arabica Coffee"
+                                    class="img-fluid">
+                                <i class="bi bi-cart text-dark" style="color: rgba(141,111,65,1);"></i>
+                                <div class="text-white fw-bold"
+                                    style="font-size: 0.75rem; background-color: rgba(141,111,65,1); padding: 10px; border-radius: 5px;">
+                                    Arabica | Dark Roast
+                                </div>
+                                {{-- <button class="btn btn-light mt-3"><i class="bi bi-cart"></i></button> --}}
                             </div>
                         </div>
                     </div>
@@ -81,7 +92,8 @@
                 <div class="col-lg-5 wow bounceInUp" data-wow-delay="0.1s">
                     <div class="video">
                         <button type="button" class="btn btn-play" data-bs-toggle="modal"
-                            data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-bs-target="#videoModal">
+                            data-src="https://www.youtube.com/embed/2Q1fK7OJfHk?si=jbX0398H6D9g8t2i"
+                            data-bs-target="#videoModal">
                             <span></span>
                         </button>
                     </div>
@@ -100,8 +112,9 @@
                 <div class="modal-body">
                     <!-- 16:9 aspect ratio -->
                     <div class="ratio ratio-16x9">
-                        <iframe class="embed-responsive-item" src="" id="video" allowfullscreen
-                            allowscriptaccess="always" allow="autoplay"></iframe>
+                        <iframe class="embed-responsive-item"
+                            src="https://www.youtube.com/embed/2Q1fK7OJfHk?si=jbX0398H6D9g8t2i" id="video"
+                            allowfullscreen allowscriptaccess="always" allow="autoplay"></iframe>
                     </div>
                 </div>
             </div>

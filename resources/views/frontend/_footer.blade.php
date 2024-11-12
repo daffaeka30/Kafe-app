@@ -6,14 +6,17 @@
                 <div class="col-lg-3 col-md-6">
                     <div class="footer-item">
                         <h1 class="text-primary">Kanal Soc<span class="text-dark">ial Space</span></h1>
-                        <p class="lh-lg mb-4">There cursus massa at urnaaculis estieSed aliquamellus vitae ultrs
-                            condmentum leo massamollis its estiegittis miristum.</p>
+                        <p class="lh-lg mb-4">Kanal Social Space adalah ruang <br> hangout yang cozy dengan aroma <br>
+                            kopi yang menggugah, tempat <br> yang sempurna untuk berbagi <br> cerita dan inspirasi
+                            bersama <br> teman-teman.
+                        </p>
                         <div class="footer-icon d-flex">
                             <a class="btn btn-primary btn-sm-square me-2 rounded-circle" href=""><i
                                     class="fab fa-facebook-f"></i></a>
                             <a class="btn btn-primary btn-sm-square me-2 rounded-circle" href=""><i
                                     class="fab fa-twitter"></i></a>
-                            <a href="#" class="btn btn-primary btn-sm-square me-2 rounded-circle"><i
+                            <a href="https://www.instagram.com/kanal.socialspace?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                                class="btn btn-primary btn-sm-square me-2 rounded-circle" target="_blank"><i
                                     class="fab fa-instagram"></i></a>
                             <a href="#" class="btn btn-primary btn-sm-square rounded-circle"><i
                                     class="fab fa-linkedin-in"></i></a>
@@ -26,10 +29,12 @@
                         <div class="d-flex flex-column align-items-start">
                             <a class="text-body mb-3" href=""><i class="fa fa-check text-primary me-2"></i>Cheese
                                 Burger</a>
-                            <a class="text-body mb-3" href=""><i class="fa fa-check text-primary me-2"></i>Sandwich</a>
+                            <a class="text-body mb-3" href=""><i
+                                    class="fa fa-check text-primary me-2"></i>Sandwich</a>
                             <a class="text-body mb-3" href=""><i class="fa fa-check text-primary me-2"></i>Panner
                                 Burger</a>
-                            <a class="text-body mb-3" href=""><i class="fa fa-check text-primary me-2"></i>Special
+                            <a class="text-body mb-3" href=""><i
+                                    class="fa fa-check text-primary me-2"></i>Special
                                 Sweets</a>
                         </div>
                     </div>
@@ -38,7 +43,8 @@
                     <div class="footer-item">
                         <h4 class="mb-4">Contact Us</h4>
                         <div class="d-flex flex-column align-items-start">
-                            <p><i class="fa fa-map-marker-alt text-primary me-2"></i> 123 Street, New York, USA</p>
+                            <p><i class="fa fa-map-marker-alt text-primary me-2"></i> Jl. Wijaya Kusuma No.6, Makassar
+                            </p>
                             <p><i class="fa fa-phone-alt text-primary me-2"></i> (+012) 3456 7890 123</p>
                             <p><i class="fas fa-envelope text-primary me-2"></i> info@example.com</p>
                             <p><i class="fa fa-clock text-primary me-2"></i> 26/7 Hours Service</p>
@@ -86,14 +92,15 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                    <span class="text-light"><a href="#"><i class="fas fa-copyright text-light me-2"></i>Kanal Social Space</a>, All right reserved.</span>
+                    <span class="text-light"><a href="#"><i class="fas fa-copyright text-light me-2"></i>Kanal
+                            Social Space</a>, All right reserved.</span>
                 </div>
                 <div class="col-md-6 my-auto text-center text-md-end text-white">
                     <!--/*** This template is free as long as you keep the below author’s credit link/attribution link/backlink. ***/-->
                     <!--/*** If you'd like to use the template without the below author’s credit link/attribution link/backlink, ***/-->
                     <!--/*** you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". ***/-->
-                    Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a> Distributed By <a
-                        class="border-bottom" href="https://themewagon.com">ThemeWagon</a>
+                    Designed By <a class="border-bottom decoration-none" href="#">Kelompok 1</a> Distributed By <a
+                        class="border-bottom decoration-none" href="#">PT. Someah Kreatif Nusantara</a>
                 </div>
             </div>
         </div>

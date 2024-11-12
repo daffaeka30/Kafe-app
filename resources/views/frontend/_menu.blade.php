@@ -8,27 +8,26 @@
                 <h1 class="display-5 mb-5">Most Popular Food in the World</h1>
             </div>
             <div class="tab-class text-center">
-                <ul class="nav nav-pills d-inline-flex justify-content-center mb-5 wow bounceInUp"
-                    data-wow-delay="0.1s">
+                <ul class="nav nav-pills d-inline-flex justify-content-center mb-5 wow bounceInUp" data-wow-delay="0.1s">
                     <li class="nav-item p-2">
                         <a class="d-flex py-2 mx-2 border border-primary bg-white rounded-pill active"
                             data-bs-toggle="pill" href="#tab-6">
-                            <span class="text-dark" style="width: 150px;">Starter</span>
+                            <span class="text-dark" style="width: 150px;">Coffee</span>
                         </a>
                     </li>
                     <li class="nav-item p-2">
                         <a class="d-flex py-2 mx-2 border border-primary bg-white rounded-pill" data-bs-toggle="pill"
                             href="#tab-7">
-                            <span class="text-dark" style="width: 150px;">Main Course</span>
+                            <span class="text-dark" style="width: 150px;">Mocktail</span>
                         </a>
                     </li>
                     <li class="nav-item p-2">
                         <a class="d-flex py-2 mx-2 border border-primary bg-white rounded-pill" data-bs-toggle="pill"
                             href="#tab-8">
-                            <span class="text-dark" style="width: 150px;">Drinks</span>
+                            <span class="text-dark" style="width: 150px;">Food</span>
                         </a>
                     </li>
-                    <li class="nav-item p-2">
+                    {{-- <li class="nav-item p-2">
                         <a class="d-flex py-2 mx-2 border border-primary bg-white rounded-pill" data-bs-toggle="pill"
                             href="#tab-9">
                             <span class="text-dark" style="width: 150px;">Offers</span>
@@ -39,7 +38,7 @@
                             href="#tab-10">
                             <span class="text-dark" style="width: 150px;">Our Spesial</span>
                         </a>
-                    </li>
+                    </li> --}}
                 </ul>
                 <div class="tab-content">
                     <div id="tab-6" class="tab-pane fade show p-0 active">

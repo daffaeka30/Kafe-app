@@ -29,7 +29,7 @@
     <!-- Book Us End -->
 
     <!-- Team Start -->
-    @include('frontend._chef-team')
+    {{-- @include('frontend._chef-team') --}}
     <!-- Team End -->
 
     <!-- Testimonial Start -->

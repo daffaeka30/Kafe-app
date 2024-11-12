@@ -8,98 +8,41 @@
                 <h1 class="display-5 mb-5">What We Offer</h1>
             </div>
             <div class="row g-4">
-                <div class="col-lg-3 col-md-6 col-sm-12 wow bounceInUp">
+                <div class="col-lg-4 col-md-6 col-sm-12 wow bounceInUp">
                     <div class="bg-light rounded service-item">
                         <div class="service-content d-flex align-items-center justify-content-center p-4">
                             <div class="service-content-icon text-center">
-                                <i class="fas fa-cheese fa-7x text-primary mb-4"></i>
-                                <h4 class="mb-3">Wedding Services</h4>
-                                <p class="mb-4">Contrary to popular belief, ipsum is not simply random.</p>
-                                <a href="#" class="btn btn-primary px-4 py-2 rounded-pill">Read More</a>
+                                <i class="fas fa-coffee fa-7x text-primary mb-4"></i>
+                                <h4 class="mb-3">Varian Minuman</h4>
+                                <p class="mb-4">Nikmati berbagai varian minuman spesial yang dibuat dengan bahan
+                                    berkualitas untuk memenuhi selera Anda.</p>
+                                {{-- <a href="#" class="btn btn-primary px-4 py-2 rounded-pill">Selengkapnya</a> --}}
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 col-sm-12 wow bounceInUp" data-wow-delay="0.3s">
+                <div class="col-lg-4 col-md-6 col-sm-12 wow bounceInUp">
                     <div class="bg-light rounded service-item">
                         <div class="service-content d-flex align-items-center justify-content-center p-4">
                             <div class="service-content-icon text-center">
-                                <i class="fas fa-pizza-slice fa-7x text-primary mb-4"></i>
-                                <h4 class="mb-3">Corporate Catering</h4>
-                                <p class="mb-4">Contrary to popular belief, ipsum is not simply random.</p>
-                                <a href="#" class="btn btn-primary px-4 py-2 rounded-pill">Read More</a>
+                                <i class="fas fa-shopping-bag fa-7x text-primary mb-4"></i>
+                                <h4 class="mb-3">Take A Way</h4>
+                                <p class="mb-4">Pesan untuk dibawa pulang.<br>
+                                    Praktis dan mudah untuk Anda yang <br> ingin menikmati di luar.</p>
+                                {{-- <a href="#" class="btn btn-primary px-4 py-2 rounded-pill">Selengkapnya</a> --}}
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 col-sm-12 wow bounceInUp" data-wow-delay="0.5s">
-                    <div class="bg-light rounded service-item">
-                        <div class="service-content d-flex align-items-center justify-content-center p-4">
-                            <div class="service-content-icon text-center">
-                                <i class="fas fa-hotdog fa-7x text-primary mb-4"></i>
-                                <h4 class="mb-3">Cocktail Reception</h4>
-                                <p class="mb-4">Contrary to popular belief, ipsum is not simply random.</p>
-                                <a href="#" class="btn btn-primary px-4 py-2 rounded-pill">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-12 wow bounceInUp" data-wow-delay="0.7s">
-                    <div class="bg-light rounded service-item">
-                        <div class="service-content d-flex align-items-center justify-content-center p-4">
-                            <div class="service-content-icon text-center">
-                                <i class="fas fa-hamburger fa-7x text-primary mb-4"></i>
-                                <h4 class="mb-3">Bento Catering</h4>
-                                <p class="mb-4">Contrary to popular belief, ipsum is not simply random.</p>
-                                <a href="#" class="btn btn-primary px-4 py-2 rounded-pill">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-12 wow bounceInUp" data-wow-delay="0.1s">
-                    <div class="bg-light rounded service-item">
-                        <div class="service-content d-flex align-items-center justify-content-center p-4">
-                            <div class="service-content-icon text-center">
-                                <i class="fas fa-wine-glass-alt fa-7x text-primary mb-4"></i>
-                                <h4 class="mb-3">Pub Party</h4>
-                                <p class="mb-4">Contrary to popular belief, ipsum is not simply random.</p>
-                                <a href="#" class="btn btn-primary px-4 py-2 rounded-pill">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-12 wow bounceInUp" data-wow-delay="0.3s">
-                    <div class="bg-light rounded service-item">
-                        <div class="service-content d-flex align-items-center justify-content-center p-4">
-                            <div class="service-content-icon text-center">
-                                <i class="fas fa-walking fa-7x text-primary mb-4"></i>
-                                <h4 class="mb-3">Home Delivery</h4>
-                                <p class="mb-4">Contrary to popular belief, ipsum is not simply random.</p>
-                                <a href="#" class="btn btn-primary px-4 py-2 rounded-pill">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-12 wow bounceInUp" data-wow-delay="0.5s">
-                    <div class="bg-light rounded service-item">
-                        <div class="service-content d-flex align-items-center justify-content-center p-4">
-                            <div class="service-content-icon text-center">
-                                <i class="fas fa-wheelchair fa-7x text-primary mb-4"></i>
-                                <h4 class="mb-3">Sit-down Catering</h4>
-                                <p class="mb-4">Contrary to popular belief, ipsum is not simply random.</p>
-                                <a href="#" class="btn btn-primary px-4 py-2 rounded-pill">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-12 wow bounceInUp" data-wow-delay="0.7s">
+                <div class="col-lg-4 col-md-6 col-sm-12 wow bounceInUp">
                     <div class="bg-light rounded service-item">
                         <div class="service-content d-flex align-items-center justify-content-center p-4">
                             <div class="service-content-icon text-center">
                                 <i class="fas fa-utensils fa-7x text-primary mb-4"></i>
-                                <h4 class="mb-3">Buffet Catering</h4>
-                                <p class="mb-4">Contrary to popular belief, ipsum is not simply random.</p>
-                                <a href="#" class="btn btn-primary px-4 py-2 rounded-pill">Read More</a>
+                                <h4 class="mb-3">Varian Makanan</h4>
+                                <p class="mb-4">Pilih dari beragam menu makanan kami yang cocok untuk menemani minuman
+                                    favorit Anda di Kanal Social Space.</p>
+                                {{-- <a href="#" class="btn btn-primary px-4 py-2 rounded-pill">Selengkapnya</a> --}}
                             </div>
                         </div>
                     </div>
