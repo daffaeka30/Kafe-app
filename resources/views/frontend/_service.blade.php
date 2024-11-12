@@ -27,8 +27,8 @@
                             <div class="service-content-icon text-center">
                                 <i class="fas fa-shopping-bag fa-7x text-primary mb-4"></i>
                                 <h4 class="mb-3">Take A Way</h4>
-                                <p class="mb-4">Pesan untuk dibawa pulang.<br>
-                                    Praktis dan mudah untuk Anda yang <br> ingin menikmati di luar.</p>
+                                <p class="mb-4">Pesan untuk dibawa pulang.<br> Praktis dan mudah untuk Anda yang <br>
+                                    ingin menikmati di luar.</p>
                                 {{-- <a href="#" class="btn btn-primary px-4 py-2 rounded-pill">Selengkapnya</a> --}}
                             </div>
                         </div>

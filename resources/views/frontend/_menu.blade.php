@@ -27,23 +27,11 @@
                             <span class="text-dark" style="width: 150px;">Food</span>
                         </a>
                     </li>
-                    {{-- <li class="nav-item p-2">
-                        <a class="d-flex py-2 mx-2 border border-primary bg-white rounded-pill" data-bs-toggle="pill"
-                            href="#tab-9">
-                            <span class="text-dark" style="width: 150px;">Offers</span>
-                        </a>
-                    </li>
-                    <li class="nav-item p-2">
-                        <a class="d-flex py-2 mx-2 border border-primary bg-white rounded-pill" data-bs-toggle="pill"
-                            href="#tab-10">
-                            <span class="text-dark" style="width: 150px;">Our Spesial</span>
-                        </a>
-                    </li> --}}
                 </ul>
                 <div class="tab-content">
                     <div id="tab-6" class="tab-pane fade show p-0 active">
                         <div class="row g-4">
-                            <div class="col-lg-6 wow bounceInUp" data-wow-delay="0.1s">
+                            <div class="col-sm-12 col-md-6 col-lg-6 wow bounceInUp" data-wow-delay="0.1s">
                                 <div class="menu-item d-flex align-items-center">
                                     <img class="flex-shrink-0 img-fluid rounded-circle"
                                         src="{{ asset('frontend/assets') }}/img/menu-01.jpg" alt="">
@@ -53,13 +41,12 @@
                                             <h4>Paneer</h4>
                                             <h4 class="text-primary">$90</h4>
                                         </div>
-                                        <p class="mb-0">Consectetur adipiscing elit sed dwso eiusmod tempor
-                                            incididunt
+                                        <p class="mb-0">Consectetur adipiscing elit sed dwso eiusmod tempor incididunt
                                             ut labore.</p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-6 wow bounceInUp" data-wow-delay="0.2s">
+                            <div class="col-sm-12 col-md-6 col-lg-6 wow bounceInUp" data-wow-delay="0.2s">
                                 <div class="menu-item d-flex align-items-center">
                                     <img class="flex-shrink-0 img-fluid rounded-circle"
                                         src="{{ asset('frontend/assets') }}/img/menu-02.jpg" alt="">
@@ -69,13 +56,12 @@
                                             <h4>Sweet Potato</h4>
                                             <h4 class="text-primary">$90</h4>
                                         </div>
-                                        <p class="mb-0">Consectetur adipiscing elit sed dwso eiusmod tempor
-                                            incididunt
+                                        <p class="mb-0">Consectetur adipiscing elit sed dwso eiusmod tempor incididunt
                                             ut labore.</p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-6 wow bounceInUp" data-wow-delay="0.3s">
+                            <div class="col-sm-12 col-md-6 col-lg-6 wow bounceInUp" data-wow-delay="0.3s">
                                 <div class="menu-item d-flex align-items-center">
                                     <img class="flex-shrink-0 img-fluid rounded-circle"
                                         src="{{ asset('frontend/assets') }}/img/menu-03.jpg" alt="">
@@ -85,13 +71,12 @@
                                             <h4>Sabudana Tikki</h4>
                                             <h4 class="text-primary">$90</h4>
                                         </div>
-                                        <p class="mb-0">Consectetur adipiscing elit sed dwso eiusmod tempor
-                                            incididunt
+                                        <p class="mb-0">Consectetur adipiscing elit sed dwso eiusmod tempor incididunt
                                             ut labore.</p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-6 wow bounceInUp" data-wow-delay="0.4s">
+                            <div class="col-sm-12 col-md-6 col-lg-6 wow bounceInUp" data-wow-delay="0.4s">
                                 <div class="menu-item d-flex align-items-center">
                                     <img class="flex-shrink-0 img-fluid rounded-circle"
                                         src="{{ asset('frontend/assets') }}/img/menu-04.jpg" alt="">
@@ -101,13 +86,12 @@
                                             <h4>Pizza</h4>
                                             <h4 class="text-primary">$90</h4>
                                         </div>
-                                        <p class="mb-0">Consectetur adipiscing elit sed dwso eiusmod tempor
-                                            incididunt
+                                        <p class="mb-0">Consectetur adipiscing elit sed dwso eiusmod tempor incididunt
                                             ut labore.</p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-6 wow bounceInUp" data-wow-delay="0.5s">
+                            <div class="col-sm-12 col-md-6 col-lg-6 wow bounceInUp" data-wow-delay="0.5s">
                                 <div class="menu-item d-flex align-items-center">
                                     <img class="flex-shrink-0 img-fluid rounded-circle"
                                         src="{{ asset('frontend/assets') }}/img/menu-05.jpg" alt="">
@@ -117,13 +101,12 @@
                                             <h4>Bacon</h4>
                                             <h4 class="text-primary">$90</h4>
                                         </div>
-                                        <p class="mb-0">Consectetur adipiscing elit sed dwso eiusmod tempor
-                                            incididunt
+                                        <p class="mb-0">Consectetur adipiscing elit sed dwso eiusmod tempor incididunt
                                             ut labore.</p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-6 wow bounceInUp" data-wow-delay="0.6s">
+                            <div class="col-sm-12 col-md-6 col-lg-6 wow bounceInUp" data-wow-delay="0.6s">
                                 <div class="menu-item d-flex align-items-center">
                                     <img class="flex-shrink-0 img-fluid rounded-circle"
                                         src="{{ asset('frontend/assets') }}/img/menu-06.jpg" alt="">
@@ -133,13 +116,12 @@
                                             <h4>Chicken</h4>
                                             <h4 class="text-primary">$90</h4>
                                         </div>
-                                        <p class="mb-0">Consectetur adipiscing elit sed dwso eiusmod tempor
-                                            incididunt
+                                        <p class="mb-0">Consectetur adipiscing elit sed dwso eiusmod tempor incididunt
                                             ut labore.</p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-6 wow bounceInUp" data-wow-delay="0.7s">
+                            <div class="col-sm-12 col-md-6 col-lg-6 wow bounceInUp" data-wow-delay="0.7s">
                                 <div class="menu-item d-flex align-items-center">
                                     <img class="flex-shrink-0 img-fluid rounded-circle"
                                         src="{{ asset('frontend/assets') }}/img/menu-07.jpg" alt="">
@@ -150,12 +132,11 @@
                                             <h4 class="text-primary">$90</h4>
                                         </div>
                                         <p class="mb-0">Consectetur adipiscing elit sed dwso eiusmod tempor
-                                            incididunt
-                                            ut labore.</p>
+                                            incididunt ut labore.</p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-6 wow bounceInUp" data-wow-delay="0.8s">
+                            <div class="col-sm-12 col-md-6 col-lg-6 wow bounceInUp" data-wow-delay="0.8s">
                                 <div class="menu-item d-flex align-items-center">
                                     <img class="flex-shrink-0 img-fluid rounded-circle"
                                         src="{{ asset('frontend/assets') }}/img/menu-08.jpg" alt="">
@@ -166,8 +147,7 @@
                                             <h4 class="text-primary">$90</h4>
                                         </div>
                                         <p class="mb-0">Consectetur adipiscing elit sed dwso eiusmod tempor
-                                            incididunt
-                                            ut labore.</p>
+                                            incididunt ut labore.</p>
                                     </div>
                                 </div>
                             </div>
@@ -175,7 +155,7 @@
                     </div>
                     <div id="tab-7" class="tab-pane fade show p-0">
                         <div class="row g-4">
-                            <div class="col-lg-6">
+                            <div class="col-sm-12 col-md-6 col-lg-6">
                                 <div class="menu-item d-flex align-items-center">
                                     <img class="flex-shrink-0 img-fluid rounded-circle"
                                         src="{{ asset('frontend/assets') }}/img/menu-01.jpg" alt="">
@@ -186,12 +166,11 @@
                                             <h4 class="text-primary">$90</h4>
                                         </div>
                                         <p class="mb-0">Consectetur adipiscing elit sed dwso eiusmod tempor
-                                            incididunt
-                                            ut labore.</p>
+                                            incididunt ut labore.</p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-6">
+                            <div class="col-sm-12 col-md-6 col-lg-6">
                                 <div class="menu-item d-flex align-items-center">
                                     <img class="flex-shrink-0 img-fluid rounded-circle"
                                         src="{{ asset('frontend/assets') }}/img/menu-03.jpg" alt="">
@@ -202,12 +181,11 @@
                                             <h4 class="text-primary">$90</h4>
                                         </div>
                                         <p class="mb-0">Consectetur adipiscing elit sed dwso eiusmod tempor
-                                            incididunt
-                                            ut labore.</p>
+                                            incididunt ut labore.</p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-6">
+                            <div class="col-sm-12 col-md-6 col-lg-6">
                                 <div class="menu-item d-flex align-items-center">
                                     <img class="flex-shrink-0 img-fluid rounded-circle"
                                         src="{{ asset('frontend/assets') }}/img/menu-05.jpg" alt="">
@@ -218,12 +196,11 @@
                                             <h4 class="text-primary">$90</h4>
                                         </div>
                                         <p class="mb-0">Consectetur adipiscing elit sed dwso eiusmod tempor
-                                            incididunt
-                                            ut labore.</p>
+                                            incididunt ut labore.</p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-6">
+                            <div class="col-sm-12 col-md-6 col-lg-6">
                                 <div class="menu-item d-flex align-items-center">
                                     <img class="flex-shrink-0 img-fluid rounded-circle"
                                         src="{{ asset('frontend/assets') }}/img/menu-07.jpg" alt="">
@@ -234,12 +211,11 @@
                                             <h4 class="text-primary">$90</h4>
                                         </div>
                                         <p class="mb-0">Consectetur adipiscing elit sed dwso eiusmod tempor
-                                            incididunt
-                                            ut labore.</p>
+                                            incididunt ut labore.</p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-6">
+                            <div class="col-sm-12 col-md-6 col-lg-6">
                                 <div class="menu-item d-flex align-items-center">
                                     <img class="flex-shrink-0 img-fluid rounded-circle"
                                         src="{{ asset('frontend/assets') }}/img/menu-08.jpg" alt="">
@@ -250,12 +226,11 @@
                                             <h4 class="text-primary">$90</h4>
                                         </div>
                                         <p class="mb-0">Consectetur adipiscing elit sed dwso eiusmod tempor
-                                            incididunt
-                                            ut labore.</p>
+                                            incididunt ut labore.</p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-6">
+                            <div class="col-sm-12 col-md-6 col-lg-6">
                                 <div class="menu-item d-flex align-items-center">
                                     <img class="flex-shrink-0 img-fluid rounded-circle"
                                         src="{{ asset('frontend/assets') }}/img/menu-03.jpg" alt="">
@@ -266,12 +241,11 @@
                                             <h4 class="text-primary">$90</h4>
                                         </div>
                                         <p class="mb-0">Consectetur adipiscing elit sed dwso eiusmod tempor
-                                            incididunt
-                                            ut labore.</p>
+                                            incididunt ut labore.</p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-6">
+                            <div class="col-sm-12 col-md-6 col-lg-6">
                                 <div class="menu-item d-flex align-items-center">
                                     <img class="flex-shrink-0 img-fluid rounded-circle"
                                         src="{{ asset('frontend/assets') }}/img/menu-02.jpg" alt="">
@@ -282,12 +256,11 @@
                                             <h4 class="text-primary">$90</h4>
                                         </div>
                                         <p class="mb-0">Consectetur adipiscing elit sed dwso eiusmod tempor
-                                            incididunt
-                                            ut labore.</p>
+                                            incididunt ut labore.</p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-6">
+                            <div class="col-sm-12 col-md-6 col-lg-6">
                                 <div class="menu-item d-flex align-items-center">
                                     <img class="flex-shrink-0 img-fluid rounded-circle"
                                         src="{{ asset('frontend/assets') }}/img/menu-01.jpg" alt="">
@@ -298,8 +271,7 @@
                                             <h4 class="text-primary">$90</h4>
                                         </div>
                                         <p class="mb-0">Consectetur adipiscing elit sed dwso eiusmod tempor
-                                            incididunt
-                                            ut labore.</p>
+                                            incididunt ut labore.</p>
                                     </div>
                                 </div>
                             </div>
@@ -307,7 +279,7 @@
                     </div>
                     <div id="tab-8" class="tab-pane fade show p-0">
                         <div class="row g-4">
-                            <div class="col-lg-6">
+                            <div class="col-sm-12 col-md-6 col-lg-6">
                                 <div class="menu-item d-flex align-items-center">
                                     <img class="flex-shrink-0 img-fluid rounded-circle"
                                         src="{{ asset('frontend/assets') }}/img/menu-01.jpg" alt="">
@@ -318,12 +290,11 @@
                                             <h4 class="text-primary">$90</h4>
                                         </div>
                                         <p class="mb-0">Consectetur adipiscing elit sed dwso eiusmod tempor
-                                            incididunt
-                                            ut labore.</p>
+                                            incididunt ut labore.</p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-6">
+                            <div class="col-sm-12 col-md-6 col-lg-6">
                                 <div class="menu-item d-flex align-items-center">
                                     <img class="flex-shrink-0 img-fluid rounded-circle"
                                         src="{{ asset('frontend/assets') }}/img/menu-02.jpg" alt="">
@@ -334,12 +305,11 @@
                                             <h4 class="text-primary">$90</h4>
                                         </div>
                                         <p class="mb-0">Consectetur adipiscing elit sed dwso eiusmod tempor
-                                            incididunt
-                                            ut labore.</p>
+                                            incididunt ut labore.</p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-6">
+                            <div class="col-sm-12 col-md-6 col-lg-6">
                                 <div class="menu-item d-flex align-items-center">
                                     <img class="flex-shrink-0 img-fluid rounded-circle"
                                         src="{{ asset('frontend/assets') }}/img/menu-03.jpg" alt="">
@@ -350,12 +320,11 @@
                                             <h4 class="text-primary">$90</h4>
                                         </div>
                                         <p class="mb-0">Consectetur adipiscing elit sed dwso eiusmod tempor
-                                            incididunt
-                                            ut labore.</p>
+                                            incididunt ut labore.</p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-6">
+                            <div class="col-sm-12 col-md-6 col-lg-6">
                                 <div class="menu-item d-flex align-items-center">
                                     <img class="flex-shrink-0 img-fluid rounded-circle"
                                         src="{{ asset('frontend/assets') }}/img/menu-04.jpg" alt="">
@@ -366,12 +335,11 @@
                                             <h4 class="text-primary">$90</h4>
                                         </div>
                                         <p class="mb-0">Consectetur adipiscing elit sed dwso eiusmod tempor
-                                            incididunt
-                                            ut labore.</p>
+                                            incididunt ut labore.</p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-6">
+                            <div class="col-sm-12 col-md-6 col-lg-6">
                                 <div class="menu-item d-flex align-items-center">
                                     <img class="flex-shrink-0 img-fluid rounded-circle"
                                         src="{{ asset('frontend/assets') }}/img/menu-05.jpg" alt="">
@@ -382,12 +350,11 @@
                                             <h4 class="text-primary">$90</h4>
                                         </div>
                                         <p class="mb-0">Consectetur adipiscing elit sed dwso eiusmod tempor
-                                            incididunt
-                                            ut labore.</p>
+                                            incididunt ut labore.</p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-6">
+                            <div class="col-sm-12 col-md-6 col-lg-6">
                                 <div class="menu-item d-flex align-items-center">
                                     <img class="flex-shrink-0 img-fluid rounded-circle"
                                         src="{{ asset('frontend/assets') }}/img/menu-06.jpg" alt="">
@@ -398,12 +365,11 @@
                                             <h4 class="text-primary">$90</h4>
                                         </div>
                                         <p class="mb-0">Consectetur adipiscing elit sed dwso eiusmod tempor
-                                            incididunt
-                                            ut labore.</p>
+                                            incididunt ut labore.</p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-6">
+                            <div class="col-sm-12 col-md-6 col-lg-6">
                                 <div class="menu-item d-flex align-items-center">
                                     <img class="flex-shrink-0 img-fluid rounded-circle"
                                         src="{{ asset('frontend/assets') }}/img/menu-07.jpg" alt="">
@@ -414,12 +380,11 @@
                                             <h4 class="text-primary">$90</h4>
                                         </div>
                                         <p class="mb-0">Consectetur adipiscing elit sed dwso eiusmod tempor
-                                            incididunt
-                                            ut labore.</p>
+                                            incididunt ut labore.</p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-6">
+                            <div class="col-sm-12 col-md-6 col-lg-6">
                                 <div class="menu-item d-flex align-items-center">
                                     <img class="flex-shrink-0 img-fluid rounded-circle"
                                         src="{{ asset('frontend/assets') }}/img/menu-08.jpg" alt="">
@@ -430,8 +395,7 @@
                                             <h4 class="text-primary">$90</h4>
                                         </div>
                                         <p class="mb-0">Consectetur adipiscing elit sed dwso eiusmod tempor
-                                            incididunt
-                                            ut labore.</p>
+                                            incididunt ut labore.</p>
                                     </div>
                                 </div>
                             </div>
@@ -439,7 +403,7 @@
                     </div>
                     <div id="tab-9" class="tab-pane fade show p-0">
                         <div class="row g-4">
-                            <div class="col-lg-6">
+                            <div class="col-sm-12 col-md-6 col-lg-6">
                                 <div class="menu-item d-flex align-items-center">
                                     <img class="flex-shrink-0 img-fluid rounded-circle"
                                         src="{{ asset('frontend/assets') }}/img/menu-06.jpg" alt="">
@@ -450,12 +414,11 @@
                                             <h4 class="text-primary">$90</h4>
                                         </div>
                                         <p class="mb-0">Consectetur adipiscing elit sed dwso eiusmod tempor
-                                            incididunt
-                                            ut labore.</p>
+                                            incididunt ut labore.</p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-6">
+                            <div class="col-sm-12 col-md-6 col-lg-6">
                                 <div class="menu-item d-flex align-items-center">
                                     <img class="flex-shrink-0 img-fluid rounded-circle"
                                         src="{{ asset('frontend/assets') }}/img/menu-07.jpg" alt="">
@@ -466,12 +429,11 @@
                                             <h4 class="text-primary">$90</h4>
                                         </div>
                                         <p class="mb-0">Consectetur adipiscing elit sed dwso eiusmod tempor
-                                            incididunt
-                                            ut labore.</p>
+                                            incididunt ut labore.</p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-6">
+                            <div class="col-sm-12 col-md-6 col-lg-6">
                                 <div class="menu-item d-flex align-items-center">
                                     <img class="flex-shrink-0 img-fluid rounded-circle"
                                         src="{{ asset('frontend/assets') }}/img/menu-09.jpg" alt="">
@@ -482,12 +444,11 @@
                                             <h4 class="text-primary">$90</h4>
                                         </div>
                                         <p class="mb-0">Consectetur adipiscing elit sed dwso eiusmod tempor
-                                            incididunt
-                                            ut labore.</p>
+                                            incididunt ut labore.</p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-6">
+                            <div class="col-sm-12 col-md-6 col-lg-6">
                                 <div class="menu-item d-flex align-items-center">
                                     <img class="flex-shrink-0 img-fluid rounded-circle"
                                         src="{{ asset('frontend/assets') }}/img/menu-02.jpg" alt="">
@@ -498,12 +459,11 @@
                                             <h4 class="text-primary">$90</h4>
                                         </div>
                                         <p class="mb-0">Consectetur adipiscing elit sed dwso eiusmod tempor
-                                            incididunt
-                                            ut labore.</p>
+                                            incididunt ut labore.</p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-6">
+                            <div class="col-sm-12 col-md-6 col-lg-6">
                                 <div class="menu-item d-flex align-items-center">
                                     <img class="flex-shrink-0 img-fluid rounded-circle"
                                         src="{{ asset('frontend/assets') }}/img/menu-03.jpg" alt="">
@@ -514,12 +474,11 @@
                                             <h4 class="text-primary">$90</h4>
                                         </div>
                                         <p class="mb-0">Consectetur adipiscing elit sed dwso eiusmod tempor
-                                            incididunt
-                                            ut labore.</p>
+                                            incididunt ut labore.</p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-6">
+                            <div class="col-sm-12 col-md-6 col-lg-6">
                                 <div class="menu-item d-flex align-items-center">
                                     <img class="flex-shrink-0 img-fluid rounded-circle"
                                         src="{{ asset('frontend/assets') }}/img/menu-05.jpg" alt="">
@@ -530,12 +489,11 @@
                                             <h4 class="text-primary">$90</h4>
                                         </div>
                                         <p class="mb-0">Consectetur adipiscing elit sed dwso eiusmod tempor
-                                            incididunt
-                                            ut labore.</p>
+                                            incididunt ut labore.</p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-6">
+                            <div class="col-sm-12 col-md-6 col-lg-6">
                                 <div class="menu-item d-flex align-items-center">
                                     <img class="flex-shrink-0 img-fluid rounded-circle"
                                         src="{{ asset('frontend/assets') }}/img/menu-07.jpg" alt="">
@@ -546,12 +504,11 @@
                                             <h4 class="text-primary">$90</h4>
                                         </div>
                                         <p class="mb-0">Consectetur adipiscing elit sed dwso eiusmod tempor
-                                            incididunt
-                                            ut labore.</p>
+                                            incididunt ut labore.</p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-6">
+                            <div class="col-sm-12 col-md-6 col-lg-6">
                                 <div class="menu-item d-flex align-items-center">
                                     <img class="flex-shrink-0 img-fluid rounded-circle"
                                         src="{{ asset('frontend/assets') }}/img/menu-09.jpg" alt="">
@@ -562,8 +519,7 @@
                                             <h4 class="text-primary">$90</h4>
                                         </div>
                                         <p class="mb-0">Consectetur adipiscing elit sed dwso eiusmod tempor
-                                            incididunt
-                                            ut labore.</p>
+                                            incididunt ut labore.</p>
                                     </div>
                                 </div>
                             </div>
@@ -571,7 +527,7 @@
                     </div>
                     <div id="tab-10" class="tab-pane fade show p-0">
                         <div class="row g-4">
-                            <div class="col-lg-6">
+                            <div class="col-sm-12 col-md-6 col-lg-6">
                                 <div class="menu-item d-flex align-items-center">
                                     <img class="flex-shrink-0 img-fluid rounded-circle"
                                         src="{{ asset('frontend/assets') }}/img/menu-06.jpg" alt="">
@@ -582,12 +538,11 @@
                                             <h4 class="text-primary">$90</h4>
                                         </div>
                                         <p class="mb-0">Consectetur adipiscing elit sed dwso eiusmod tempor
-                                            incididunt
-                                            ut labore.</p>
+                                            incididunt ut labore.</p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-6">
+                            <div class="col-sm-12 col-md-6 col-lg-6">
                                 <div class="menu-item d-flex align-items-center">
                                     <img class="flex-shrink-0 img-fluid rounded-circle"
                                         src="{{ asset('frontend/assets') }}/img/menu-07.jpg" alt="">
@@ -598,12 +553,11 @@
                                             <h4 class="text-primary">$90</h4>
                                         </div>
                                         <p class="mb-0">Consectetur adipiscing elit sed dwso eiusmod tempor
-                                            incididunt
-                                            ut labore.</p>
+                                            incididunt ut labore.</p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-6">
+                            <div class="col-sm-12 col-md-6 col-lg-6">
                                 <div class="menu-item d-flex align-items-center">
                                     <img class="flex-shrink-0 img-fluid rounded-circle"
                                         src="{{ asset('frontend/assets') }}/img/menu-09.jpg" alt="">
@@ -614,12 +568,11 @@
                                             <h4 class="text-primary">$90</h4>
                                         </div>
                                         <p class="mb-0">Consectetur adipiscing elit sed dwso eiusmod tempor
-                                            incididunt
-                                            ut labore.</p>
+                                            incididunt ut labore.</p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-6">
+                            <div class="col-sm-12 col-md-6 col-lg-6">
                                 <div class="menu-item d-flex align-items-center">
                                     <img class="flex-shrink-0 img-fluid rounded-circle"
                                         src="{{ asset('frontend/assets') }}/img/menu-02.jpg" alt="">
@@ -630,12 +583,11 @@
                                             <h4 class="text-primary">$90</h4>
                                         </div>
                                         <p class="mb-0">Consectetur adipiscing elit sed dwso eiusmod tempor
-                                            incididunt
-                                            ut labore.</p>
+                                            incididunt ut labore.</p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-6">
+                            <div class="col-sm-12 col-md-6 col-lg-6">
                                 <div class="menu-item d-flex align-items-center">
                                     <img class="flex-shrink-0 img-fluid rounded-circle"
                                         src="{{ asset('frontend/assets') }}/img/menu-03.jpg" alt="">
@@ -646,12 +598,11 @@
                                             <h4 class="text-primary">$90</h4>
                                         </div>
                                         <p class="mb-0">Consectetur adipiscing elit sed dwso eiusmod tempor
-                                            incididunt
-                                            ut labore.</p>
+                                            incididunt ut labore.</p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-6">
+                            <div class="col-sm-12 col-md-6 col-lg-6">
                                 <div class="menu-item d-flex align-items-center">
                                     <img class="flex-shrink-0 img-fluid rounded-circle"
                                         src="{{ asset('frontend/assets') }}/img/menu-05.jpg" alt="">
@@ -662,12 +613,11 @@
                                             <h4 class="text-primary">$90</h4>
                                         </div>
                                         <p class="mb-0">Consectetur adipiscing elit sed dwso eiusmod tempor
-                                            incididunt
-                                            ut labore.</p>
+                                            incididunt ut labore.</p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-6">
+                            <div class="col-sm-12 col-md-6 col-lg-6">
                                 <div class="menu-item d-flex align-items-center">
                                     <img class="flex-shrink-0 img-fluid rounded-circle"
                                         src="{{ asset('frontend/assets') }}/img/menu-07.jpg" alt="">
@@ -678,12 +628,11 @@
                                             <h4 class="text-primary">$90</h4>
                                         </div>
                                         <p class="mb-0">Consectetur adipiscing elit sed dwso eiusmod tempor
-                                            incididunt
-                                            ut labore.</p>
+                                            incididunt ut labore.</p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-6">
+                            <div class="col-sm-12 col-md-6 col-lg-6">
                                 <div class="menu-item d-flex align-items-center">
                                     <img class="flex-shrink-0 img-fluid rounded-circle"
                                         src="{{ asset('frontend/assets') }}/img/menu-09.jpg" alt="">
@@ -694,8 +643,7 @@
                                             <h4 class="text-primary">$90</h4>
                                         </div>
                                         <p class="mb-0">Consectetur adipiscing elit sed dwso eiusmod tempor
-                                            incididunt
-                                            ut labore.</p>
+                                            incididunt ut labore.</p>
                                     </div>
                                 </div>
                             </div>

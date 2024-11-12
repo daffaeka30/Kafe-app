@@ -2,14 +2,13 @@
     <div class="container-fluid py-3">
         <div class="container">
             <div class="row g-5 align-items-center">
-                <div class="col-lg-5 wow bounceInUp">
+                <div class="col-sm-12 col-md-6 col-lg-5 wow bounceInUp">
                     <img src="{{ asset('frontend/assets') }}/img/about.jpg" class="img-fluid rounded" alt="">
                 </div>
-                <div class="col-lg-7 wow bounceInUp" data-wow-delay="0.3s">
+                <div class="col-sm-12 col-md-6 col-lg-7 wow bounceInUp" data-wow-delay="0.3s">
                     <small
                         class="d-inline-block fw-bold text-dark text-uppercase bg-light border border-primary rounded-pill px-4 py-1 mb-3">About
                         Us</small>
-                    {{-- <h1 class="display-5 mb-4">Kanal Social Space</h1> --}}
                     <p class="mb-4">Kanal Social Space adalah tempat yang pas untuk berbagi cerita, inspirasi, dan
                         momen santai bersama teman-teman. Kami menawarkan pilihan kopi dan teh spesial dari berbagai
                         belahan dunia. Mulai dari kopi single origin beraroma khas hingga pilihan espresso, semua
@@ -42,13 +41,11 @@
     <div class="container-fluid faqt py-5">
         <div class="container">
             <div class="row g-4 align-items-center">
-                <div class="col-lg-7">
-                    <div class="wow bounceInUp" data-wow-delay="0.3s">
-                        <small
-                            class="d-inline-block fw-bold text-dark text-uppercase bg-light border border-primary rounded-pill px-4 py-1 mb-3">Recommended</small>
-                    </div>
+                <div class="col-sm-12 col-lg-7 wow bounceInUp" data-wow-delay="0.3s">
+                    <small
+                        class="d-inline-block fw-bold text-dark text-uppercase bg-light border border-primary rounded-pill px-4 py-1 mb-3">Recommended</small>
                     <div class="row g-4">
-                        <div class="col-sm-4 wow bounceInUp" data-wow-delay="0.3s">
+                        <div class="col-lg-4 col-md-6 col-sm-12 wow bounceInUp" data-wow-delay="0.3s">
                             <div class="faqt-item bg-primary rounded p-4 text-center">
                                 <i class="bi bi-info-circle text-dark" style="color: rgba(141,111,65,1);"></i>
                                 <img src="{{ asset('frontend/assets') }}/img/kopi1.jpg" alt="Arabica Coffee"
@@ -58,10 +55,9 @@
                                     style="font-size: 0.75rem; background-color: rgba(141,111,65,1); padding: 10px; border-radius: 5px;">
                                     Arabica | Dark Roast
                                 </div>
-                                {{-- <button class="btn btn-light mt-3"><i class="bi bi-cart"></i></button> --}}
                             </div>
                         </div>
-                        <div class="col-sm-4 wow bounceInUp" data-wow-delay="0.5s">
+                        <div class="col-lg-4 col-md-6 col-sm-12 wow bounceInUp" data-wow-delay="0.5s">
                             <div class="faqt-item bg-primary rounded p-4 text-center">
                                 <i class="bi bi-info-circle text-dark" style="color: rgba(141,111,65,1);"></i>
                                 <img src="{{ asset('frontend/assets') }}/img/kopi1.jpg" alt="Arabica Coffee"
@@ -71,10 +67,9 @@
                                     style="font-size: 0.75rem; background-color: rgba(141,111,65,1); padding: 10px; border-radius: 5px;">
                                     Arabica | Dark Roast
                                 </div>
-                                {{-- <button class="btn btn-light mt-3"><i class="bi bi-cart"></i></button> --}}
                             </div>
                         </div>
-                        <div class="col-sm-4 wow bounceInUp" data-wow-delay="0.7s">
+                        <div class="col-lg-4 col-md-6 col-sm-12 wow bounceInUp" data-wow-delay="0.7s">
                             <div class="faqt-item bg-primary rounded p-4 text-center">
                                 <i class="bi bi-info-circle text-dark" style="color: rgba(141,111,65,1);"></i>
                                 <img src="{{ asset('frontend/assets') }}/img/kopi1.jpg" alt="Arabica Coffee"
@@ -84,12 +79,11 @@
                                     style="font-size: 0.75rem; background-color: rgba(141,111,65,1); padding: 10px; border-radius: 5px;">
                                     Arabica | Dark Roast
                                 </div>
-                                {{-- <button class="btn btn-light mt-3"><i class="bi bi-cart"></i></button> --}}
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-5 wow bounceInUp" data-wow-delay="0.1s">
+                <div class="col-sm-12 col-lg-5 wow bounceInUp" data-wow-delay="0.1s">
                     <div class="video">
                         <button type="button" class="btn btn-play" data-bs-toggle="modal"
                             data-src="https://www.youtube.com/embed/2Q1fK7OJfHk?si=jbX0398H6D9g8t2i"

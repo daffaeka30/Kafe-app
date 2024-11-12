@@ -4,7 +4,8 @@
             <div class="row g-0">
                 <div class="col-1">
                     <img src="{{ asset('frontend/assets') }}/img/background-site.jpg"
-                        class="img-fluid h-100 w-100 rounded-start" style="object-fit: cover; opacity: 0.7;" alt="">
+                        class="img-fluid h-100 w-100 rounded-start" style="object-fit: cover; opacity: 0.7;"
+                        alt="">
                 </div>
                 <div class="col-10">
                     <div class="border-bottom border-top border-primary bg-light py-5 px-4">
@@ -85,7 +86,8 @@
                 </div>
                 <div class="col-1">
                     <img src="{{ asset('frontend/assets') }}/img/background-site.jpg"
-                        class="img-fluid h-100 w-100 rounded-end" style="object-fit: cover; opacity: 0.7;" alt="">
+                        class="img-fluid h-100 w-100 rounded-end" style="object-fit: cover; opacity: 0.7;"
+                        alt="">
                 </div>
             </div>
         </div>
