@@ -9,26 +9,27 @@
                     <small
                         class="d-inline-block fw-bold text-dark text-uppercase bg-light border border-primary rounded-pill px-4 py-1 mb-3">About
                         Us</small>
-                    <h1 class="display-5 mb-4">Trusted By 200 + satisfied clients</h1>
-                    <p class="mb-4">Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore eit
-                        esdioilore magna aliqua. Ut enim ad minim veniam,
-                        quis nostrud exercitation ullaemco laboeeiris nisi ut aliquip ex ea commodo consequat.
-                        Duis
-                        aute
-                        irure
-                        dolor iesdein reprehendeerit in voluptate velit esse cillum dolore.</p>
+                    {{-- <h1 class="display-5 mb-4">Kanal Social Space</h1> --}}
+                    <p class="mb-4">Kanal Social Space adalah tempat yang pas untuk berbagi cerita, inspirasi, dan
+                        momen santai bersama teman-teman. Kami menawarkan pilihan kopi dan teh spesial dari berbagai
+                        belahan dunia. Mulai dari kopi single origin beraroma khas hingga pilihan espresso, semua
+                        tersedia dengan kualitas terbaik yang etis dan ramah lingkungan. Bagi pecinta kopi sejati, kami
+                        juga menyediakan berbagai peralatan seduh unik untuk melengkapi pengalaman. Dengan barista
+                        terlatih dan suasana cozy, Kanal Social Space siap menjadi destinasi hangout favoritmu, baik
+                        untuk bersantai di rumah atau menghabiskan waktu bersama teman-teman. Semua dapat diakses dengan
+                        mudah hanya dengan satu klik!</p>
                     <div class="row g-4 text-dark mb-5">
                         <div class="col-sm-6">
-                            <i class="fas fa-share text-primary me-2"></i>Fresh and Fast food Delivery
+                            <i class="fas fa-share text-primary me-2"></i>Pesan Sekarang, Nikmati Segera!
                         </div>
                         <div class="col-sm-6">
-                            <i class="fas fa-share text-primary me-2"></i>24/7 Customer Support
+                            <i class="fas fa-share text-primary me-2"></i>Kami Selalu Ada Untuk Anda!
                         </div>
                         <div class="col-sm-6">
-                            <i class="fas fa-share text-primary me-2"></i>Easy Customization Options
+                            <i class="fas fa-share text-primary me-2"></i>Sesuaikan Pesananmu, Nikmati Kebebasan!
                         </div>
                         <div class="col-sm-6">
-                            <i class="fas fa-share text-primary me-2"></i>Delicious Deals for Delicious Meals
+                            <i class="fas fa-share text-primary me-2"></i>Nikmati Rasa Istimewa, Harga Lebih Hemat!
                         </div>
                     </div>
                     <a href="" class="btn btn-primary py-3 px-5 rounded-pill">About Us<i
@@ -42,12 +43,23 @@
         <div class="container">
             <div class="row g-4 align-items-center">
                 <div class="col-lg-7">
+                    <div class="wow bounceInUp" data-wow-delay="0.3s">
+                        <small
+                            class="d-inline-block fw-bold text-dark text-uppercase bg-light border border-primary rounded-pill px-4 py-1 mb-3">Recommended</small>
+                    </div>
                     <div class="row g-4">
                         <div class="col-sm-4 wow bounceInUp" data-wow-delay="0.3s">
                             <div class="faqt-item bg-primary rounded p-4 text-center">
-                                <i class="fas fa-users fa-4x mb-4 text-white"></i>
-                                <h1 class="display-4 fw-bold" data-toggle="counter-up">689</h1>
-                                <p class="text-dark text-uppercase fw-bold mb-0">Happy Customers</p>
+                                <img src="{{ asset('frontend/assets') }}/img/kopi1.jpg" alt="Arabica Coffee"
+                                    class="img-fluid">
+                                <div style="color: rgba(141,111,65,1)">
+                                    <i class="bi bi-cart text-dark text-right" style="color: rgba(141,111,65,1);"></i>
+                                </div>
+                                <div class="text-white fw-bold"
+                                    style="font-size: 0.75rem; background-color: rgba(141,111,65,1); padding: 10px; border-radius: 5px;">
+                                    Arabica | Dark Roast
+                                </div>
+                                {{-- <button class="btn btn-light mt-3"><i class="bi bi-cart"></i></button> --}}
                             </div>
                         </div>
                         <div class="col-sm-4 wow bounceInUp" data-wow-delay="0.5s">

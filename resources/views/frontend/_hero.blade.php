@@ -9,10 +9,11 @@
                     <h1 class="display-2 mb-0 animated bounceInDown"><span class="text-primary">Kanal Soc</span>ial
                         Space</h1>
                     <h6 class="text1 mb-4 animated bounceInDown">Coffee - Mocktail & Food</h6>
-                    <h5 class="mb-4 animated bounceInDown">Ini adalah ruang untuk berbagi cerita, inspirasi, dan
-                        momen santai bersama teman-teman. Dari aroma
-                        kopi yang menggugah hingga lingkungan yang cozy, kami siap menjadi destinasi hangout favoritmu!
-                    </h5>
+                    <h6 class="mb-4 animated bounceInDown">Ini adalah ruang untuk berbagi cerita, inspirasi, dan
+                        momen santai bersama <br> teman-teman. Dari aroma
+                        kopi yang menggugah hingga lingkungan yang cozy, <br> kami siap menjadi destinasi hangout
+                        favoritmu!
+                    </h6>
                     <a href=""
                         class="btn btn-primary border-0 rounded-pill py-3 px-4 px-md-5 me-4 animated bounceInLeft">Pesan
                         Sekarang</a>
