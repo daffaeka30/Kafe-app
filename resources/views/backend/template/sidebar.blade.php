@@ -12,7 +12,7 @@
     <div class="collapse navbar-collapse  w-auto  max-height-vh-100" id="sidenav-collapse-main">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link text-white active bg-gradient-primary" href="./pages/dashboard.html">
+          <a class="nav-link text-white {{ request()->routeIs('panel.dashboard.index') ? 'active bg-gradient-primary' : '' }}" href="{{ route('panel.dashboard.index') }}">
             <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
               <i class="material-icons opacity-10">dashboard</i>
             </div>
@@ -36,6 +36,14 @@
               <i class="material-icons opacity-10">person</i>
             </div>
             <span class="nav-link-text ms-1">Chef</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white {{ request()->routeIs('panel.raw-material.index') ? 'active bg-gradient-primary' : '' }}" href="{{ route('panel.raw-material.index') }}">
+            <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+              <i class="material-icons opacity-10">inventory_2</i>
+            </div>
+            <span class="nav-link-text ms-1">Raw Material</span>
           </a>
         </li>
         <li class="nav-item">
@@ -93,22 +101,6 @@
               <i class="material-icons opacity-10">settings</i>
             </div>
             <span class="nav-link-text ms-1">Setting</span>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-white " href="./pages/sign-in.html">
-            <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
-              <i class="material-icons opacity-10">login</i>
-            </div>
-            <span class="nav-link-text ms-1">Sign In</span>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-white " href="./pages/sign-up.html">
-            <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
-              <i class="material-icons opacity-10">assignment</i>
-            </div>
-            <span class="nav-link-text ms-1">Sign Up</span>
           </a>
         </li>
       </ul>
