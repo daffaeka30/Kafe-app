@@ -30,7 +30,7 @@
                             <i class="fas fa-share text-primary me-2"></i>Nikmati Rasa Istimewa, Harga Lebih Hemat!
                         </div>
                     </div>
-                    <a href="" class="btn btn-primary py-3 px-5 rounded-pill">About Us<i
+                    <a href="#" class="btn btn-primary py-3 px-5 rounded-pill">Tentang Kami<i
                             class="fas fa-arrow-right ps-2"></i></a>
                 </div>
             </div>
