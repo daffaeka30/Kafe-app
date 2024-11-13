@@ -5,7 +5,6 @@
 @section('content')
     <!-- Hero Start -->
     @include('frontend._hero')
-    </section>
     <!-- Hero End -->
 
     <!-- About Start -->

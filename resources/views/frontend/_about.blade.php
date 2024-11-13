@@ -7,8 +7,7 @@
                 </div>
                 <div class="col-sm-12 col-md-6 col-lg-7 wow bounceInUp" data-wow-delay="0.3s">
                     <small
-                        class="d-inline-block fw-bold text-dark text-uppercase bg-light border border-primary rounded-pill px-4 py-1 mb-3">About
-                        Us</small>
+                        class="d-inline-block fw-bold text-dark text-uppercase bg-light border border-primary rounded-pill px-4 py-1 mb-4">Tentang Kami</small>
                     <p class="mb-4">Kanal Social Space adalah tempat yang pas untuk berbagi cerita, inspirasi, dan
                         momen santai bersama teman-teman. Kami menawarkan pilihan kopi dan teh spesial dari berbagai
                         belahan dunia. Mulai dari kopi single origin beraroma khas hingga pilihan espresso, semua
@@ -31,7 +30,7 @@
                             <i class="fas fa-share text-primary me-2"></i>Nikmati Rasa Istimewa, Harga Lebih Hemat!
                         </div>
                     </div>
-                    <a href="" class="btn btn-primary py-3 px-5 rounded-pill">About Us<i
+                    <a href="#" class="btn btn-primary py-3 px-5 rounded-pill">Tentang Kami<i
                             class="fas fa-arrow-right ps-2"></i></a>
                 </div>
             </div>

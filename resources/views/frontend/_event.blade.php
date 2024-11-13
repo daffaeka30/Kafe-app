@@ -3,9 +3,8 @@
         <div class="container">
             <div class="text-center wow bounceInUp">
                 <small
-                    class="d-inline-block fw-bold text-dark text-uppercase bg-light border border-primary rounded-pill px-4 py-1 mb-3">Latest
-                    Events</small>
-                <h1 class="display-5 mb-5">Our Social & Professional Events Gallery</h1>
+                    class="d-inline-block fw-bold text-dark text-uppercase bg-light border border-primary rounded-pill px-4 py-1 mb-3">Acara Terbaru</small>
+                <h1 class="display-5 mb-5">Galeri Acara Sosial & Profesional Kami</h1>
             </div>
             <div class="tab-class text-center">
                 <ul class="nav nav-pills d-inline-flex justify-content-center mb-5 wow bounceInUp">

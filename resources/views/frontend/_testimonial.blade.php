@@ -4,7 +4,7 @@
             <div class="text-center wow bounceInUp">
                 <small
                     class="d-inline-block fw-bold text-dark text-uppercase bg-light border border-primary rounded-pill px-4 py-1 mb-3">Testimonial</small>
-                <h1 class="display-5 mb-5">What Our Customers says!</h1>
+                <h1 class="display-5 mb-5">Apa Kata Pelanggan Kami!</h1>
             </div>
             <div class="owl-carousel owl-theme testimonial-carousel testimonial-carousel-1 mb-4 wow bounceInUp">
                 <div class="testimonial-item rounded bg-light">

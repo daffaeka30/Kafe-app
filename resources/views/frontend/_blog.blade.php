@@ -3,9 +3,8 @@
         <div class="container">
             <div class="text-center wow bounceInUp">
                 <small
-                    class="d-inline-block fw-bold text-dark text-uppercase bg-light border border-primary rounded-pill px-4 py-1 mb-3">Our
-                    Blog</small>
-                <h1 class="display-5 mb-5">Be First Who Read News</h1>
+                    class="d-inline-block fw-bold text-dark text-uppercase bg-light border border-primary rounded-pill px-4 py-1 mb-3">Blog Kami</small>
+                <h1 class="display-5 mb-5">Jadilah Orang Pertama yang Membaca Berita</h1>
             </div>
             <div class="row gx-4 justify-content-center">
                 <div class="col-sm-12 col-md-6 col-lg-4 wow bounceInUp">
