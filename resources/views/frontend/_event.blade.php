@@ -45,7 +45,7 @@
                         <div class="row g-4">
                             <div class="col-lg-12">
                                 <div class="row g-4">
-                                    <div class="col-md-6 col-lg-3 wow bounceInUp" data-wow-delay="0.1s">
+                                    <div class="col-sm-12 col-md-6 col-lg-3 wow bounceInUp" data-wow-delay="0.1s">
                                         <div class="event-img position-relative">
                                             <img class="img-fluid rounded w-100"
                                                 src="{{ asset('frontend/assets') }}/img/event-1.jpg" alt="">
@@ -57,7 +57,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-6 col-lg-3 wow bounceInUp" data-wow-delay="0.3s">
+                                    <div class="col-sm-12 col-md-6 col-lg-3 wow bounceInUp" data-wow-delay="0.3s">
                                         <div class="event-img position-relative">
                                             <img class="img-fluid rounded w-100"
                                                 src="{{ asset('frontend/assets') }}/img/event-2.jpg" alt="">
@@ -69,7 +69,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-6 col-lg-3 wow bounceInUp" data-wow-delay="0.5s">
+                                    <div class="col-sm-12 col-md-6 col-lg-3 wow bounceInUp" data-wow-delay="0.5s">
                                         <div class="event-img position-relative">
                                             <img class="img-fluid rounded w-100"
                                                 src="{{ asset('frontend/assets') }}/img/event-3.jpg" alt="">
@@ -81,7 +81,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-6 col-lg-3 wow bounceInUp" data-wow-delay="0.7s">
+                                    <div class="col-sm-12 col-md-6 col-lg-3 wow bounceInUp" data-wow-delay="0.7s">
                                         <div class="event-img position-relative">
                                             <img class="img-fluid rounded w-100"
                                                 src="{{ asset('frontend/assets') }}/img/event-4.jpg" alt="">
@@ -93,7 +93,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-6 col-lg-3 wow bounceInUp" data-wow-delay="0.1s">
+                                    <div class="col-sm-12 col-md-6 col-lg-3 wow bounceInUp" data-wow-delay="0.1s">
                                         <div class="event-img position-relative">
                                             <img class="img-fluid rounded w-100"
                                                 src="{{ asset('frontend/assets') }}/img/event-5.jpg" alt="">
@@ -105,7 +105,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-6 col-lg-3 wow bounceInUp" data-wow-delay="0.3s">
+                                    <div class="col-sm-12 col-md-6 col-lg-3 wow bounceInUp" data-wow-delay="0.3s">
                                         <div class="event-img position-relative">
                                             <img class="img-fluid rounded w-100"
                                                 src="{{ asset('frontend/assets') }}/img/event-6.jpg" alt="">
@@ -117,7 +117,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-6 col-lg-3 wow bounceInUp" data-wow-delay="0.5s">
+                                    <div class="col-sm-12 col-md-6 col-lg-3 wow bounceInUp" data-wow-delay="0.5s">
                                         <div class="event-img position-relative">
                                             <img class="img-fluid rounded w-100"
                                                 src="{{ asset('frontend/assets') }}/img/event-7.jpg" alt="">
@@ -129,7 +129,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-6 col-lg-3 wow bounceInUp" data-wow-delay="0.7s">
+                                    <div class="col-sm-12 col-md-6 col-lg-3 wow bounceInUp" data-wow-delay="0.7s">
                                         <div class="event-img position-relative">
                                             <img class="img-fluid rounded w-100"
                                                 src="{{ asset('frontend/assets') }}/img/event-8.jpg" alt="">
@@ -149,7 +149,7 @@
                         <div class="row g-4">
                             <div class="col-lg-12">
                                 <div class="row g-4">
-                                    <div class="col-md-6 col-lg-3">
+                                    <div class="col-sm-12 col-md-6 col-lg-3">
                                         <div class="event-img position-relative">
                                             <img class="img-fluid rounded w-100"
                                                 src="{{ asset('frontend/assets') }}/img/event-1.jpg" alt="">
@@ -161,7 +161,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-6 col-lg-3">
+                                    <div class="col-sm-12 col-md-6 col-lg-3">
                                         <div class="event-img position-relative">
                                             <img class="img-fluid rounded w-100"
                                                 src="{{ asset('frontend/assets') }}/img/event-2.jpg" alt="">
@@ -181,7 +181,7 @@
                         <div class="row g-4">
                             <div class="col-lg-12">
                                 <div class="row g-4">
-                                    <div class="col-md-6 col-lg-3">
+                                    <div class="col-sm-12 col-md-6 col-lg-3">
                                         <div class="event-img position-relative">
                                             <img class="img-fluid rounded w-100"
                                                 src="{{ asset('frontend/assets') }}/img/event-3.jpg" alt="">
@@ -193,7 +193,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-6 col-lg-3">
+                                    <div class="col-sm-12 col-md-6 col-lg-3">
                                         <div class="event-img position-relative">
                                             <img class="img-fluid rounded w-100"
                                                 src="{{ asset('frontend/assets') }}/img/event-4.jpg" alt="">
@@ -213,7 +213,7 @@
                         <div class="row g-4">
                             <div class="col-lg-12">
                                 <div class="row g-4">
-                                    <div class="col-md-6 col-lg-3">
+                                    <div class="col-sm-12 col-md-6 col-lg-3">
                                         <div class="event-img position-relative">
                                             <img class="img-fluid rounded w-100"
                                                 src="{{ asset('frontend/assets') }}/img/event-5.jpg" alt="">
@@ -225,7 +225,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-6 col-lg-3">
+                                    <div class="col-sm-12 col-md-6 col-lg-3">
                                         <div class="event-img position-relative">
                                             <img class="img-fluid rounded w-100"
                                                 src="{{ asset('frontend/assets') }}/img/event-6.jpg" alt="">
@@ -245,7 +245,7 @@
                         <div class="row g-4">
                             <div class="col-lg-12">
                                 <div class="row g-4">
-                                    <div class="col-md-6 col-lg-3">
+                                    <div class="col-sm-12 col-md-6 col-lg-3">
                                         <div class="event-img position-relative">
                                             <img class="img-fluid rounded w-100"
                                                 src="{{ asset('frontend/assets') }}/img/event-7.jpg" alt="">
@@ -257,7 +257,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-6 col-lg-3">
+                                    <div class="col-sm-12 col-md-6 col-lg-3">
                                         <div class="event-img position-relative">
                                             <img class="img-fluid rounded w-100"
                                                 src="{{ asset('frontend/assets') }}/img/event-8.jpg" alt="">

@@ -3,7 +3,7 @@
     <div class="container-fluid footer py-6 my-6 mb-0 bg-light wow bounceInUp">
         <div class="container">
             <div class="row">
-                <div class="col-lg-3 col-md-6">
+                <div class="col-sm-12 col-md-6 col-lg-3">
                     <div class="footer-item">
                         <h1 class="text-primary">Kanal Soc<span class="text-dark">ial Space</span></h1>
                         <p class="lh-lg mb-4">Kanal Social Space adalah ruang <br> hangout yang cozy dengan aroma <br>
@@ -23,7 +23,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6">
+                <div class="col-sm-12 col-md-6 col-lg-3">
                     <div class="footer-item">
                         <h4 class="mb-4">Special Facilities</h4>
                         <div class="d-flex flex-column align-items-start">
@@ -34,12 +34,11 @@
                             <a class="text-body mb-3" href=""><i class="fa fa-check text-primary me-2"></i>Panner
                                 Burger</a>
                             <a class="text-body mb-3" href=""><i
-                                    class="fa fa-check text-primary me-2"></i>Special
-                                Sweets</a>
+                                    class="fa fa-check text-primary me-2"></i>Special Sweets</a>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6">
+                <div class="col-sm-12 col-md-6 col-lg-3">
                     <div class="footer-item">
                         <h4 class="mb-4">Contact Us</h4>
                         <div class="d-flex flex-column align-items-start">
@@ -51,7 +50,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6">
+                <div class="col-sm-12 col-md-6 col-lg-3">
                     <div class="footer-item">
                         <h4 class="mb-4">Social Gallery</h4>
                         <div class="row g-2">

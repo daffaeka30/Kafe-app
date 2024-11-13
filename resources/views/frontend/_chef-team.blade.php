@@ -8,9 +8,10 @@
                 <h1 class="display-5 mb-5">We have experienced chef Team</h1>
             </div>
             <div class="row g-4">
-                <div class="col-lg-3 col-md-6 wow bounceInUp">
+                <div class="col-sm-12 col-md-6 col-lg-3 wow bounceInUp">
                     <div class="team-item rounded">
-                        <img class="img-fluid rounded-top " src="{{ asset('frontend/assets') }}/img/team-1.jpg" alt="">
+                        <img class="img-fluid rounded-top" src="{{ asset('frontend/assets') }}/img/team-1.jpg"
+                            alt="">
                         <div class="team-content text-center py-3 bg-dark rounded-bottom">
                             <h4 class="text-primary">Henry</h4>
                             <p class="text-white mb-0">Decoration Chef</p>
@@ -27,9 +28,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 wow bounceInUp" data-wow-delay="0.3s">
+                <div class="col-sm-12 col-md-6 col-lg-3 wow bounceInUp" data-wow-delay="0.3s">
                     <div class="team-item rounded">
-                        <img class="img-fluid rounded-top " src="{{ asset('frontend/assets') }}/img/team-2.jpg" alt="">
+                        <img class="img-fluid rounded-top" src="{{ asset('frontend/assets') }}/img/team-2.jpg"
+                            alt="">
                         <div class="team-content text-center py-3 bg-dark rounded-bottom">
                             <h4 class="text-primary">Jemes Born</h4>
                             <p class="text-white mb-0">Executive Chef</p>
@@ -46,9 +48,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 wow bounceInUp" data-wow-delay="0.5s">
+                <div class="col-sm-12 col-md-6 col-lg-3 wow bounceInUp" data-wow-delay="0.5s">
                     <div class="team-item rounded">
-                        <img class="img-fluid rounded-top " src="{{ asset('frontend/assets') }}/img/team-3.jpg" alt="">
+                        <img class="img-fluid rounded-top" src="{{ asset('frontend/assets') }}/img/team-3.jpg"
+                            alt="">
                         <div class="team-content text-center py-3 bg-dark rounded-bottom">
                             <h4 class="text-primary">Martin Hill</h4>
                             <p class="text-white mb-0">Kitchen Porter</p>
@@ -65,9 +68,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 wow bounceInUp" data-wow-delay="0.7s">
+                <div class="col-sm-12 col-md-6 col-lg-3 wow bounceInUp" data-wow-delay="0.7s">
                     <div class="team-item rounded">
-                        <img class="img-fluid rounded-top " src="{{ asset('frontend/assets') }}/img/team-4.jpg" alt="">
+                        <img class="img-fluid rounded-top" src="{{ asset('frontend/assets') }}/img/team-4.jpg"
+                            alt="">
                         <div class="team-content text-center py-3 bg-dark rounded-bottom">
                             <h4 class="text-primary">Adam Smith</h4>
                             <p class="text-white mb-0">Head Chef</p>

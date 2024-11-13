@@ -8,10 +8,11 @@
                 <h1 class="display-5 mb-5">Be First Who Read News</h1>
             </div>
             <div class="row gx-4 justify-content-center">
-                <div class="col-md-6 col-lg-4 wow bounceInUp">
+                <div class="col-sm-12 col-md-6 col-lg-4 wow bounceInUp">
                     <div class="blog-item">
                         <div class="overflow-hidden rounded">
-                            <img src="{{ asset('frontend/assets') }}/img/blog-1.jpg" class="img-fluid w-100" alt="">
+                            <img src="{{ asset('frontend/assets') }}/img/blog-1.jpg" class="img-fluid w-100"
+                                alt="">
                         </div>
                         <div class="blog-content mx-4 d-flex rounded bg-light">
                             <div class="text-dark bg-primary rounded-start">
@@ -25,10 +26,11 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-4 wow bounceInUp" data-wow-delay="0.3s">
+                <div class="col-sm-12 col-md-6 col-lg-4 wow bounceInUp" data-wow-delay="0.3s">
                     <div class="blog-item">
                         <div class="overflow-hidden rounded">
-                            <img src="{{ asset('frontend/assets') }}/img/blog-2.jpg" class="img-fluid w-100" alt="">
+                            <img src="{{ asset('frontend/assets') }}/img/blog-2.jpg" class="img-fluid w-100"
+                                alt="">
                         </div>
                         <div class="blog-content mx-4 d-flex rounded bg-light">
                             <div class="text-dark bg-primary rounded-start">
@@ -42,10 +44,11 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-4 wow bounceInUp" data-wow-delay="0.5s">
+                <div class="col-sm-12 col-md-6 col-lg-4 wow bounceInUp" data-wow-delay="0.5s">
                     <div class="blog-item">
                         <div class="overflow-hidden rounded">
-                            <img src="{{ asset('frontend/assets') }}/img/blog-3.jpg" class="img-fluid w-100" alt="">
+                            <img src="{{ asset('frontend/assets') }}/img/blog-3.jpg" class="img-fluid w-100"
+                                alt="">
                         </div>
                         <div class="blog-content mx-4 d-flex rounded bg-light">
                             <div class="text-dark bg-primary rounded-start">
