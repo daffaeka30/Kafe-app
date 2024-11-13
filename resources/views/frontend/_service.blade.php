@@ -3,9 +3,8 @@
         <div class="container">
             <div class="text-center wow bounceInUp">
                 <small
-                    class="d-inline-block fw-bold text-dark text-uppercase bg-light border border-primary rounded-pill px-4 py-1 mb-3">Our
-                    Services</small>
-                <h1 class="display-5 mb-5">What We Offer</h1>
+                    class="d-inline-block fw-bold text-dark text-uppercase bg-light border border-primary rounded-pill px-4 py-1 mb-3">Layanan Kami</small>
+                <h1 class="display-5 mb-5">Apa yang Kami Tawarkan</h1>
             </div>
             <div class="row g-4">
                 <div class="col-lg-4 col-md-6 col-sm-12 wow bounceInUp">
