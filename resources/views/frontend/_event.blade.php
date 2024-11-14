@@ -3,7 +3,8 @@
         <div class="container">
             <div class="text-center wow bounceInUp">
                 <small
-                    class="d-inline-block fw-bold text-dark text-uppercase bg-light border border-primary rounded-pill px-4 py-1 mb-3">Acara Terbaru</small>
+                    class="d-inline-block fw-bold text-dark text-uppercase bg-light border border-primary rounded-pill px-4 py-1 mb-3">Acara
+                    Terbaru</small>
                 <h1 class="display-5 mb-5">Galeri Acara Sosial & Profesional Kami</h1>
             </div>
             <div class="tab-class text-center">
@@ -11,7 +12,7 @@
                     <li class="nav-item p-2">
                         <a class="d-flex mx-2 py-2 border border-primary bg-light rounded-pill active"
                             data-bs-toggle="pill" href="#tab-1">
-                            <span class="text-dark" style="width: 150px;">All Events</span>
+                            <span class="text-dark" style="width: 150px;">Semua Acara</span>
                         </a>
                     </li>
                     <li class="nav-item p-2">

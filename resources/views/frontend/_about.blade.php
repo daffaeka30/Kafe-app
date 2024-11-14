@@ -7,7 +7,8 @@
                 </div>
                 <div class="col-sm-12 col-md-6 col-lg-7 wow bounceInUp" data-wow-delay="0.3s">
                     <small
-                        class="d-inline-block fw-bold text-dark text-uppercase bg-light border border-primary rounded-pill px-4 py-1 mb-4">Tentang Kami</small>
+                        class="d-inline-block fw-bold text-dark text-uppercase bg-light border border-primary rounded-pill px-4 py-1 mb-4">Tentang
+                        Kami</small>
                     <p class="mb-4">Kanal Social Space adalah tempat yang pas untuk berbagi cerita, inspirasi, dan
                         momen santai bersama teman-teman. Kami menawarkan pilihan kopi dan teh spesial dari berbagai
                         belahan dunia. Mulai dari kopi single origin beraroma khas hingga pilihan espresso, semua
@@ -42,7 +43,7 @@
             <div class="row g-4 align-items-center">
                 <div class="col-sm-12 col-lg-7 wow bounceInUp" data-wow-delay="0.3s">
                     <small
-                        class="d-inline-block fw-bold text-dark text-uppercase bg-light border border-primary rounded-pill px-4 py-1 mb-3">Recommended</small>
+                        class="d-inline-block fw-bold text-dark text-uppercase bg-light border border-primary rounded-pill px-4 py-1 mb-3">Rekomendasi</small>
                     <div class="row g-4">
                         <div class="col-lg-4 col-md-6 col-sm-12 wow bounceInUp" data-wow-delay="0.3s">
                             <div class="faqt-item bg-primary rounded p-4 text-center">
