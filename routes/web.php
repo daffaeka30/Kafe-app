@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Backend\DashboardController;
+use App\Http\Controllers\Backend\ProductController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Frontend\BlogController;
@@ -24,10 +25,14 @@ Route::get('/blog', [BlogController::class, 'index'])->name('frontend.blog');
 
 Route::prefix('panel')->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])
-    ->name('panel.dashboard.index');
+        ->name('panel.dashboard.index');
 
     Route::resource('raw-material', RawMaterialController::class)
-    ->names('panel.raw-material');
+        ->names('panel.raw-material');
+
+
+    Route::resource('product', ProductController::class)
+        ->names('panel.product');
 });
 
 Auth::routes();
