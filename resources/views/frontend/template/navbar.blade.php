@@ -22,8 +22,8 @@
                             class="nav-item nav-link {{ request()->routeIs('frontend.event') ? 'active' : '' }}">Acara</a>
                         <a href="{{ route('frontend.menu') }}"
                             class="nav-item nav-link {{ request()->routeIs('frontend.menu') ? 'active' : '' }}">Menu</a>
-                        <a href="{{ route('frontend.blog') }}"
-                            class="nav-item nav-link {{ request()->routeIs('frontend.blog') ? 'active' : '' }}">Blog</a>
+                        <a href="{{ route('frontend.map') }}"
+                            class="nav-item nav-link {{ request()->routeIs('frontend.map') ? 'active' : '' }}">Lokasi</a>
                         <a href="{{ route('frontend.contact') }}"
                             class="nav-item nav-link {{ request()->routeIs('frontend.contact') ? 'active' : '' }}">Hubungi</a>
                     </div>

@@ -51,7 +51,7 @@
             },
             {
                 name: 'Blog',
-                route: '/blog'
+                route: '/map'
             },
             {
                 name: 'Home',
