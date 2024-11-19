@@ -35,7 +35,7 @@
     @include('frontend._testimonial')
     <!-- Testimonial End -->
 
-    <!-- Blog Start -->
-    @include('frontend._blog')
-    <!-- Blog End -->
+    <!-- Map Start -->
+    @include('frontend._map')
+    <!-- Map End -->
 @endsection

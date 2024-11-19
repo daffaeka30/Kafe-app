@@ -1,12 +1,12 @@
 @extends('frontend.template.main')
 
-@section('title', 'Blog')
+@section('title', 'Lokasi')
 
 @section('content')
 {{-- Breadcrumb --}}
 <div class="container-fluid py-4 my-4 mt-0">
     <div class="container animated bounceInDown">
-        <h1 class="display-6 mb-4">Blog</h1>
+        <h1 class="display-6 mb-4">Lokasi</h1>
         <ol class="breadcrumb mb-0 animated bounceInDown">
             <li class="breadcrumb-item">
                 <div>
@@ -18,12 +18,12 @@
                 </div>
             </li>
             <li class="breadcrumb-item"><a href="{{ url('/') }}">Beranda</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Blog</li>
+            <li class="breadcrumb-item active" aria-current="page">Lokasi</li>
         </ol>
 
         <div role="separator" class="dropdown-divider pt-1 mt-4 border-secondary"></div>
     </div>
 </div>
 
-@include('frontend._blog')
+@include('frontend._map')
 @endsection

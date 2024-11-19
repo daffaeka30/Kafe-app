@@ -1,16 +1,16 @@
 <?php
 
-use App\Http\Controllers\Backend\DashboardController;
-use App\Http\Controllers\Backend\ProductController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Frontend\BlogController;
+use App\Http\Controllers\Frontend\MapController;
 use App\Http\Controllers\Frontend\MenuController;
 use App\Http\Controllers\Frontend\AboutController;
 use App\Http\Controllers\Frontend\EventController;
 use App\Http\Controllers\Frontend\ContactController;
 use App\Http\Controllers\Frontend\ServiceController;
+use App\Http\Controllers\Backend\DashboardController;
 use App\Http\Controllers\Backend\RawMaterialController;
+use App\Http\Controllers\Backend\ProductController;
 
 Route::get('/', function () {
     return view('frontend.home');
@@ -21,7 +21,7 @@ Route::get('/layanan', [ServiceController::class, 'index'])->name('frontend.serv
 Route::get('/acara', [EventController::class, 'index'])->name('frontend.event');
 Route::get('/menu', [MenuController::class, 'index'])->name('frontend.menu');
 Route::get('/hubungi', [ContactController::class, 'index'])->name('frontend.contact');
-Route::get('/blog', [BlogController::class, 'index'])->name('frontend.blog');
+Route::get('/map', [MapController::class, 'index'])->name('frontend.map');
 
 Route::prefix('panel')->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])
