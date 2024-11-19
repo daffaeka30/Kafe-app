@@ -1,6 +1,6 @@
 @extends('backend.template.main')
 
-@section('title', 'Add Raw Material')
+@section('title', 'Add Product')
 
 @section('content')
     <div class="container-fluid py-4">
@@ -10,7 +10,7 @@
                     <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
                         <div class="bg-gradient-primary shadow-primary border-radius-lg pt-4 pb-3">
                             <div class="d-flex justify-content-between">
-                                <h6 class="text-white text-capitalize ps-3">Add Bahan Baku</h6>
+                                <h6 class="text-white text-capitalize ps-3">Add Product</h6>
                             </div>
                         </div>
                     </div>
@@ -22,7 +22,7 @@
                     @endif
 
                     <div class="card-body px-0 pb-2">
-                        <form action="{{ route('panel.raw-material.store') }}" method="post" class="p-3"
+                        <form action="{{ route('panel.product.store') }}" method="post" class="p-3"
                             enctype="multipart/form-data">
                             @csrf
                             <div class="row">
@@ -44,16 +44,13 @@
 
                                 <div class="col-md-6">
                                     <div class="form-group mb-3">
-                                        <label for="category_id" class="form-label">Category</label>
-                                        <select name="category_id" id="category_id"
-                                            class="form-select border ps-2 pe-4 @error('category_id') is-invalid @enderror">
-                                            <option value="" disabled selected> == Choose Category ==</option>
-                                            @foreach ($categories as $category)
-                                                <option value="{{ $category->id }}">{{ $category->name }}</option>
-                                            @endforeach
-                                        </select>
+                                        <label for="price" class="form-label">Price</label>
+                                        <input type="number" step="0.01"
+                                            class="form-control border px-3 @error('price') is-invalid @enderror"
+                                            value="{{ old('price') }}" name="price" id="price"
+                                            placeholder="Enter price">
 
-                                        @error('category_id')
+                                        @error('price')
                                             <span class="invalid-feedback" role="alert">
                                                 <strong>{{ $message }}</strong>
                                             </span>
@@ -81,13 +78,11 @@
 
                                 <div class="col-md-6">
                                     <div class="form-group mb-3">
-                                        <label for="unit" class="form-label">Unit</label>
-                                        <input type="text"
-                                            class="form-control border px-3 @error('unit') is-invalid @enderror"
-                                            value="{{ old('unit') }}" name="unit" id="unit"
-                                            placeholder="Enter unit">
+                                        <label for="description" class="form-label">Description</label>
+                                        <textarea class="form-control border px-3 @error('description') is-invalid @enderror" name="description"
+                                            id="description" placeholder="Enter description">{{ old('description') }}</textarea>
 
-                                        @error('unit')
+                                        @error('description')
                                             <span class="invalid-feedback" role="alert">
                                                 <strong>{{ $message }}</strong>
                                             </span>
@@ -96,8 +91,27 @@
                                 </div>
                             </div>
 
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group mb-3">
+                                        <label for="image" class="form-label">Image</label>
+                                        <input type="file"
+                                            class="form-control border px-3 @error('image') is-invalid @enderror"
+                                            name="image" id="image" accept="image/*">
+
+                                        @error('image')
+                                            <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $message }}</strong>
+                                            </span>
+                                        @enderror
+                                    </div>
+                                </div>
+                            </div>
+
+
+
                             <div class="float-end">
-                                <a href="{{ route('panel.raw-material.index') }}" class="btn btn-secondary me-2">Back</a>
+                                <a href="{{ route('panel.product.index') }}" class="btn btn-secondary me-2">Back</a>
                                 <button type="submit" class="btn btn-primary">Submit</button>
                             </div>
                         </form>

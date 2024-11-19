@@ -10,6 +10,7 @@ use App\Http\Controllers\Frontend\ContactController;
 use App\Http\Controllers\Frontend\ServiceController;
 use App\Http\Controllers\Backend\DashboardController;
 use App\Http\Controllers\Backend\RawMaterialController;
+use App\Http\Controllers\Backend\ProductController;
 
 Route::get('/', function () {
     return view('frontend.home');
@@ -24,10 +25,14 @@ Route::get('/map', [MapController::class, 'index'])->name('frontend.map');
 
 Route::prefix('panel')->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])
-    ->name('panel.dashboard.index');
+        ->name('panel.dashboard.index');
 
     Route::resource('raw-material', RawMaterialController::class)
-    ->names('panel.raw-material');
+        ->names('panel.raw-material');
+
+
+    Route::resource('product', ProductController::class)
+        ->names('panel.product');
 });
 
 Auth::routes();
