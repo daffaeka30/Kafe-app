@@ -27,6 +27,4 @@
 
 @include('frontend._event')
 
-@include('frontend._book')
-
 @endsection

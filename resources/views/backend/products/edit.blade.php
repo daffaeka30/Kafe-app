@@ -93,6 +93,24 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group mb-3">
+                                        <label for="status" class="form-label">Status</label>
+                                        <select class="form-control border px-3 @error('status') is-invalid @enderror"
+                                            name="status" id="status">
+                                            <option value="" hidden>---- Choose Status ----</option>
+                                            <option value="available" {{ old('status', $product->status) == 'available' ? 'selected' : '' }}>Tersedia</option>
+                                            <option value="unavailable" {{ old('status', $product->status) == 'unavailable' ? 'selected' : '' }}>Tidak Tersedia</option>
+                                        </select>
+
+                                        @error('status')
+                                            <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $message }}</strong>
+                                            </span>
+                                        @enderror
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="form-group mb-3">
                                         <label for="image" class="form-label">Image</label>
                                         <input type="file"
                                             class="form-control border px-3 @error('image') is-invalid @enderror"
@@ -103,12 +121,10 @@
                                                 <strong>{{ $message }}</strong>
                                             </span>
                                         @enderror
-                                    </div>
-                                </div>
 
-                                <div class="col-md-6">
-                                    <img src="{{ asset('storage/' . $product->image) }}" alt="{{ $product->name }}"
-                                        width="500">
+                                        <img src="{{ asset('storage/' . $product->image) }}" alt="{{ $product->name }}"
+                                        width="200" class="mt-3">
+                                    </div>
                                 </div>
                             </div>
 

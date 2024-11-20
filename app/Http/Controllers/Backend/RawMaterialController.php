@@ -2,29 +2,26 @@
 
 namespace App\Http\Controllers\Backend;
 
-use App\Models\RawMaterial;
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Http\Services\CategoryService;
-use App\Http\Requests\RawMaterialRequest;
-use App\Http\Services\RawMaterialService;
+use App\Http\Requests\Backend\RawMaterialRequest;
+use App\Http\Services\Backend\CategoryService;
+use App\Http\Services\Backend\RawMaterialService;
+use App\Models\Backend\RawMaterial;
+use Illuminate\Contracts\View\View;
 
 class RawMaterialController extends Controller
 {
     public function __construct(
         private RawMaterialService $rawMaterialService,
         private CategoryService $categoryService
-        )
-    {
-        
-    }
+    ) {}
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
         return view('backend.raw-material.index', [
-            'rawMaterials' => $this->rawMaterialService->select(10)
+            'rawMaterials' => $this->rawMaterialService->select(10),
         ]);
     }
 
@@ -34,7 +31,7 @@ class RawMaterialController extends Controller
     public function create()
     {
         return view('backend.raw-material.create', [
-            'categories' => $this->categoryService->select()
+            'categories' => $this->categoryService->select(),
         ]);
     }
 
@@ -65,11 +62,11 @@ class RawMaterialController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $uuid)
+    public function edit(string $uuid): View
     {
         return view('backend.raw-material.edit', [
             'rawMaterial' => $this->rawMaterialService->selectFirstBy('uuid', $uuid),
-            'categories' => $this->categoryService->select()
+            'categories' => $this->categoryService->select(),
         ]);
     }
 
@@ -101,7 +98,7 @@ class RawMaterialController extends Controller
         $getRawMaterial->delete();
 
         return response()->json([
-            'message' => 'Data raw material berhasil dihapus'
+            'message' => 'Data raw material berhasil dihapus',
         ]);
     }
 }

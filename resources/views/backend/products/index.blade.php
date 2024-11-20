@@ -64,7 +64,7 @@
                                             </td>
                                             <td class="text-center">{{ $product->name }}</td>
                                             <td class="text-center">{{ $product->description }}</td>
-                                            <td class="text-center">{{ $product->price }}</td>
+                                            <td class="text-center">Rp {{ number_format($product->price, 0, ',', '.') }}</td>
                                             <td class="text-center">{{ $product->stock }}</td>
                                             <td class="text-center">
                                                 <img src="{{ asset('storage/' . $product->image) }}"

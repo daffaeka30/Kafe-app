@@ -1,7 +1,8 @@
 <?php
-namespace App\Http\Services;
 
-use App\Models\RawMaterial;
+namespace App\Http\Services\Backend;
+
+use App\Models\Backend\RawMaterial;
 
 class RawMaterialService
 {

@@ -9,6 +9,8 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Product extends Model
 {
+    protected $table = 'products';
+
     use HasFactory, SoftDeletes;
 
     protected $fillable = [
@@ -16,6 +18,7 @@ class Product extends Model
         'name',
         'description',
         'price',
+        'status',
         'stock',
         'image',
     ];

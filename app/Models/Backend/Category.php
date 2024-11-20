@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Models;
+namespace App\Models\Backend;
 
 use Illuminate\Support\Str;
 use Illuminate\Database\Eloquent\Model;
@@ -9,15 +9,17 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Category extends Model
 {
+    protected $table = 'categories';
+
     use HasFactory;
 
-    protected $fillable = 
-    [
+    protected $fillable = [
+        'uuid',
         'name',
         'slug',
     ];
 
-    public static function booted() 
+    public static function booted()
     {
         static::creating(function ($model) {
             $model->uuid = Str::uuid();

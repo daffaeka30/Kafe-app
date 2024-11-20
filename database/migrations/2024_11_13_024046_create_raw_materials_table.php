@@ -17,7 +17,7 @@ return new class extends Migration
             $table->foreignId('category_id')->constrained('categories')->onDelete('cascade');
             $table->string('name');
             $table->string('stock');
-            $table->string('unit');
+            $table->enum('unit', ['pcs', 'kg', 'liter', 'gram', 'ml'])->default('pcs');
             $table->timestamps();
         });
     }
