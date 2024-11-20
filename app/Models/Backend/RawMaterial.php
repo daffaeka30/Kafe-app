@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Models;
+namespace App\Models\Backend;
 
 use Illuminate\Support\Str;
 use Illuminate\Database\Eloquent\Model;
@@ -9,10 +9,11 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class RawMaterial extends Model
 {
+    protected $table = 'raw_materials';
+
     use HasFactory;
 
-    protected $fillable = 
-    [
+    protected $fillable = [
         'uuid',
         'category_id',
         'name',

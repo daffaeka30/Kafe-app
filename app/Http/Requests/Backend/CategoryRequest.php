@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Requests;
+namespace App\Http\Requests\Backend;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class RawMaterialRequest extends FormRequest
+class CategoryRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -21,11 +21,10 @@ class RawMaterialRequest extends FormRequest
      */
     public function rules(): array
     {
+        $routeIdCategory = $this->route('category');
+
         return [
-            'name' => 'required|min:3',
-            'category_id' => 'required|exists:categories,id',
-            'stock' => 'required|numeric',
-            'unit' => 'required',
+            'name' => 'required|string|min:3|unique:categories,name,' . $routeIdCategory . ',uuid',
         ];
     }
 }

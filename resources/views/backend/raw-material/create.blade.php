@@ -47,10 +47,10 @@
                                         <label for="category_id" class="form-label">Category</label>
                                         <select name="category_id" id="category_id"
                                             class="form-select border ps-2 pe-4 @error('category_id') is-invalid @enderror">
-                                            <option value="" disabled selected> == Choose Category ==</option>
-                                            @foreach ($categories as $category)
-                                                <option value="{{ $category->id }}">{{ $category->name }}</option>
-                                            @endforeach
+                                            <option value="" hidden>---- Choose Category ----</option>
+                                                @foreach ($categories as $category)
+                                                    <option value="{{ $category->id }}">{{ $category->name }}</option>
+                                                @endforeach
                                         </select>
 
                                         @error('category_id')
@@ -82,10 +82,14 @@
                                 <div class="col-md-6">
                                     <div class="form-group mb-3">
                                         <label for="unit" class="form-label">Unit</label>
-                                        <input type="text"
-                                            class="form-control border px-3 @error('unit') is-invalid @enderror"
-                                            value="{{ old('unit') }}" name="unit" id="unit"
-                                            placeholder="Enter unit">
+                                        <select name="unit" id="unit" class="form-select border ps-2 pe-4 @error('unit') is-invalid @enderror">
+                                            <option value="" hidden>---- Choose Unit ----</option>
+                                            <option value="pcs" {{ old('unit') == 'pcs' ? 'selected' : '' }}>Pcs</option>
+                                            <option value="gram" {{ old('unit') == 'gram' ? 'selected' : '' }}>Gram</option>
+                                            <option value="kg" {{ old('unit') == 'kg' ? 'selected' : '' }}>Kilogram</option>
+                                            <option value="liter" {{ old('unit') == 'liter' ? 'selected' : '' }}>Liter</option>
+                                            <option value="ml" {{ old('unit') == 'ml' ? 'selected' : '' }}>Milliliter</option>
+                                        </select>
 
                                         @error('unit')
                                             <span class="invalid-feedback" role="alert">

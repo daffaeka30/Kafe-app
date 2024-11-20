@@ -1,6 +1,6 @@
 @extends('backend.template.main')
 
-@section('title', 'Raw Material')
+@section('title', 'Categories')
 
 @section('content')
 
@@ -12,8 +12,8 @@
                 <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
                     <div class="bg-gradient-primary shadow-primary border-radius-lg pt-4 pb-3">
                         <div class="d-flex justify-content-between">
-                            <h6 class="text-white text-capitalize ps-3">Daftar Bahan Baku</h6>
-                            <a href="{{ route('panel.raw-material.create') }}" class="btn btn-sm btn-primary me-3"><i
+                            <h6 class="text-white text-capitalize ps-3">Daftar Kategori Bahan Baku</h6>
+                            <a href="{{ route('panel.category.create') }}" class="btn btn-sm btn-primary me-3"><i
                                     class="fas fa-plus me-1"></i> Add</a>
                         </div>
                     </div>
@@ -43,46 +43,30 @@
                                 <tr>
                                     <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7"
                                         style="width: 50px;">No</th>
-                                    <th
-                                        class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                                        Name</th>
-                                    <th
-                                        class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                                        Category</th>
-                                    <th
-                                        class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                                        Stock</th>
-                                    <th
-                                        class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                                        Unit</th>
-                                    <th
-                                        class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                                        Action</th>
+                                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                        Name
+                                    </th>
+                                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                        Slug
+                                    </th>
+                                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                        Action
+                                    </th>
                                 </tr>
                             </thead>
                             <tbody>
-                                @forelse ($rawMaterials as $material)
+                                @forelse ($categories as $category)
                                 <tr>
-                                    <td class="text-center">
-                                        {{ ($rawMaterials->currentPage() - 1) * $rawMaterials->perPage() + $loop->iteration }}
-                                    </td>
-                                    <td class="text-center">{{ $material->name }}</td>
-                                    <td class="text-center">{{ $material->category->name }}</td>
-                                    <td class="text-center">{{ $material->stock }}</td>
-                                    <td class="text-center">{{ $material->unit }}</td>
-                                    <td>
-                                        <div class="d-flex justify-content-center">
-                                            <a href="{{ route('panel.raw-material.edit', $material->uuid) }}"
-                                                class="btn btn-info">
-                                                <i class="fas fa-edit"></i>
-                                            </a>
-
-                                            <button class="btn btn-danger" onclick="deleteRawMaterial(this)"
-                                                data-uuid="{{ $material->uuid }}">
-                                                <i class="fas fa-trash-alt"></i>
-                                            </button>
-
-                                        </div>
+                                    <td class="align-middle text-center text-sm">{{ $loop->iteration }}</td>
+                                    <td class="align-middle text-center text-sm">{{ $category->name }}</td>
+                                    <td class="align-middle text-center text-sm">{{ $category->slug }}</td>
+                                    <td class="align-middle text-center">
+                                        <a href="{{ route('panel.category.edit', $category->uuid) }}"
+                                            class="btn btn-info"><i class="fas fa-edit"></i></a>
+                                        <button type="button" class="btn btn-danger"
+                                            data-uuid="{{ $category->uuid }}" onclick="deleteCategory(this)">
+                                            <i class="fas fa-trash"></i>
+                                        </button>
                                     </td>
                                 </tr>
                                 @empty
@@ -94,7 +78,7 @@
                         </table>
                         {{-- pagination --}}
                         <div class="mt-3 justify-content-center" style="margin-left: 20px; margin-right: 20px;">
-                            {{ $rawMaterials->links('pagination::bootstrap-5') }}
+                            {{ $categories->links('pagination::bootstrap-5') }}
                         </div>
                     </div>
                 </div>
@@ -108,7 +92,7 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <script>
-        const deleteRawMaterial = (e) => {
+        const deleteCategory = (e) => {
             let uuid = e.getAttribute('data-uuid')
 
             Swal.fire({
@@ -123,7 +107,7 @@
                 if (result.value) {
                     $.ajax({
                         type: "DELETE",
-                        url: `/panel/raw-material/${uuid}`,
+                        url: `/panel/category/${uuid}`,
                         headers: {
                             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
                         },

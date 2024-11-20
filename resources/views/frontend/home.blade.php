@@ -23,12 +23,8 @@
     @include('frontend._menu')
     <!-- Menu End -->
 
-    <!-- Book Us Start -->
-    @include('frontend._book')
-    <!-- Book Us End -->
-
     <!-- Team Start -->
-    {{-- @include('frontend._chef-team') --}}
+    @include('frontend._chef-team')
     <!-- Team End -->
 
     <!-- Testimonial Start -->

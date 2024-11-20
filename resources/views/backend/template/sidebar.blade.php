@@ -27,19 +27,11 @@
                 <h6 class="ps-4 ms-2 text-uppercase text-xs text-white font-weight-bolder opacity-8">Master</h6>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-white " href="./pages/tables.html">
+                <a class="nav-link text-white {{ request()->routeIs('panel.category.index') ? 'active bg-gradient-primary' : '' }}" href="{{ route('panel.category.index') }}">
                     <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
-                        <i class="material-icons opacity-10">restaurant</i>
+                        <i class="material-icons opacity-10">category</i>
                     </div>
-                    <span class="nav-link-text ms-1">Menu</span>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-white " href="./pages/billing.html">
-                    <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
-                        <i class="material-icons opacity-10">person</i>
-                    </div>
-                    <span class="nav-link-text ms-1">Chef</span>
+                    <span class="nav-link-text ms-1">Category</span>
                 </a>
             </li>
             <li class="nav-item">
@@ -52,12 +44,21 @@
                 </a>
             </li>
             <li class="nav-item">
+                <a class="nav-link text-white " href="./pages/billing.html">
+                    <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                        <i class="material-icons opacity-10">person</i>
+                    </div>
+                    <span class="nav-link-text ms-1">Chef</span>
+                </a>
+            </li>
+
+            <li class="nav-item">
                 <a class="nav-link text-white {{ request()->routeIs('panel.product.index') ? 'active bg-gradient-primary' : '' }}"
                     href="{{ route('panel.product.index') }}">
                     <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
                         <i class="material-icons opacity-10">shopping_cart</i>
                     </div>
-                    <span class="nav-link-text ms-1">Product</span>
+                    <span class="nav-link-text ms-1">Product (menu)</span>
                 </a>
             </li>
             <li class="nav-item">
