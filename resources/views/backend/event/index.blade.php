@@ -1,6 +1,6 @@
 @extends('backend.template.main')
 
-@section('title', 'Products')
+@section('title', 'Event')
 
 @section('content')
 
@@ -12,9 +12,9 @@
                     <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
                         <div class="bg-gradient-primary shadow-primary border-radius-lg pt-4 pb-3">
                             <div class="d-flex justify-content-between">
-                                <h6 class="text-white text-capitalize ps-3">Product List</h6>
-                                <a href="{{ route('panel.product.create') }}" class="btn btn-sm btn-primary me-3"><i
-                                        class="fas fa-plus me-1"></i> Add</a>
+                                <h6 class="text-white text-capitalize ps-3">Event List</h6>
+                                <a href="{{ route('panel.event.create') }}" class="btn btn-sm btn-primary me-3"><i
+                                        class="fas fa-plus me-1"></i> Add Event</a>
                             </div>
                         </div>
                     </div>
@@ -40,13 +40,13 @@
                                             Name</th>
                                         <th
                                             class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                                            Description</th>
+                                            Category</th>
                                         <th
                                             class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
                                             Price</th>
                                         <th
                                             class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                                            Stock</th>
+                                            Status</th>
                                         <th
                                             class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
                                             Image
@@ -57,28 +57,32 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @forelse ($products as $product)
+                                    @forelse ($events as $event)
                                         <tr>
                                             <td class="text-center">
-                                                {{ ($products->currentPage() - 1) * $products->perPage() + $loop->iteration }}
+                                                {{ ($events->currentPage() - 1) * $events->perPage() + $loop->iteration }}
                                             </td>
-                                            <td class="text-center">{{ $product->name }}</td>
-                                            <td class="text-center">{{ $product->description }}</td>
-                                            <td class="text-center">Rp {{ number_format($product->price, 0, ',', '.') }}</td>
-                                            <td class="text-center">{{ $product->stock }}</td>
+                                            <td class="text-center text-sm">{{ $event->name }}</td>
+                                            <td class="text-center text-sm">{{ $event->eventCategory->name }}</td>
+                                            <td class="text-center text-sm">Rp. {{ number_format($event->price, 0, ',', '.') }}</td>
+                                            <td class="text-center text-sm">
+                                                <span class="badge {{ $event->status == 'active' ? 'bg-success' : 'bg-danger' }}">
+                                                    {{ $event->status }}
+                                                </span>
+                                            </td>
                                             <td class="text-center">
-                                                <img src="{{ asset('storage/' . $product->image) }}"
-                                                    alt="{{ $product->name }}" width="50">
+                                                <img src="{{ asset('storage/' . $event->image) }}"
+                                                    alt="{{ $event->name }}" width="100">
                                             </td>
                                             <td>
                                                 <div class="d-flex justify-content-center gap-1">
-                                                    <a href="{{ route('panel.product.edit', $product->uuid) }}"
+                                                    <a href="{{ route('panel.event.edit', $event->uuid) }}"
                                                         class="btn btn-info">
                                                         <i class="fas fa-edit"></i>
                                                     </a>
 
-                                                    <button class="btn btn-danger" onclick="deleteProduct(this)"
-                                                        data-uuid="{{ $product->uuid }}">
+                                                    <button class="btn btn-danger" onclick="deleteEvent(this)"
+                                                        data-uuid="{{ $event->uuid }}">
                                                         <i class="fas fa-trash-alt"></i>
                                                     </button>
 
@@ -94,8 +98,8 @@
                             </table>
                             {{-- pagination --}}
                             <div class="mt-3 justify-content-center" style="margin-left: 20px; margin-right: 20px;">
-                                {{ $products->links('pagination::bootstrap-5') }}
-                            </div>
+                                {{ $events->links('pagination::bootstrap-5') }}
+                            </div> 
                         </div>
                     </div>
                 </div>
@@ -108,7 +112,7 @@
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
         <script>
-            const deleteProduct = (e) => {
+            const deleteEvent = (e) => {
                 let uuid = e.getAttribute('data-uuid')
 
                 Swal.fire({
@@ -123,7 +127,7 @@
                     if (result.value) {
                         $.ajax({
                             type: "DELETE",
-                            url: `/panel/product/${uuid}`,
+                            url: `/panel/event/${uuid}`,
                             headers: {
                                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
                             },
