@@ -71,7 +71,7 @@
                                                     alt="{{ $product->name }}" width="50">
                                             </td>
                                             <td>
-                                                <div class="d-flex justify-content-center gap-1">
+                                                <div class="d-flex justify-content-center">
                                                     <a href="{{ route('panel.product.edit', $product->uuid) }}"
                                                         class="btn btn-info">
                                                         <i class="fas fa-edit"></i>
@@ -87,7 +87,7 @@
                                         </tr>
                                     @empty
                                         <tr>
-                                            <td colspan="7" class="text-center">No Data Available</td>
+                                            <td colspan="6" class="text-center">No Data Available</td>
                                         </tr>
                                     @endforelse
                                 </tbody>
