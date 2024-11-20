@@ -66,12 +66,12 @@
                                     <td class="text-center">
                                         {{ ($rawMaterials->currentPage() - 1) * $rawMaterials->perPage() + $loop->iteration }}
                                     </td>
-                                    <td class="text-center text-sm">{{ $material->name }}</td>
-                                    <td class="text-center text-sm">{{ $material->category->name }}</td>
-                                    <td class="text-center text-sm">{{ $material->stock }}</td>
-                                    <td class="text-center text-sm">{{ $material->unit }}</td>
+                                    <td class="text-center">{{ $material->name }}</td>
+                                    <td class="text-center">{{ $material->category->name }}</td>
+                                    <td class="text-center">{{ $material->stock }}</td>
+                                    <td class="text-center">{{ $material->unit }}</td>
                                     <td>
-                                        <div class="d-flex justify-content-center gap-1">
+                                        <div class="d-flex justify-content-center">
                                             <a href="{{ route('panel.raw-material.edit', $material->uuid) }}"
                                                 class="btn btn-info">
                                                 <i class="fas fa-edit"></i>
@@ -81,6 +81,7 @@
                                                 data-uuid="{{ $material->uuid }}">
                                                 <i class="fas fa-trash-alt"></i>
                                             </button>
+
                                         </div>
                                     </td>
                                 </tr>
