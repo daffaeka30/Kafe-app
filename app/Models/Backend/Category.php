@@ -33,4 +33,9 @@ class Category extends Model
         return $this->hasMany(RawMaterial::class);
     }
 
+    public function product(): HasMany
+    {
+        return $this->hasMany(Product::class);
+    }
+
 }

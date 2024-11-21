@@ -11,13 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('raw_materials', function (Blueprint $table) {
+        Schema::create('sellings', function (Blueprint $table) {
             $table->id();
             $table->uuid('uuid');
-            $table->foreignId('category_id')->constrained('categories')->onDelete('cascade');
-            $table->string('name');
-            $table->decimal('stock', 8, 1);
-            $table->enum('unit', ['butir', 'pcs', 'kg', 'liter', 'gram', 'ml'])->default('pcs');
+            $table->foreignId('user_id')->constrained('users')->onDelete('cascade');
+            $table->date('date');
+            $table->decimal('total_price', 8, 2);
+            $table->string('invoice')->unique();
             $table->timestamps();
         });
     }
@@ -27,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('raw_materials');
+        Schema::dropIfExists('sellings');
     }
 };

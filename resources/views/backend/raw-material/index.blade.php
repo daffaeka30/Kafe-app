@@ -19,24 +19,22 @@
                     </div>
                 </div>
 
-                <br>
-
                 @if (session('success'))
-                <div class="alert alert-success alert-dismissible fade show mx-3 text-white" role="alert">
+                <div class="alert alert-success alert-dismissible fade show mx-3 mt-3 text-white" role="alert">
                     {{ session('success') }}
                     <button type="button" class="btn-close text-white" data-bs-dismiss="alert" aria-label="Close"></button>
                 </div>
                 @endif
 
                 @if (session('error'))
-                <div class="alert alert-danger alert-dismissible fade show mx-3 text-white" role="alert">
+                <div class="alert alert-danger alert-dismissible fade show mx-3 mt-3 text-white" role="alert">
                     {{ session('error') }}
                     <button type="button" class="btn-close text-white" data-bs-dismiss="alert"
                         aria-label="Close"></button>
                 </div>
                 @endif
 
-                <div class="card-body px-0 pb-2">
+                <div class="card-body px-4 pb-2">
                     <div class="table-responsive p-0">
                         <table class="table align-items-center mb-0">
                             <thead>
@@ -73,11 +71,11 @@
                                     <td>
                                         <div class="d-flex justify-content-center">
                                             <a href="{{ route('panel.raw-material.edit', $material->uuid) }}"
-                                                class="btn btn-info">
+                                                class="btn btn-info btn-md me-1">
                                                 <i class="fas fa-edit"></i>
                                             </a>
 
-                                            <button class="btn btn-danger" onclick="deleteRawMaterial(this)"
+                                            <button class="btn btn-danger btn-md me-1" onclick="deleteRawMaterial(this)"
                                                 data-uuid="{{ $material->uuid }}">
                                                 <i class="fas fa-trash-alt"></i>
                                             </button>

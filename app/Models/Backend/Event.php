@@ -4,25 +4,20 @@ namespace App\Models\Backend;
 
 use Illuminate\Support\Str;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
-class Product extends Model
+class Event extends Model
 {
-    protected $table = 'products';
+    use HasFactory;
 
-    use HasFactory, SoftDeletes;
+    protected $table = 'events';
 
     protected $fillable = [
         'uuid',
         'category_id',
         'name',
-        'description',
-        'price',
-        'status',
-        'stock',
-        'image',
+        'image'
     ];
 
     protected static function booted()

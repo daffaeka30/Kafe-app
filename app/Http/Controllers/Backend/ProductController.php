@@ -2,29 +2,31 @@
 
 namespace App\Http\Controllers\Backend;
 
-use Illuminate\Http\Request;
 use App\Models\Backend\Product;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Storage;
 use App\Http\Requests\Backend\ProductRequest;
 use App\Http\Services\Backend\ProductService;
-use Illuminate\Support\Facades\Storage;
+use App\Http\Services\Backend\CategoryService;
 
 class ProductController extends Controller
 {
     public function __construct(
-        private ProductService $productService
+        private ProductService $productService, private CategoryService $categoryService
     ) {}
 
     public function index()
     {
         return view('backend.products.index', [
-            'products' => $this->productService->select(10)
+            'products' => $this->productService->select(10),
         ]);
     }
 
     public function create()
     {
-        return view('backend.products.create');
+        return view('backend.products.create', [
+            'categories' => $this->categoryService->select(),
+        ]);
     }
 
     public function store(ProductRequest $request)
@@ -52,7 +54,8 @@ class ProductController extends Controller
     public function edit(string $uuid)
     {
         return view('backend.products.edit', [
-            'product' => $this->productService->selectFirstBy('uuid', $uuid)
+            'product' => $this->productService->selectFirstBy('uuid', $uuid),
+            'categories' => $this->categoryService->select(),
         ]);
     }
 
@@ -89,7 +92,7 @@ class ProductController extends Controller
         $product->delete();
 
         return response()->json([
-            'message' => 'Product successfully deleted'
+            'message' => 'Product successfully deleted',
         ]);
     }
 }
