@@ -11,13 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('raw_materials', function (Blueprint $table) {
+        Schema::create('forecasting_results', function (Blueprint $table) {
             $table->id();
             $table->uuid('uuid');
-            $table->foreignId('category_id')->constrained('categories')->onDelete('cascade');
-            $table->string('name');
-            $table->decimal('stock', 8, 1);
-            $table->enum('unit', ['butir', 'pcs', 'kg', 'liter', 'gram', 'ml'])->default('pcs');
+            $table->foreignId('raw_material_id')->constrained('raw_materials')->onDelete('cascade');
+            $table->date('date');
+            $table->decimal('predicted_amount', 8, 2);
+            $table->string('forecasting_method');
             $table->timestamps();
         });
     }
@@ -27,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('raw_materials');
+        Schema::dropIfExists('forecasting_results');
     }
 };

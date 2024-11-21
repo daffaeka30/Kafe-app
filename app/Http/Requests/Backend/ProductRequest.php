@@ -16,6 +16,7 @@ class ProductRequest extends FormRequest
         $routeIdProduct = $this->route('product');
         return [
             'name' => 'required|string|min:3|unique:products,name,' . $routeIdProduct . ',uuid',
+            'category_id' => 'required|exists:categories,id',
             'description' => 'nullable|string',
             'price' => 'required|numeric|min:0',
             'status' => 'required|string|in:available,unavailable',

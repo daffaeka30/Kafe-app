@@ -111,6 +111,27 @@
 
                                 <div class="col-md-6">
                                     <div class="form-group mb-3">
+                                        <label for="category_id" class="form-label">Category</label>
+                                        <select name="category_id" id="category_id"
+                                            class="form-select border ps-2 pe-4 @error('category_id') is-invalid @enderror">
+                                            <option value="" hidden>---- Choose Category ----</option>
+                                                @foreach ($categories as $category)
+                                                    <option value="{{ $category->id }}" {{ $category->id == $product->category_id ? 'selected' : '' }}>{{ $category->name }}</option>
+                                                @endforeach
+                                        </select>
+
+                                        @error('category_id')
+                                            <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $message }}</strong>
+                                            </span>
+                                        @enderror
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group mb-3">
                                         <label for="image" class="form-label">Image</label>
                                         <input type="file"
                                             class="form-control border px-3 @error('image') is-invalid @enderror"

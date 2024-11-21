@@ -27,7 +27,8 @@
                 <h6 class="ps-4 ms-2 text-uppercase text-xs text-white font-weight-bolder opacity-8">Master</h6>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-white {{ request()->routeIs('panel.category.index') ? 'active bg-gradient-primary' : '' }}" href="{{ route('panel.category.index') }}">
+                <a class="nav-link text-white {{ request()->routeIs('panel.category.index') ? 'active bg-gradient-primary' : '' }}"
+                    href="{{ route('panel.category.index') }}">
                     <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
                         <i class="material-icons opacity-10">category</i>
                     </div>
@@ -44,7 +45,8 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-white " href="./pages/billing.html">
+                <a class="nav-link text-white {{ request()->routeIs('panel.chef.index') ? 'active bg-gradient-primary' : '' }}"
+                    href="{{ route('panel.chef.index') }}">
                     <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
                         <i class="material-icons opacity-10">person</i>
                     </div>
@@ -62,30 +64,11 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-white " href="./pages/virtual-reality.html">
+                <a class="nav-link text-white {{ request()->routeIs('panel.event.index') ? 'active bg-gradient-primary' : '' }}" href="{{ route('panel.event.index') }}">
                     <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
                         <i class="material-icons opacity-10">event</i>
                     </div>
                     <span class="nav-link-text ms-1">Event</span>
-                </a>
-            </li>
-            <li class="nav-item mt-3">
-                <h6 class="ps-4 ms-2 text-uppercase text-xs text-white font-weight-bolder opacity-8">Gallery</h6>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-white " href="./pages/rtl.html">
-                    <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
-                        <i class="material-icons opacity-10">photo_album</i>
-                    </div>
-                    <span class="nav-link-text ms-1">Image</span>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-white " href="./pages/rtl.html">
-                    <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
-                        <i class="material-icons opacity-10">videocam</i>
-                    </div>
-                    <span class="nav-link-text ms-1">Video</span>
                 </a>
             </li>
             <li class="nav-item mt-3">

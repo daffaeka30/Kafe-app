@@ -21,10 +21,11 @@
                         </div>
                     @endif
 
-                    <div class="card-body px-0 pb-2">
+                    <div class="card-body px-4 pb-2">
                         <form action="{{ route('panel.product.store') }}" method="post" class="p-3"
                             enctype="multipart/form-data">
                             @csrf
+                            
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group mb-3">
@@ -112,6 +113,27 @@
 
                                 <div class="col-md-6">
                                     <div class="form-group mb-3">
+                                        <label for="category_id" class="form-label">Category</label>
+                                        <select name="category_id" id="category_id"
+                                            class="form-select border ps-2 pe-4 @error('category_id') is-invalid @enderror">
+                                            <option value="" hidden>---- Choose Category ----</option>
+                                                @foreach ($categories as $category)
+                                                    <option value="{{ $category->id }}">{{ $category->name }}</option>
+                                                @endforeach
+                                        </select>
+
+                                        @error('category_id')
+                                            <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $message }}</strong>
+                                            </span>
+                                        @enderror
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group mb-3">
                                         <label for="image" class="form-label">Image</label>
                                         <input type="file"
                                             class="form-control border px-3 @error('image') is-invalid @enderror"
@@ -125,8 +147,6 @@
                                     </div>
                                 </div>
                             </div>
-
-
 
                             <div class="float-end">
                                 <a href="{{ route('panel.product.index') }}" class="btn btn-secondary me-2">Back</a>

@@ -10,7 +10,7 @@
                     <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
                         <div class="bg-gradient-primary shadow-primary border-radius-lg pt-4 pb-3">
                             <div class="d-flex justify-content-between">
-                                <h6 class="text-white text-capitalize ps-3">Edit Category</h6>
+                                <h6 class="text-white text-capitalize ps-3">Edit Kategori</h6>
                             </div>
                         </div>
                     </div>
