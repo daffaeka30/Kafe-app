@@ -144,7 +144,6 @@ Route::prefix('panel')->middleware('auth')->group(function () {
         Route::put('/{uuid}/change-password', [UserController::class, 'changePassword'])->name('change-password');
         Route::put('/{uuid}/change-role', [UserController::class, 'changeRole'])->name('change-role');
     });
-
 });
 
 Auth::routes();
