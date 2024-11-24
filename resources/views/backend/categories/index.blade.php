@@ -36,18 +36,19 @@
 
                 <div class="card-body px-4 pb-2">
                     <div class="table-responsive p-0">
-                        <table class="table align-items-center mb-0">
+                        <table class="table table-centered table-hover align-items-center justify-content-center text-center mb-0">
                             <thead>
                                 <tr>
-                                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7"
-                                        style="width: 50px;">No</th>
-                                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                        No
+                                    </th>
+                                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
                                         Name
                                     </th>
-                                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
                                         Slug
                                     </th>
-                                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
                                         Action
                                     </th>
                                 </tr>
@@ -55,10 +56,10 @@
                             <tbody>
                                 @forelse ($categories as $category)
                                 <tr>
-                                    <td class="align-middle text-center text-sm">{{ $loop->iteration }}</td>
-                                    <td class="align-middle text-center text-sm">{{ $category->name }}</td>
-                                    <td class="align-middle text-center text-sm">{{ $category->slug }}</td>
-                                    <td class="align-middle text-center">
+                                    <td>{{ $loop->iteration }}</td>
+                                    <td>{{ $category->name }}</td>
+                                    <td>{{ $category->slug }}</td>
+                                    <td>
                                         <a href="{{ route('panel.category.edit', $category->uuid) }}"
                                             class="btn btn-info btn-md">
                                             <i class="fas fa-edit"></i>
@@ -71,14 +72,14 @@
                                 </tr>
                                 @empty
                                 <tr>
-                                    <td colspan="7" class="text-center">No Data Available</td>
+                                    <td colspan="7">No Data Available</td>
                                 </tr>
                                 @endforelse
                             </tbody>
                         </table>
                         {{-- pagination --}}
                         <div class="mt-3 justify-content-center" style="margin-left: 20px; margin-right: 20px;">
-                            {{ $categories->links('pagination::bootstrap-5') }}
+                            {{ $categories->links() }}
                         </div>
                     </div>
                 </div>

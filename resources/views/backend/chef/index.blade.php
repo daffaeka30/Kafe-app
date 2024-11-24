@@ -18,46 +18,45 @@
                     </div>
                 </div>
 
-                @if (session('success'))
+                @if(session('success'))
                 <div class="alert alert-success alert-dismissible fade show mx-3 mt-3 text-white" role="alert">
                     {{ session('success') }}
-                    <button type="button" class="btn-close text-white" data-bs-dismiss="alert" aria-label="Close"></button>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                 </div>
                 @endif
 
-                @if (session('error'))
+                @if(session('error'))
                 <div class="alert alert-danger alert-dismissible fade show mx-3 mt-3 text-white" role="alert">
                     {{ session('error') }}
-                    <button type="button" class="btn-close text-white" data-bs-dismiss="alert"
-                        aria-label="Close"></button>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                 </div>
                 @endif
 
                 <div class="card-body px-4 pb-2">
                     <div class="table-responsive p-0">
-                        <table class="table align-items-center mb-0">
+                        <table class="table table-centered table-hover align-items-center justify-content-center text-center mb-0">
                             <thead>
                                 <tr>
-                                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7" style="width: 50px;">No</th>
-                                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Photo</th>
-                                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Name</th>
-                                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Position</th>
-                                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Social Media</th>
-                                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Action</th>
+                                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">No</th>
+                                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Photo</th>
+                                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Name</th>
+                                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Position</th>
+                                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Social Media</th>
+                                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Action</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 @forelse ($chefs as $chef)
                                 <tr>
-                                    <td class="text-center">
+                                    <td>
                                         {{ ($chefs->currentPage() - 1) * $chefs->perPage() + $loop->iteration }}
                                     </td>
-                                    <td class="text-center">
+                                    <td>
                                         <img src="{{ asset('storage/' . $chef->photo) }}" alt="{{ $chef->name }}" width="80" class="rounded-circle">
                                     </td>
-                                    <td class="text-center">{{ $chef->name }}</td>
-                                    <td class="text-center">{{ $chef->position }}</td>
-                                    <td class="text-center">
+                                    <td>{{ $chef->name }}</td>
+                                    <td>{{ $chef->position }}</td>
+                                    <td>
                                         @if($chef->insta_link)
                                             <a href="{{ $chef->insta_link }}" target="_blank" class="btn btn-instagram btn-md">
                                                 <i class="fab fa-instagram"></i>
@@ -74,7 +73,7 @@
                                             </a>
                                         @endif
                                     </td>
-                                    <td class="text-center">
+                                    <td>
                                         <div class="d-flex justify-content-center">
                                             <a href="{{ route('panel.chef.show', $chef->uuid) }}" class="btn btn-info btn-md me-1">
                                                 <i class="fas fa-eye"></i>
@@ -91,14 +90,14 @@
                                 </tr>
                                 @empty
                                 <tr>
-                                    <td colspan="6" class="text-center">No Chefs Available</td>
+                                    <td colspan="6">No Chefs Available</td>
                                 </tr>
                                 @endforelse
                             </tbody>
                         </table>
 
                         <div class="mt-3 justify-content-center" style="margin-left: 20px; margin-right: 20px;">
-                            {{ $chefs->links('pagination::bootstrap-5') }}
+                            {{ $chefs->links() }}
                         </div>
                     </div>
                 </div>

@@ -3,16 +3,34 @@
 namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
+use App\Http\Services\Backend\DashboardService;
 use Illuminate\Http\Request;
 
 class DashboardController extends Controller
 {
+    public function __construct(
+        private DashboardService $dashboardService
+    ) {}
+
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        return view('backend.dashboard.index');
+        $summary = $this->dashboardService->getSummaryData();
+        $charts = $this->dashboardService->getChartData();
+        $tables = $this->dashboardService->getTableData();
+
+        return view('backend.dashboard.index', array_merge(
+            $summary,
+            [
+                'salesChart' => $charts['salesChart'] ?? ['labels' => [], 'data' => []],
+                'productChart' => $charts['productChart'] ?? ['labels' => [], 'data' => []],
+                'forecastChart' => $charts['forecastChart'] ?? ['labels' => [], 'data' => []],
+            ],
+            $tables
+        ));
+
     }
 
     /**

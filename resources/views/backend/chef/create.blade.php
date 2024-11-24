@@ -104,7 +104,7 @@
                                     <label for="photo" class="form-label">Photo</label>
                                     <input type="file"
                                         class="form-control border px-3 @error('photo') is-invalid @enderror"
-                                        value="{{ old('photo') }}" name="photo" id="photo" placeholder="Enter photo">
+                                        value="{{ old('photo') }}" name="photo" id="photo" placeholder="Enter photo" accept="image/*">
 
                                     @error('photo')
                                     <span class="invalid-feedback" role="alert">

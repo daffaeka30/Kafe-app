@@ -17,7 +17,6 @@ return new class extends Migration
             $table->decimal('rate', 8, 2);
             $table->timestamps();
         });
-
     }
 
     /**
