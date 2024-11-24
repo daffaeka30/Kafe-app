@@ -36,43 +36,46 @@
 
                 <div class="card-body px-4 pb-2">
                     <div class="table-responsive p-0">
-                        <table class="table align-items-center mb-0">
+                        <table class="table table-centered table-hover align-items-center justify-content-center text-center mb-0">
                             <thead>
                                 <tr>
-                                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7"
-                                        style="width: 50px;">No</th>
                                     <th
-                                        class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                        class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                        No
+                                    </th>
+                                    <th
+                                        class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
                                         Name</th>
                                     <th
-                                        class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                        class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
                                         Category</th>
                                     <th
-                                        class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                        class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
                                         Price</th>
                                     <th
-                                        class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                        class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
                                         Stock</th>
                                     <th
-                                        class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                        class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
                                         Image
                                     </th>
                                     <th
-                                        class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                                        Action</th>
+                                        class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                        Action
+                                    </th>
                                 </tr>
                             </thead>
                             <tbody>
                                 @forelse ($products as $product)
                                 <tr>
-                                    <td class="text-center">
+                                    <td>
                                         {{ ($products->currentPage() - 1) * $products->perPage() + $loop->iteration }}
                                     </td>
-                                    <td class="text-center">{{ $product->name }}</td>
-                                    <td class="text-center">{{ $product->category->name }}</td>
-                                    <td class="text-center">Rp {{ number_format($product->price, 0, ',', '.') }}</td>
-                                    <td class="text-center">{{ $product->stock }}</td>
-                                    <td class="text-center">
+                                    <td>{{ $product->name }}</td>
+                                    <td>{{ $product->category->name }}</td>
+                                    <td>Rp {{ number_format($product->price, 0, ',', '.') }}</td>
+                                    <td>{{ $product->stock }}</td>
+                                    <td>
                                         <img src="{{ asset('storage/' . $product->image) }}" alt="{{ $product->name }}"
                                             width="50">
                                     </td>
@@ -93,14 +96,14 @@
                                 </tr>
                                 @empty
                                 <tr>
-                                    <td colspan="6" class="text-center">No Data Available</td>
+                                    <td colspan="6">No Data Available</td>
                                 </tr>
                                 @endforelse
                             </tbody>
                         </table>
                         {{-- pagination --}}
                         <div class="mt-3 justify-content-center" style="margin-left: 20px; margin-right: 20px;">
-                            {{ $products->links('pagination::bootstrap-5') }}
+                            {{ $products->links() }}
                         </div>
                     </div>
                 </div>

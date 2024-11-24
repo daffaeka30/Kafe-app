@@ -20,11 +20,14 @@ return new class extends Migration
             $table->text('notes')->nullable();
             $table->enum('payment_status', ['unpaid', 'paid'])->default('unpaid');
             $table->enum('payment_method', ['cash', 'transfer', 'ewallet'])->default('cash');
-            $table->integer('order_number')->unique();
+            $table->decimal('payment_amount', 10, 2);
+            $table->string('order_number')->unique();
             $table->enum('order_type', ['dine_in', 'takeaway'])->default('dine_in');
+            $table->decimal('subtotal', 10, 2);
+            $table->decimal('tax_amount', 10, 2);
+            $table->decimal('discount_amount', 10, 2);
             $table->timestamps();
         });
-
     }
 
     /**

@@ -35,28 +35,28 @@
 
                 <div class="card-body px-4 pb-2">
                     <div class="table-responsive p-0">
-                        <table class="table align-items-center mb-0">
+                        <table class="table table-centered table-hover align-items-center justify-content-center text-center mb-0">
                             <thead>
                                 <tr>
-                                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7" style="width: 50px;">No</th>
-                                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Image</th>
-                                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Name</th>
-                                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Category</th>
-                                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Action</th>
+                                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">No</th>
+                                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Image</th>
+                                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Name</th>
+                                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Category</th>
+                                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Action</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 @forelse ($events as $event)
                                 <tr>
-                                    <td class="text-center">
+                                    <td>
                                         {{ ($events->currentPage() - 1) * $events->perPage() + $loop->iteration }}
                                     </td>
-                                    <td class="text-center">
+                                    <td>
                                         <img src="{{ asset('storage/' . $event->image) }}" alt="{{ $event->name }}" width="80" class="rounded">
                                     </td>
-                                    <td class="text-center">{{ $event->name }}</td>
-                                    <td class="text-center">{{ $event->category->name }}</td>
-                                    <td class="text-center">
+                                    <td>{{ $event->name }}</td>
+                                    <td>{{ $event->category->name }}</td>
+                                    <td>
                                         <div class="d-flex justify-content-center">
                                             <a href="{{ route('panel.event.show', $event->uuid) }}" class="btn btn-info btn-md me-1">
                                                 <i class="fas fa-eye"></i>
@@ -73,14 +73,14 @@
                                 </tr>
                                 @empty
                                 <tr>
-                                    <td colspan="5" class="text-center">No Events Available</td>
+                                    <td colspan="5">No Events Available</td>
                                 </tr>
                                 @endforelse
                             </tbody>
                         </table>
 
                         <div class="mt-3 justify-content-center" style="margin-left: 20px; margin-right: 20px;">
-                            {{ $events->links('pagination::bootstrap-5') }}
+                            {{ $events->links() }}
                         </div>
                     </div>
                 </div>

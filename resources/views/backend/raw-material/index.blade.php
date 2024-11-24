@@ -36,38 +36,39 @@
 
                 <div class="card-body px-4 pb-2">
                     <div class="table-responsive p-0">
-                        <table class="table align-items-center mb-0">
+                        <table class="table table-centered table-hover align-items-center justify-content-center text-center mb-0">
                             <thead>
                                 <tr>
-                                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7"
-                                        style="width: 50px;">No</th>
+                                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                        No
+                                    </th>
                                     <th
-                                        class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                        class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
                                         Name</th>
                                     <th
-                                        class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                        class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
                                         Category</th>
                                     <th
-                                        class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                        class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
                                         Stock</th>
                                     <th
-                                        class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                        class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
                                         Unit</th>
                                     <th
-                                        class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                        class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
                                         Action</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 @forelse ($rawMaterials as $material)
                                 <tr>
-                                    <td class="text-center">
+                                    <td>
                                         {{ ($rawMaterials->currentPage() - 1) * $rawMaterials->perPage() + $loop->iteration }}
                                     </td>
-                                    <td class="text-center">{{ $material->name }}</td>
-                                    <td class="text-center">{{ $material->category->name }}</td>
-                                    <td class="text-center">{{ $material->stock }}</td>
-                                    <td class="text-center">{{ $material->unit }}</td>
+                                    <td>{{ $material->name }}</td>
+                                    <td>{{ $material->category->name }}</td>
+                                    <td>{{ $material->stock }}</td>
+                                    <td>{{ $material->unit }}</td>
                                     <td>
                                         <div class="d-flex justify-content-center">
                                             <a href="{{ route('panel.raw-material.edit', $material->uuid) }}"
@@ -85,14 +86,14 @@
                                 </tr>
                                 @empty
                                 <tr>
-                                    <td colspan="7" class="text-center">No Data Available</td>
+                                    <td colspan="7">No Data Available</td>
                                 </tr>
                                 @endforelse
                             </tbody>
                         </table>
                         {{-- pagination --}}
                         <div class="mt-3 justify-content-center" style="margin-left: 20px; margin-right: 20px;">
-                            {{ $rawMaterials->links('pagination::bootstrap-5') }}
+                            {{ $rawMaterials->links() }}
                         </div>
                     </div>
                 </div>

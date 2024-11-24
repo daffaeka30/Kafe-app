@@ -70,7 +70,7 @@
                                         <option value="Cashier" {{ old('position', $chef->position) == 'Cashier' ? 'selected' : '' }}>Cashier</option>
                                         <option value="Waiter" {{ old('position', $chef->position) == 'Waiter' ? 'selected' : '' }}>Waiter</option>
                                         <option value="Chef" {{ old('position', $chef->position) == 'Chef' ? 'selected' : '' }}>Chef</option>
-                                        <option value="Owner" {{ old('position', $chef->position) == 'Manager' ? 'selected' : '' }}>Manager</option>
+                                        <option value="Owner" {{ old('position', $chef->position) == 'Owner' ? 'selected' : '' }}>Manager</option>
                                         <option value="Administrator" {{ old('position', $chef->position) == 'Administrator' ? 'selected' : '' }}>Administrator</option>
                                     </select>
 
@@ -113,7 +113,7 @@
                                     </span>
                                     @enderror
 
-                                    <img src="{{ asset('storage/' . $chef->photo) }}" alt="{{ $chef->name }}" width="200" class="mt-3">
+                                    <img src="{{ asset('storage/' . $chef->photo) }}" class="rounded mt-3" alt="{{ $chef->name }}" width="200">
                                 </div>
                             </div>
 
