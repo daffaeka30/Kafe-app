@@ -1,18 +1,10 @@
 @extends('layouts.app')
 
 @section('content')
-
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                @auth
-                    <div class="text-center text-md-center mb-5 mt-md-5">
-                        <h1 class="mb-3 h3">{{ __('Welcome Back!') }}</h1>
-                        <p>You are already logged in.</p>
-                        <a href="{{ url('/panel/dashboard') }}" class="btn btn-gray-800 mt-4">Go to Dashboard</a>
-                    </div>
-                @else
                 <div class="card-header">{{ __('Login') }}</div>
 
                 <div class="card-body">
@@ -74,7 +66,6 @@
                         </div>
                     </form>
                 </div>
-                @endauth
             </div>
         </div>
     </div>
