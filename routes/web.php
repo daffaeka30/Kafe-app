@@ -22,10 +22,10 @@ use App\Http\Controllers\Backend\RawMaterialController;
 use App\Http\Controllers\Backend\RawMaterialStockController;
 use App\Http\Controllers\Backend\RawMaterialUsageController;
 use App\Http\Controllers\Frontend\EventController as FrontendEventController;
+use App\Http\Controllers\Frontend\FrontendController;
 
-Route::get('/', function () {
-    return view('frontend.home');
-});
+Route::get('/', [FrontendController::class, 'index'])
+    ->name('frontend.home');
 
 Route::get('/tentang-kami', [AboutController::class, 'index'])->name('frontend.about');
 Route::get('/layanan', [ServiceController::class, 'index'])->name('frontend.service');

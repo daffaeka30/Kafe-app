@@ -27,5 +27,5 @@
 
 @include('frontend._about')
 
-{{-- @include('frontend._chef-team') --}}
+@include('frontend._chef-team') 
 @endsection
