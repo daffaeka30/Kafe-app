@@ -45,102 +45,21 @@
                         <div class="row g-4">
                             <div class="col-lg-12">
                                 <div class="row g-4">
+                                    @foreach ($events as $event)
                                     <div class="col-sm-12 col-md-6 col-lg-3 wow bounceInUp" data-wow-delay="0.1s">
                                         <div class="event-img position-relative">
                                             <img class="img-fluid rounded w-100"
-                                                src="{{ asset('frontend/assets') }}/img/event-1.jpg" alt="">
+                                                src="{{ asset('storage/'.$event->image) }}" alt="{{ $event->name }}">
                                             <div class="event-overlay d-flex flex-column p-4">
-                                                <h4 class="me-auto">Wedding</h4>
-                                                <a href="{{ asset('frontend/assets') }}/img/event-1.jpg"
+                                                <h4 class="me-auto">{{ $event->name }}</h4>
+                                                <a href="{{ asset('storage/'.$event->image) }}"
                                                     data-lightbox="event-1" class="my-auto"><i
                                                         class="fas fa-search-plus text-dark fa-2x"></i></a>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-sm-12 col-md-6 col-lg-3 wow bounceInUp" data-wow-delay="0.3s">
-                                        <div class="event-img position-relative">
-                                            <img class="img-fluid rounded w-100"
-                                                src="{{ asset('frontend/assets') }}/img/event-2.jpg" alt="">
-                                            <div class="event-overlay d-flex flex-column p-4">
-                                                <h4 class="me-auto">Corporate</h4>
-                                                <a href="{{ asset('frontend/assets') }}/img/event-2.jpg"
-                                                    data-lightbox="event-2" class="my-auto"><i
-                                                        class="fas fa-search-plus text-dark fa-2x"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-12 col-md-6 col-lg-3 wow bounceInUp" data-wow-delay="0.5s">
-                                        <div class="event-img position-relative">
-                                            <img class="img-fluid rounded w-100"
-                                                src="{{ asset('frontend/assets') }}/img/event-3.jpg" alt="">
-                                            <div class="event-overlay d-flex flex-column p-4">
-                                                <h4 class="me-auto">Wedding</h4>
-                                                <a href="{{ asset('frontend/assets') }}/img/event-3.jpg"
-                                                    data-lightbox="event-3" class="my-auto"><i
-                                                        class="fas fa-search-plus text-dark fa-2x"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-12 col-md-6 col-lg-3 wow bounceInUp" data-wow-delay="0.7s">
-                                        <div class="event-img position-relative">
-                                            <img class="img-fluid rounded w-100"
-                                                src="{{ asset('frontend/assets') }}/img/event-4.jpg" alt="">
-                                            <div class="event-overlay d-flex flex-column p-4">
-                                                <h4 class="me-auto">Buffet</h4>
-                                                <a href="{{ asset('frontend/assets') }}/img/event-4.jpg"
-                                                    data-lightbox="event-4" class="my-auto"><i
-                                                        class="fas fa-search-plus text-dark fa-2x"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-12 col-md-6 col-lg-3 wow bounceInUp" data-wow-delay="0.1s">
-                                        <div class="event-img position-relative">
-                                            <img class="img-fluid rounded w-100"
-                                                src="{{ asset('frontend/assets') }}/img/event-5.jpg" alt="">
-                                            <div class="event-overlay d-flex flex-column p-4">
-                                                <h4 class="me-auto">Cocktail</h4>
-                                                <a href="{{ asset('frontend/assets') }}/img/event-5.jpg"
-                                                    data-lightbox="event-5" class="my-auto"><i
-                                                        class="fas fa-search-plus text-dark fa-2x"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-12 col-md-6 col-lg-3 wow bounceInUp" data-wow-delay="0.3s">
-                                        <div class="event-img position-relative">
-                                            <img class="img-fluid rounded w-100"
-                                                src="{{ asset('frontend/assets') }}/img/event-6.jpg" alt="">
-                                            <div class="event-overlay d-flex flex-column p-4">
-                                                <h4 class="me-auto">Wedding</h4>
-                                                <a href="{{ asset('frontend/assets') }}/img/event-6.jpg"
-                                                    data-lightbox="event-6" class="my-auto"><i
-                                                        class="fas fa-search-plus text-dark fa-2x"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-12 col-md-6 col-lg-3 wow bounceInUp" data-wow-delay="0.5s">
-                                        <div class="event-img position-relative">
-                                            <img class="img-fluid rounded w-100"
-                                                src="{{ asset('frontend/assets') }}/img/event-7.jpg" alt="">
-                                            <div class="event-overlay d-flex flex-column p-4">
-                                                <h4 class="me-auto">Buffet</h4>
-                                                <a href="{{ asset('frontend/assets') }}/img/event-7.jpg"
-                                                    data-lightbox="event-7" class="my-auto"><i
-                                                        class="fas fa-search-plus text-dark fa-2x"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-12 col-md-6 col-lg-3 wow bounceInUp" data-wow-delay="0.7s">
-                                        <div class="event-img position-relative">
-                                            <img class="img-fluid rounded w-100"
-                                                src="{{ asset('frontend/assets') }}/img/event-8.jpg" alt="">
-                                            <div class="event-overlay d-flex flex-column p-4">
-                                                <h4 class="me-auto">Corporate</h4>
-                                                <a href="{{ asset('frontend/assets') }}/img/event-8.jpg"
-                                                    data-lightbox="event-17" class="my-auto"><i
-                                                        class="fas fa-search-plus text-dark fa-2x"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    @endforeach
+                                    
                                 </div>
                             </div>
                         </div>
@@ -149,30 +68,21 @@
                         <div class="row g-4">
                             <div class="col-lg-12">
                                 <div class="row g-4">
+                                    @foreach ($event_bazar as $bazar)
                                     <div class="col-sm-12 col-md-6 col-lg-3">
                                         <div class="event-img position-relative">
                                             <img class="img-fluid rounded w-100"
-                                                src="{{ asset('frontend/assets') }}/img/event-1.jpg" alt="">
+                                                src="{{ asset('storage/'.$bazar->image) }}" alt="{{ $bazar->name }}">
                                             <div class="event-overlay d-flex flex-column p-4">
-                                                <h4 class="me-auto">Wedding</h4>
-                                                <a href="{{ asset('frontend/assets') }}/img/01.jpg"
+                                                <h4 class="me-auto">{{ $bazar->name }}</h4>
+                                                <a href="{{ asset('storage/'.$bazar->image) }}"
                                                     data-lightbox="event-8" class="my-auto"><i
                                                         class="fas fa-search-plus text-dark fa-2x"></i></a>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-sm-12 col-md-6 col-lg-3">
-                                        <div class="event-img position-relative">
-                                            <img class="img-fluid rounded w-100"
-                                                src="{{ asset('frontend/assets') }}/img/event-2.jpg" alt="">
-                                            <div class="event-overlay d-flex flex-column p-4">
-                                                <h4 class="me-auto">Wedding</h4>
-                                                <a href="{{ asset('frontend/assets') }}/img/01.jpg"
-                                                    data-lightbox="event-9" class="my-auto"><i
-                                                        class="fas fa-search-plus text-dark fa-2x"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    @endforeach
+                                    
                                 </div>
                             </div>
                         </div>
@@ -181,30 +91,20 @@
                         <div class="row g-4">
                             <div class="col-lg-12">
                                 <div class="row g-4">
+                                    @foreach ($event_live_musik as $live_musik)
                                     <div class="col-sm-12 col-md-6 col-lg-3">
                                         <div class="event-img position-relative">
                                             <img class="img-fluid rounded w-100"
-                                                src="{{ asset('frontend/assets') }}/img/event-3.jpg" alt="">
+                                                src="{{ asset('storage/'.$live_musik->image) }}" alt="{{ $live_musik->name }}">
                                             <div class="event-overlay d-flex flex-column p-4">
-                                                <h4 class="me-auto">Corporate</h4>
-                                                <a href="{{ asset('frontend/assets') }}/img/01.jpg"
-                                                    data-lightbox="event-10" class="my-auto"><i
+                                                <h4 class="me-auto">{{ $live_musik->name }}</h4>
+                                                <a href="{{ asset('storage/'.$live_musik->image) }}"
+                                                    data-lightbox="event-3" class="my-auto"><i
                                                         class="fas fa-search-plus text-dark fa-2x"></i></a>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="col-sm-12 col-md-6 col-lg-3">
-                                        <div class="event-img position-relative">
-                                            <img class="img-fluid rounded w-100"
-                                                src="{{ asset('frontend/assets') }}/img/event-4.jpg" alt="">
-                                            <div class="event-overlay d-flex flex-column p-4">
-                                                <h4 class="me-auto">Corporate</h4>
-                                                <a href="{{ asset('frontend/assets') }}/img/01.jpg"
-                                                    data-lightbox="event-11" class="my-auto"><i
-                                                        class="fas fa-search-plus text-dark fa-2x"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    </div>  
+                                    @endforeach
                                 </div>
                             </div>
                         </div>
@@ -213,30 +113,20 @@
                         <div class="row g-4">
                             <div class="col-lg-12">
                                 <div class="row g-4">
+                                    @foreach ($event_nonton_bareng as $nonton_bareng)
                                     <div class="col-sm-12 col-md-6 col-lg-3">
                                         <div class="event-img position-relative">
                                             <img class="img-fluid rounded w-100"
-                                                src="{{ asset('frontend/assets') }}/img/event-5.jpg" alt="">
+                                                src="{{ asset('storage/'.$nonton_bareng->image) }}" alt="{{ $nonton_bareng->name }}">
                                             <div class="event-overlay d-flex flex-column p-4">
-                                                <h4 class="me-auto">Cocktail</h4>
-                                                <a href="{{ asset('frontend/assets') }}/img/01.jpg"
-                                                    data-lightbox="event-12" class="my-auto"><i
+                                                <h4 class="me-auto">{{ $nonton_bareng->name }}</h4>
+                                                <a href="{{ asset('storage/'.$nonton_bareng->image) }}"
+                                                    data-lightbox="event-3" class="my-auto"><i
                                                         class="fas fa-search-plus text-dark fa-2x"></i></a>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-sm-12 col-md-6 col-lg-3">
-                                        <div class="event-img position-relative">
-                                            <img class="img-fluid rounded w-100"
-                                                src="{{ asset('frontend/assets') }}/img/event-6.jpg" alt="">
-                                            <div class="event-overlay d-flex flex-column p-4">
-                                                <h4 class="me-auto">Cocktail</h4>
-                                                <a href="{{ asset('frontend/assets') }}/img/01.jpg"
-                                                    data-lightbox="event-13" class="my-auto"><i
-                                                        class="fas fa-search-plus text-dark fa-2x"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    @endforeach
                                 </div>
                             </div>
                         </div>
@@ -245,30 +135,20 @@
                         <div class="row g-4">
                             <div class="col-lg-12">
                                 <div class="row g-4">
+                                    @foreach ($event_game_night as $game_night)
                                     <div class="col-sm-12 col-md-6 col-lg-3">
                                         <div class="event-img position-relative">
                                             <img class="img-fluid rounded w-100"
-                                                src="{{ asset('frontend/assets') }}/img/event-7.jpg" alt="">
+                                                src="{{ asset('storage/'.$game_night->image) }}" alt="{{ $game_night->name }}">
                                             <div class="event-overlay d-flex flex-column p-4">
-                                                <h4 class="me-auto">Buffet</h4>
-                                                <a href="{{ asset('frontend/assets') }}/img/01.jpg"
-                                                    data-lightbox="event-14" class="my-auto"><i
+                                                <h4 class="me-auto">{{ $game_night->name }}</h4>
+                                                <a href="{{ asset('storage/'.$game_night->image) }}"
+                                                    data-lightbox="event-3" class="my-auto"><i
                                                         class="fas fa-search-plus text-dark fa-2x"></i></a>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-sm-12 col-md-6 col-lg-3">
-                                        <div class="event-img position-relative">
-                                            <img class="img-fluid rounded w-100"
-                                                src="{{ asset('frontend/assets') }}/img/event-8.jpg" alt="">
-                                            <div class="event-overlay d-flex flex-column p-4">
-                                                <h4 class="me-auto">Buffet</h4>
-                                                <a href="{{ asset('frontend/assets') }}/img/01.jpg"
-                                                    data-lightbox="event-15" class="my-auto"><i
-                                                        class="fas fa-search-plus text-dark fa-2x"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    @endforeach
                                 </div>
                             </div>
                         </div>
