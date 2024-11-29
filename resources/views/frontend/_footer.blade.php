@@ -19,13 +19,13 @@
                                 class="btn btn-primary btn-sm-square me-2 rounded-circle" target="_blank"><i
                                     class="fab fa-instagram"></i></a>
                             <a href="#" class="btn btn-primary btn-sm-square rounded-circle"><i
-                                    class="fab fa-linkedin-in"></i></a>
+                                    class="fab fa-youtube"></i></a>
                         </div>
                     </div>
                 </div>
                 <div class="col-sm-12 col-md-6 col-lg-3">
                     <div class="footer-item">
-                        <h4 class="mb-4">Special Facilities</h4>
+                        <h4 class="mb-4">Special Menu</h4>
                         <div class="d-flex flex-column align-items-start">
                             <a class="text-body mb-3" href=""><i class="fa fa-check text-primary me-2"></i>Cheese
                                 Burger</a>
@@ -45,7 +45,7 @@
                             <p><i class="fa fa-map-marker-alt text-primary me-2"></i> Jl. Wijaya Kusuma No.6, Makassar
                             </p>
                             <p><i class="fa fa-phone-alt text-primary me-2"></i> (+012) 3456 7890 123</p>
-                            <p><i class="fas fa-envelope text-primary me-2"></i> info@example.com</p>
+                            <p><i class="fas fa-envelope text-primary me-2"></i> kelompok1@gmail.com</p>
                             <p><i class="fa fa-clock text-primary me-2"></i> 26/7 Hours Service</p>
                         </div>
                     </div>
