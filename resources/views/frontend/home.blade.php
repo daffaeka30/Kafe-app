@@ -24,12 +24,16 @@
     <!-- Menu End -->
 
     <!-- Team Start -->
-    @include('frontend._chef-team')
+    {{-- @include('frontend._chef-team') --}}
     <!-- Team End -->
 
     <!-- Testimonial Start -->
     @include('frontend._testimonial')
     <!-- Testimonial End -->
+
+    <!-- Contact Start -->
+    @include('frontend._contact')
+    <!-- Contact End -->
 
     <!-- Map Start -->
     @include('frontend._map')
