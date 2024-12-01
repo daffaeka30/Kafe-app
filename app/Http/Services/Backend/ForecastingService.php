@@ -40,44 +40,53 @@ class ForecastingService
         try {
             $rawMaterial = RawMaterial::findOrFail($rawMaterialId);
 
-            // Cek stock
             if ($rawMaterial->stock <= 0) {
                 throw new \Exception('Cannot forecast for material with no stock.');
             }
 
-            // Data yang ditampilkan berdasarkan periode dalam hitungan bulan
-            $usages = RawMaterialUsage::where('raw_material_id', $rawMaterialId)
+            // Ambil total penggunaan per bulan sesuai period yang diminta
+            $monthlyUsages = RawMaterialUsage::where('raw_material_id', $rawMaterialId)
                 ->whereDate('date', '>=', now()->subMonths($period))
-                ->selectRaw('DATE(date) as date, SUM(quantity_used) as total_usage')
-                ->groupBy('date')
-                ->orderBy('date', 'desc')
+                ->select(
+                    DB::raw('YEAR(date) as year'),
+                    DB::raw('MONTH(date) as month'),
+                    DB::raw('SUM(quantity_used) as total_usage')
+                )
+                ->groupBy('year', 'month')
+                ->orderBy('year', 'desc')
+                ->orderBy('month', 'desc')
+                ->take($period)
                 ->get();
 
-            if ($usages->count() < 3) {
-                throw new \Exception('Not enough data for forecasting. Need at least 3 months of usage data.'); // Sesuaikan pesan
+            if ($monthlyUsages->count() < $period) {
+                throw new \Exception("Tidak cukup data untuk peramalan. Dibutuhkan data penggunaan material minimal {$period} bulan terakhir.");
             }
 
-            // Weighted Moving Average dengan bobot: 3, 2, 1
-            $weights = [3, 2, 1];
-            $weightedSum = 0;
+            // Generate bobot berdasarkan period
+            $weights = array_reverse(range(1, $period));
             $totalWeight = array_sum($weights);
 
-            for ($i = 0; $i < 3; $i++) {
-                $weightedSum += $usages[$i]->total_usage * $weights[$i];
+            // Hitung WMA
+            $weightedSum = 0;
+            foreach ($monthlyUsages as $index => $usage) {
+                $weightedSum += $usage->total_usage * $weights[$index];
             }
 
+            // Hasil prediksi
             $predictedAmount = $weightedSum / $totalWeight;
 
-            // Hitung actual usage dan error rate
-            $actualUsage = $usages[0]->total_usage;
+            // Ambil data bulan terakhir untuk actual_usage
+            $actualUsage = $monthlyUsages->first()->total_usage;
+
+            // Hitung error rate
             $errorRate = abs(($actualUsage - $predictedAmount) / $actualUsage) * 100;
 
             // Simpan hasil forecast
             ForecastingResult::create([
                 'raw_material_id' => $rawMaterialId,
-                'date' => now()->addDay(),
+                'date' => now()->addMonth()->startOfMonth(),
                 'predicted_amount' => $predictedAmount,
-                'forecasting_method' => 'Weighted Moving Average',
+                'forecasting_method' => "Weighted Moving Average ({$period} months)",
                 'actual_usage' => $actualUsage,
                 'error_rate' => $errorRate,
             ]);
