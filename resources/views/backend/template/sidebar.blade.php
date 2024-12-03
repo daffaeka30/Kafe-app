@@ -288,7 +288,10 @@
     </div>
     <div class="sidenav-footer position-absolute w-100 bottom-0 ">
         <div class="mx-3">
-            <a class="btn bg-gradient-primary mt-4 w-100" href="{{ route('logout') }}" type="button"
+            <a class="btn bg-gradient-primary mt-2 w-100" href="/" type="button">
+                <i class="material-icons me-2">home</i>Beranda
+            </a>
+            <a class="btn bg-gradient-primary mt-2 w-100" href="{{ route('logout') }}" type="button"
                 onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                 <i class="material-icons me-2">logout</i>Logout
             </a>
