@@ -36,7 +36,7 @@
 
     <!-- Navbar start -->
     @include('frontend.template.navbar')
-    @include('frontend._modal-search')
+    {{-- @include('frontend._modal-search') --}}
     <!-- Navbar End -->
 
     {{-- Main Content --}}

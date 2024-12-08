@@ -19,7 +19,33 @@ return new class extends Migration
             $table->decimal('total_price', 10, 2);
             $table->text('notes')->nullable();
             $table->enum('payment_status', ['unpaid', 'paid'])->default('unpaid');
-            $table->enum('payment_method', ['cash', 'transfer', 'ewallet'])->default('cash');
+            $table->enum('payment_method', [
+                // Offline Payment
+                'cash', // Pembayaran di kasir
+                // E-Wallet
+                'gopay', // GoPay
+                'shopeepay', // ShopeePay
+                'qris', // QRIS (OVO, DANA, LinkAja, dll)
+                // Bank Transfer (Virtual Account)
+                'bca_va', // BCA Virtual Account
+                'bni_va', // BNI Virtual Account
+                'bri_va', // BRI Virtual Account
+                'mandiri_va', // Mandiri Virtual Account
+                'permata_va', // Permata Virtual Account
+                'cimb_va', // CIMB Niaga Virtual Account
+                'bsi_va', // BSI Virtual Account
+                'danamon_va', // Danamon Virtual Account
+                // Kartu Kredit/Debit
+                'credit_card', // Visa, Mastercard, JCB, AMEX
+                // Convenience Store
+                'indomaret', // Indomaret
+                'alfamart', // Alfamart
+                // Cardless Credit
+                'akulaku', // Akulaku PayLater
+                'kredivo', // Kredivo
+                'gopay_later', // GoPayLater
+                'shopeepay_later', // SPayLater
+            ])->nullable();
             $table->decimal('payment_amount', 10, 2);
             $table->string('order_number')->unique();
             $table->enum('order_type', ['dine_in', 'takeaway'])->default('dine_in');

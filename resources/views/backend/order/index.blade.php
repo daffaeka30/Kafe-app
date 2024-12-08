@@ -180,8 +180,6 @@
                         <select class="form-select border px-3" name="payment_method" id="paymentMethod" required>
                             <option value="" hidden>---- Select Payment Method ----</option>
                             <option value="cash">Cash</option>
-                            <option value="transfer">Transfer</option>
-                            <option value="ewallet">E-Wallet</option>
                         </select>
                     </div>
 

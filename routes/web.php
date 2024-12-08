@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CartController;
+use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\Backend\TaxController;
 use App\Http\Controllers\Backend\ChefController;
 use App\Http\Controllers\Backend\UserController;
@@ -17,12 +19,12 @@ use App\Http\Controllers\Backend\CategoryController;
 use App\Http\Controllers\Frontend\ContactController;
 use App\Http\Controllers\Frontend\ServiceController;
 use App\Http\Controllers\Backend\DashboardController;
+use App\Http\Controllers\Frontend\FrontendController;
 use App\Http\Controllers\Backend\ForecastingController;
 use App\Http\Controllers\Backend\RawMaterialController;
 use App\Http\Controllers\Backend\RawMaterialStockController;
 use App\Http\Controllers\Backend\RawMaterialUsageController;
 use App\Http\Controllers\Frontend\EventController as FrontendEventController;
-use App\Http\Controllers\Frontend\FrontendController;
 
 Route::get('/', [FrontendController::class, 'index'])
     ->name('frontend.home');
@@ -144,6 +146,18 @@ Route::prefix('panel')->middleware('auth')->group(function () {
         Route::put('/{uuid}/change-password', [UserController::class, 'changePassword'])->name('change-password');
         Route::put('/{uuid}/change-role', [UserController::class, 'changeRole'])->name('change-role');
     });
+});
+
+Route::middleware(['auth'])->group(function () {
+    Route::get('/checkout', [PaymentController::class, 'checkout'])->name('checkout');
+    Route::post('/cart/add', [CartController::class, 'addToCart'])->name('cart.add');
+    Route::get('/cart', [CartController::class, 'index'])->name('cart.index');
+    Route::delete('/cart/remove/{id}', [CartController::class, 'remove'])->name('cart.remove');
+
+    Route::get('/check-payment-status/{orderId}', [PaymentController::class, 'checkStatus'])->name('payment.check-status');
+    Route::get('/payment/finish/{uuid}', [PaymentController::class, 'finish'])->name('payment.finish');
+    Route::get('/payment/error/{uuid}', [PaymentController::class, 'error'])->name('payment.error');
+    Route::get('/payment/pending/{uuid}', [PaymentController::class, 'pending'])->name('payment.pending');
 });
 
 Auth::routes();
