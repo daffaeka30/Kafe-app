@@ -22,7 +22,7 @@ class OrderRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'payment_method' => 'required|in:cash,transfer,ewallet',
+            'payment_method' => 'required|in:cash,qris,gopay,shopeepay,bca_va,bni_va,bri_va,mandiri_va,permata_va,cimb_va,bsi_va,danamon_va,credit_card',
             'payment_amount' => 'required_if:payment_method,cash|numeric|min:0',
         ];
     }

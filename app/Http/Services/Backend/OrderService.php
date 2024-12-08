@@ -31,7 +31,7 @@ class OrderService
                 }
 
                 // Get active tax
-                $tax = Tax::first(); // or your logic to get active tax
+                $tax = Tax::first();
                 $taxAmount = 0;
                 if ($tax) {
                     // Tax is calculated after discount

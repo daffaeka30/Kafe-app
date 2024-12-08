@@ -47,9 +47,9 @@
                                             <form action="{{ route('cart.add') }}" method="POST" class="mt-2">
                                                 @csrf
                                                 <input type="hidden" name="product_id" value="{{ $coffee->name }}">
-                                                <input type="number" name="quantity" value="1" min="1"
+                                                <input type="number" name="quantity" value="0" min="1"
                                                     class="form-control w-25 d-inline" style="display:inline-block;">
-                                                <button type="submit" class="btn btn-primary">Add to Cart</button>
+                                                <button type="submit" class="btn btn-primary"><i class="fas fa-shopping-cart"></i></button>
                                             </form>
                                         </div>
                                     </div>
@@ -77,9 +77,9 @@
                                             <form action="{{ route('cart.add') }}" method="POST" class="mt-2">
                                                 @csrf
                                                 <input type="hidden" name="product_id" value="{{ $mocktail->name }}">
-                                                <input type="number" name="quantity" value="1" min="1"
+                                                <input type="number" name="quantity" value="0" min="1"
                                                     class="form-control w-25 d-inline" style="display:inline-block;">
-                                                <button type="submit" class="btn btn-primary">Add to Cart</button>
+                                                <button type="submit" class="btn btn-primary"><i class="fas fa-shopping-cart"></i></button>
                                             </form>
                                         </div>
                                     </div>
@@ -107,9 +107,9 @@
                                             <form action="{{ route('cart.add') }}" method="POST" class="mt-2">
                                                 @csrf
                                                 <input type="hidden" name="product_id" value="{{ $food->name }}">
-                                                <input type="number" name="quantity" value="1" min="1"
+                                                <input type="number" name="quantity" value="0" min="1"
                                                     class="form-control w-25 d-inline" style="display:inline-block;">
-                                                <button type="submit" class="btn btn-primary">Add to Cart </button>
+                                                <button type="submit" class="btn btn-primary"><i class="fas fa-shopping-cart"></i></button>
                                             </form>
                                         </div>
                                     </div>

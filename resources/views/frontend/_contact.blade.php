@@ -66,7 +66,7 @@
                     });
                 </script>
 
-                <div class="col-sm-12 col-md-6 col-lg-5">
+                <div class="col-sm-12 col-md-6 col-lg-5 text-break">
                     <div>
                         <div class="d-inline-flex w-100 border border-primary p-4 rounded mb-4">
                             <i class="fas fa-map-marker-alt fa-2x text-primary me-4"></i>

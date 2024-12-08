@@ -16,14 +16,14 @@ class Order extends Model
     protected $fillable = [
         'uuid',
         'user_id',
-        'status', // pending, confirmed, completed, cancelled
+        'status',
         'total_price',
         'notes',
-        'payment_status', // unpaid, paid
-        'payment_method', // cash, transfer, ewallet
+        'payment_status',
+        'payment_method',
         'payment_amount',
         'order_number',
-        'order_type', // dine_in, takeaway
+        'order_type',
         'subtotal',
         'tax_amount',
         'discount_amount',
@@ -35,6 +35,23 @@ class Order extends Model
         'subtotal' => 'decimal:2',
         'tax_amount' => 'decimal:2',
         'discount_amount' => 'decimal:2',
+    ];
+
+    // Konstanta untuk payment methods
+    const PAYMENT_METHODS = [
+        'cash',
+        'qris',
+        'gopay',
+        'shopeepay',
+        'bca_va',
+        'bni_va',
+        'bri_va',
+        'mandiri_va',
+        'permata_va',
+        'cimb_va',
+        'bsi_va',
+        'danamon_va',
+        'credit_card',
     ];
 
     protected static function booted()

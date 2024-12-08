@@ -153,8 +153,12 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/cart/add', [CartController::class, 'addToCart'])->name('cart.add');
     Route::get('/cart', [CartController::class, 'index'])->name('cart.index');
     Route::delete('/cart/remove/{id}', [CartController::class, 'remove'])->name('cart.remove');
+
+    Route::get('/check-payment-status/{orderId}', [PaymentController::class, 'checkStatus'])->name('payment.check-status');
+    Route::get('/payment/finish/{uuid}', [PaymentController::class, 'finish'])->name('payment.finish');
+    Route::get('/payment/error/{uuid}', [PaymentController::class, 'error'])->name('payment.error');
+    Route::get('/payment/pending/{uuid}', [PaymentController::class, 'pending'])->name('payment.pending');
 });
-Route::post('/midtrans/callback', [PaymentController::class, 'callback'])->name('midtrans.callback');
 
 Auth::routes();
 
