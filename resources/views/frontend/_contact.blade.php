@@ -2,7 +2,7 @@
     <div class="container">
         <div class="p-5 bg-light rounded contact-form">
             <div class="row g-4">
-                <div class="col-12">
+                <div class="col-12 text-center pb-3">
                     <small
                         class="d-inline-block fw-bold text-dark text-uppercase bg-light border border-primary rounded-pill px-4 py-1 mb-3">Tetap
                         Terhubung</small>
