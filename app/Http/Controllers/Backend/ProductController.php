@@ -8,16 +8,12 @@ use Illuminate\Support\Facades\Storage;
 use App\Http\Requests\Backend\ProductRequest;
 use App\Http\Services\Backend\ProductService;
 use App\Http\Services\Backend\CategoryService;
-use App\Http\Middleware\AdminMiddleware;
 
 class ProductController extends Controller
 {
     public function __construct(
         private ProductService $productService, private CategoryService $categoryService
-    )
-    {
-        $this->middleware(AdminMiddleware::class);
-    }
+    ) {}
 
     public function index()
     {
