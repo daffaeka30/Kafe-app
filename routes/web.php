@@ -4,7 +4,6 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\PaymentController;
-use App\Http\Middleware\AdminMiddleware;
 use App\Http\Controllers\Backend\TaxController;
 use App\Http\Controllers\Backend\ChefController;
 use App\Http\Controllers\Backend\UserController;
@@ -159,11 +158,6 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/payment/finish/{uuid}', [PaymentController::class, 'finish'])->name('payment.finish');
     Route::get('/payment/error/{uuid}', [PaymentController::class, 'error'])->name('payment.error');
     Route::get('/payment/pending/{uuid}', [PaymentController::class, 'pending'])->name('payment.pending');
-});
-
-Route::middleware('admin')->prefix('panel')->name('panel.')->group(function () {
-    Route::resource('product', ProductController::class);
-
 });
 
 Auth::routes();
