@@ -39,15 +39,16 @@
                 </a>
             </li>
 
+            @can('isOperator')
             <li class="nav-item">
-                <a class="nav-link text-white {{ request()->routeIs('panel.product.*') ? 'active bg-gradient-primary' : '' }}"
-                    href="{{ route('panel.product.index') }}">
+                <a class="nav-link text-white {{ request()->routeIs('panel.menu.*') ? 'active bg-gradient-primary' : '' }}"
+                    href="{{ route('panel.menu.create') }}">
                     <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
-                        <i class="material-icons opacity-10">restaurant_menu</i>
+                        <i class="fas fa-plus me-1"></i>
                     </div>
-                    <span class="nav-link-text ms-1">Products (Menu)</span>
                 </a>
             </li>
+            @endcan
 
             <li class="nav-item">
                 <a class="nav-link text-white {{ request()->routeIs('panel.raw-material.*') ? 'active bg-gradient-primary' : '' }}"
