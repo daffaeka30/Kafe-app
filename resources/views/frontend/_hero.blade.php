@@ -10,7 +10,7 @@
                     <h6 class="mb-4 animated bounceInDown">Ini adalah ruang untuk berbagi cerita, inspirasi, dan momen
                         santai bersama <br> teman-teman. Dari aroma kopi yang menggugah hingga lingkungan yang cozy,
                         <br> kami siap menjadi destinasi hangout favoritmu!</h6>
-                    <a href=""
+                    <a href="{{ route('frontend.menu') }}"
                         class="btn btn-primary border-0 rounded-pill py-3 px-4 px-md-5 me-4 animated bounceInLeft">Pesan
                         Sekarang</a>
                 </div>

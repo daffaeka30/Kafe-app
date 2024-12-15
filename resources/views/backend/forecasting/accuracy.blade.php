@@ -41,7 +41,7 @@
                                 <div class="form-group">
                                     <label for="date_from">Date From</label>
                                     <input type="date" class="form-control border px-3" name="date_from" id="date_from"
-                                        value="{{ $filters['date_from'] ?? '' }}" max="{{ date('Y-m-d') }}">
+                                        value="{{ $filters['date_from'] ?? '' }}">
                                 </div>
                             </div>
 
@@ -49,7 +49,7 @@
                                 <div class="form-group">
                                     <label for="date_to">Date To</label>
                                     <input type="date" class="form-control border px-3" name="date_to" id="date_to"
-                                        value="{{ $filters['date_to'] ?? '' }}" max="{{ date('Y-m-d') }}">
+                                        value="{{ $filters['date_to'] ?? '' }}">
                                 </div>
                             </div>
 
