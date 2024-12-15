@@ -2,10 +2,11 @@
 
 namespace App\Http\Services\Backend;
 
-use App\Models\Backend\ForecastingResult;
-use App\Models\Backend\RawMaterial;
-use App\Models\Backend\RawMaterialUsage;
 use Illuminate\Support\Facades\DB;
+use App\Models\Backend\RawMaterial;
+use Illuminate\Support\Facades\Log;
+use App\Models\Backend\RawMaterialUsage;
+use App\Models\Backend\ForecastingResult;
 
 class ForecastingService
 {
@@ -44,25 +45,37 @@ class ForecastingService
                 throw new \Exception('Cannot forecast for material with no stock.');
             }
 
-            // Ambil total penggunaan per bulan sesuai period yang diminta
+            // Ambil data penggunaan beberapa bulan terakhir sesuai period yang diminta user
             $monthlyUsages = RawMaterialUsage::where('raw_material_id', $rawMaterialId)
-                ->whereDate('date', '>=', now()->subMonths($period))
+                ->whereDate('date', '>=', now()->subMonths($period)->startOfMonth())
+                ->whereDate('date', '<=', now())
                 ->select(
                     DB::raw('YEAR(date) as year'),
                     DB::raw('MONTH(date) as month'),
                     DB::raw('SUM(quantity_used) as total_usage')
                 )
-                ->groupBy('year', 'month')
+                ->groupBy(DB::raw('YEAR(date)'), DB::raw('MONTH(date)'))
                 ->orderBy('year', 'desc')
                 ->orderBy('month', 'desc')
-                ->take($period)
                 ->get();
+
+            // Debug log untuk membantu troubleshooting
+            Log::info('Query Debug:', [
+                'raw_material_id' => $rawMaterialId,
+                'period_requested' => $period,
+                'date_range' => [
+                    'start' => now()->subMonths($period)->startOfMonth()->format('Y-m-d'),
+                    'end' => now()->format('Y-m-d'),
+                ],
+                'data_found' => $monthlyUsages->count(),
+                'monthly_data' => $monthlyUsages->toArray(),
+            ]);
 
             if ($monthlyUsages->count() < $period) {
                 throw new \Exception("Tidak cukup data untuk peramalan. Dibutuhkan data penggunaan material minimal {$period} bulan terakhir.");
             }
 
-            // Generate bobot berdasarkan period
+            // Generate bobot sesuai period yang diminta
             $weights = array_reverse(range(1, $period));
             $totalWeight = array_sum($weights);
 
@@ -72,14 +85,8 @@ class ForecastingService
                 $weightedSum += $usage->total_usage * $weights[$index];
             }
 
-            // Hasil prediksi
+            // Hasil prediksi untuk bulan depan
             $predictedAmount = $weightedSum / $totalWeight;
-
-            // Ambil data bulan terakhir untuk actual_usage
-            $actualUsage = $monthlyUsages->first()->total_usage;
-
-            // Hitung error rate
-            $errorRate = abs(($actualUsage - $predictedAmount) / $actualUsage) * 100;
 
             // Simpan hasil forecast
             ForecastingResult::create([
@@ -87,8 +94,8 @@ class ForecastingService
                 'date' => now()->addMonth()->startOfMonth(),
                 'predicted_amount' => $predictedAmount,
                 'forecasting_method' => "Weighted Moving Average ({$period} months)",
-                'actual_usage' => $actualUsage,
-                'error_rate' => $errorRate,
+                'actual_usage' => null,
+                'error_rate' => null,
             ]);
 
             DB::commit();
@@ -99,9 +106,36 @@ class ForecastingService
         }
     }
 
+    public function updateActualUsage($forecastId, $actualUsage)
+    {
+        DB::beginTransaction();
+        try {
+            $forecast = ForecastingResult::findOrFail($forecastId);
+
+            // Hitung error rate jika ada actual usage
+            $errorRate = null;
+            if ($actualUsage > 0) {
+                $errorRate = abs(($actualUsage - $forecast->predicted_amount) / $actualUsage) * 100;
+            }
+
+            $forecast->update([
+                'actual_usage' => $actualUsage,
+                'error_rate' => $errorRate,
+            ]);
+
+            DB::commit();
+            return $forecast;
+        } catch (\Exception $e) {
+            DB::rollback();
+            throw $e;
+        }
+    }
+
     public function getAccuracyAnalysis($rawMaterialId, $dateFrom = null, $dateTo = null)
     {
         $forecasts = ForecastingResult::where('raw_material_id', $rawMaterialId)
+            ->whereNotNull('actual_usage') // Hanya ambil data yang sudah ada actual usage
+            ->whereNotNull('error_rate') // dan error rate
             ->when($dateFrom, function ($q) use ($dateFrom) {
                 return $q->whereDate('date', '>=', $dateFrom);
             })

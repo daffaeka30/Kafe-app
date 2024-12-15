@@ -4,11 +4,12 @@ namespace App\Http\Controllers\Backend;
 
 use Illuminate\Http\Request;
 use App\Models\Backend\RawMaterial;
-use Illuminate\Support\Facades\Log;
 use App\Http\Controllers\Controller;
+use App\Models\Backend\ForecastingResult;
 use App\Http\Services\Backend\ForecastingService;
 use App\Http\Requests\Backend\Forecasting\FilterRequest;
 use App\Http\Requests\Backend\Forecasting\GenerateRequest;
+use App\Http\Requests\Backend\Forecasting\UpdateActualRequest;
 
 class ForecastingController extends Controller
 {
@@ -86,6 +87,31 @@ class ForecastingController extends Controller
             return redirect()
                 ->route('panel.forecasting.index')
                 ->with('success', 'Forecast generated successfully');
+        } catch (\Exception $e) {
+            return redirect()
+                ->back()
+                ->withInput()
+                ->with('error', $e->getMessage());
+        }
+    }
+
+    public function editActual($uuid)
+    {
+        $forecast = ForecastingResult::where('uuid', $uuid)->firstOrFail();
+        return view('backend.forecasting.edit-actual', compact('forecast'));
+    }
+
+    public function updateActual(UpdateActualRequest $request, $uuid)
+    {
+        try {
+            $this->forecastingService->updateActualUsage(
+                $request->forecast_id,
+                $request->actual_usage
+            );
+
+            return redirect()
+                ->route('panel.forecasting.history')
+                ->with('success', 'Actual usage updated successfully');
         } catch (\Exception $e) {
             return redirect()
                 ->back()
