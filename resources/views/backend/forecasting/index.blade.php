@@ -74,12 +74,22 @@
                                     <td>{{ $forecast->rawMaterial->name }}</td>
                                     <td>{{ $forecast->rawMaterial->category->name }}</td>
                                     <td>{{ $forecast->date->format('d M Y') }}</td>
-                                    <td>{{ number_format($forecast->actual_usage, 1) }} {{ $forecast->rawMaterial->unit }}</td>
+                                    <td>
+                                        @if(is_null($forecast->actual_usage))
+                                            -
+                                        @else
+                                            {{ number_format($forecast->actual_usage, 1) }} {{ $forecast->rawMaterial->unit }}
+                                        @endif
+                                    </td>
                                     <td>{{ number_format($forecast->predicted_amount, 1) }} {{ $forecast->rawMaterial->unit }}</td>
                                     <td>
-                                        <span class="badge bg-{{ $forecast->error_rate <= 10 ? 'success' : ($forecast->error_rate <= 20 ? 'warning' : 'danger') }}">
-                                            {{ number_format($forecast->error_rate, 1) }}%
-                                        </span>
+                                        @if(is_null($forecast->error_rate))
+                                            -
+                                        @else
+                                            <span class="badge bg-{{ $forecast->error_rate <= 10 ? 'success' : ($forecast->error_rate <= 20 ? 'warning' : 'danger') }}">
+                                                {{ number_format($forecast->error_rate, 1) }}%
+                                            </span>
+                                        @endif
                                     </td>
                                 </tr>
                                 @empty

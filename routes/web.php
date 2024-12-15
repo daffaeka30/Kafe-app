@@ -100,6 +100,8 @@ Route::prefix('panel')->middleware('auth')->group(function () {
         Route::post('/generate', [ForecastingController::class, 'generate'])->name('generate');
         Route::get('/history', [ForecastingController::class, 'history'])->name('history');
         Route::get('/accuracy', [ForecastingController::class, 'accuracy'])->name('accuracy');
+        Route::get('/{uuid}/edit-actual', [ForecastingController::class, 'editActual'])->name('edit-actual');
+        Route::put('/{uuid}/update-actual', [ForecastingController::class, 'updateActual'])->name('update-actual');
     });
 
     // Reports Routes

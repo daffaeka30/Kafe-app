@@ -17,8 +17,8 @@ return new class extends Migration
             $table->foreignId('raw_material_id')->constrained('raw_materials')->onDelete('cascade');
             $table->date('date');
             $table->decimal('predicted_amount', 8, 2);
-            $table->decimal('actual_usage', 8, 1);
-            $table->decimal('error_rate', 8, 2);
+            $table->decimal('actual_usage', 8, 1)->nullable();
+            $table->decimal('error_rate', 8, 2)->nullable();
             $table->string('forecasting_method');
             $table->timestamps();
         });

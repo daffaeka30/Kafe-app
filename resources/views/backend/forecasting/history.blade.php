@@ -75,7 +75,16 @@
                                     <td>{{ $forecast->date->format('d M Y') }}</td>
                                     <td>{{ $forecast->rawMaterial->name }}</td>
                                     <td>{{ $forecast->rawMaterial->category->name }}</td>
-                                    <td>{{ number_format($forecast->actual_usage, 1) }} {{ $forecast->rawMaterial->unit }}</td>
+                                    <td>
+                                        @if(is_null($forecast->actual_usage))
+                                            <a href="{{ route('panel.forecasting.edit-actual', $forecast->uuid) }}"
+                                            class="btn btn-sm btn-info m-3">
+                                                Update Actual
+                                            </a>
+                                        @else
+                                            {{ number_format($forecast->actual_usage, 1) }} {{ $forecast->rawMaterial->unit }}
+                                        @endif
+                                    </td>
                                     <td>{{ number_format($forecast->predicted_amount, 1) }} {{ $forecast->rawMaterial->unit }}</td>
                                     <td>{{ $forecast->forecasting_method }}</td>
                                     <td>
