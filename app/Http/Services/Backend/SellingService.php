@@ -2,9 +2,10 @@
 
 namespace App\Http\Services\Backend;
 
+use Carbon\Carbon;
 use App\Models\Backend\Selling;
 use Barryvdh\DomPDF\Facade\Pdf;
-use Carbon\Carbon;
+use Illuminate\Support\Facades\Auth;
 
 class SellingService
 {
@@ -12,8 +13,8 @@ class SellingService
     {
         $query = Selling::with(['user', 'sellingDetails.product', 'sellingDetails.tax']);
 
-        if (auth()->user()->hasRole('pelanggan')) {
-            $query->where('user_id', auth()->id());
+        if (Auth::user()->hasRole('pelanggan')) {
+            $query->where('user_id', Auth::id());
         }
 
         if ($dateFrom) {
