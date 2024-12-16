@@ -52,7 +52,7 @@
                                     <td class="ps-4">{{ $selling->invoice }}</td>
                                     <td>{{ $selling->user->name }}</td>
                                     <td>Rp {{ number_format($selling->total_price, 0, ',', '.') }}</td>
-                                    <td>{{ $selling->date->format('d M Y H:i') }}</td>
+                                    <td>{{ $selling->created_at->format('d M Y H:i') }}</td>
                                     <td>
                                         <div class="btn-group">
                                             <a href="{{ route('panel.selling.show', $selling->uuid) }}"

@@ -15,7 +15,20 @@ class RawMaterialStockController extends Controller
 {
     public function __construct(
         private RawMaterialStockService $stockService
-    ) {}
+    ) 
+    {
+        $this->middleware(function ($request, $next) {
+            if ($request->user()->isOwner() && !in_array($request->routeIs('panel.raw-material-stock.index', 'panel.raw-material-stock.history'), ['panel.raw-material-stock.index', 'panel.raw-material-stock.history'])) {
+                abort(403, 'Unauthorized action.');
+            }
+
+            if (!$request->user()->isOwner() && !$request->user()->isPegawai()) {
+                abort(403, 'Unauthorized action.');
+            }
+
+            return $next($request);
+        });
+    }
 
     /**
      * Display a listing of the resource.

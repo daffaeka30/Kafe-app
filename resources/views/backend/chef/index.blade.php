@@ -11,9 +11,11 @@
                     <div class="bg-gradient-primary shadow-primary border-radius-lg pt-4 pb-3">
                         <div class="d-flex justify-content-between">
                             <h6 class="text-white text-capitalize ps-3">Chef List</h6>
+                            @if (auth()->user()->hasRole('admin'))
                             <a href="{{ route('panel.chef.create') }}" class="btn btn-sm btn-primary me-3">
                                 <i class="fas fa-plus me-1"></i> Add Chef
                             </a>
+                            @endif
                         </div>
                     </div>
                 </div>
@@ -78,6 +80,7 @@
                                             <a href="{{ route('panel.chef.show', $chef->uuid) }}" class="btn btn-info btn-md me-1">
                                                 <i class="fas fa-eye"></i>
                                             </a>
+                                            @if (auth()->user()->hasRole('admin'))
                                             <a href="{{ route('panel.chef.edit', $chef->uuid) }}" class="btn btn-warning btn-md me-1">
                                                 <i class="fas fa-edit"></i>
                                             </a>
@@ -85,6 +88,7 @@
                                                 data-uuid="{{ $chef->uuid }}">
                                                 <i class="fas fa-trash-alt"></i>
                                             </button>
+                                            @endif
                                         </div>
                                     </td>
                                 </tr>

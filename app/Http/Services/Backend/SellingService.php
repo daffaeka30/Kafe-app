@@ -12,6 +12,10 @@ class SellingService
     {
         $query = Selling::with(['user', 'sellingDetails.product', 'sellingDetails.tax']);
 
+        if (auth()->user()->hasRole('pelanggan')) {
+            $query->where('user_id', auth()->id());
+        }
+
         if ($dateFrom) {
             $query->whereDate('date', '>=', Carbon::parse($dateFrom));
         }

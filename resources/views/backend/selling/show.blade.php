@@ -40,8 +40,8 @@
                                 </div>
                                 <div class="text-end">
                                     <h5 class="mb-1">INVOICE #{{ $selling->invoice }}</h5>
-                                    <p class="mb-1">Date: {{ $selling->date->format('d M Y') }}</p>
-                                    <p class="mb-0">Time: {{ $selling->date->format('H:i') }}</p>
+                                    <p class="mb-1">Date: {{ $selling->created_at->format('d M Y') }}</p>
+                                    <p class="mb-0">Time: {{ $selling->created_at->format('H:i') }}</p>
                                 </div>
                             </div>
                         </div>
@@ -87,7 +87,7 @@
                                         </tr>
                                         <tr>
                                             <th>Transaction Date</th>
-                                            <td>{{ $selling->date->format('d M Y H:i') }}</td>
+                                            <td>{{ $selling->created_at->format('d M Y H:i') }}</td>
                                         </tr>
                                         <tr>
                                             <th>Total Items</th>

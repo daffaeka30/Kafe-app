@@ -59,8 +59,8 @@
 
     <div class="invoice-info">
         <h3>INVOICE #{{ $selling->invoice }}</h3>
-        <p>Date: {{ $selling->date->format('d M Y') }}</p>
-        <p>Time: {{ $selling->date->format('H:i') }}</p>
+        <p>Date: {{ $selling->created_at->format('d M Y') }}</p>
+        <p>Time: {{ $selling->created_at->format('H:i') }}</p>
     </div>
 
     <div class="customer-info">

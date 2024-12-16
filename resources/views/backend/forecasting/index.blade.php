@@ -12,9 +12,11 @@
                         <div class="d-flex justify-content-between align-items-center">
                             <h6 class="text-white text-capitalize ps-3">Material Forecasting</h6>
                             <div class="me-3">
+                                @if (auth()->user()->hasRole('pegawai'))
                                 <button type="button" class="btn btn-sm btn-light" data-bs-toggle="modal" data-bs-target="#forecastModal">
                                     <i class="fas fa-plus me-1"></i> Generate Forecast
                                 </button>
+                                @endif
                                 <a href="{{ route('panel.forecasting.history') }}" class="btn btn-sm btn-light ms-2">
                                     <i class="fas fa-history me-1"></i> History
                                 </a>

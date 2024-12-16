@@ -7,11 +7,13 @@ use App\Models\Backend\OrderDetail;
 use App\Models\Backend\Product;
 use App\Models\Backend\Tax;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
 
 class OrderService
 {
     public function store($userId, $orderData)
     {
+        $userId = Auth::id();
         DB::beginTransaction();
         try {
             $subtotal = 0;
@@ -81,8 +83,13 @@ class OrderService
 
     public function getOrders($status = null, $paginate = null)
     {
+        $userId = Auth::id();
         // Menggunakan Eloquent ORM dengan eager loading
         $orders = Order::with('user');
+
+        if (Auth::user()->isPelanggan()) {
+            $orders->where('user_id', $userId);
+        }
 
         if ($status) {
             $orders->where('status', $status);
@@ -93,6 +100,7 @@ class OrderService
 
     public function getOrderByUuid($uuid)
     {
+        $userId = Auth::id();
         // Menggunakan Eloquent firstOrFail
         return Order::with('user', 'orderDetails.product', )->whereUuid($uuid)->firstOrFail();
     }

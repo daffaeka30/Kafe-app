@@ -22,7 +22,17 @@ class ReportController extends Controller
 {
     public function __construct(
         private ReportService $reportService
-    ) {}
+    ) 
+    {
+        $this->middleware(function ($request, $next) {
+            if (!$request->user()->isAdmin() && !$request->user()->isOwner() && !$request->user()->isPegawai()) {
+                abort(403, 'Unauthorized action.');
+            }
+
+            return $next($request);
+        });
+
+    }
 
     // Sales Reports
     public function salesIndex()

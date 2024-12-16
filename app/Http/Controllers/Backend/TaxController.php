@@ -13,7 +13,20 @@ class TaxController extends Controller
 {
     public function __construct(
         private TaxService $taxService
-    ) {}
+    ) 
+    {
+        $this->middleware(function ($request, $next) {
+            if ($request->user()->isOwner() && !in_array($request->routeIs('panel.tax.index'), ['panel.tax.index'])) {
+                abort(403, 'Unauthorized action.');
+            }
+
+            if (!$request->user()->isOwner() && !$request->user()->isAdmin()) {
+                abort(403, 'Unauthorized action.');
+            }
+
+            return $next($request);
+        });
+    }
 
     /**
      * Display a listing of the resource.

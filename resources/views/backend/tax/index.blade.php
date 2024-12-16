@@ -11,9 +11,11 @@
                     <div class="bg-gradient-primary shadow-primary border-radius-lg pt-4 pb-3">
                         <div class="d-flex justify-content-between">
                             <h6 class="text-white text-capitalize ps-3">Tax List</h6>
+                            @if (auth()->user()->hasRole('admin'))
                             <a href="{{ route('panel.tax.create') }}" class="btn btn-sm btn-primary me-3">
                                 <i class="fas fa-plus me-1"></i> Add
                             </a>
+                            @endif
                         </div>
                     </div>
                 </div>
@@ -40,7 +42,9 @@
                                     <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">No</th>
                                     <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Name</th>
                                     <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Rate</th>
+                                    @if (auth()->user()->hasRole('admin'))
                                     <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Action</th>
+                                    @endif
                                 </tr>
                             </thead>
                             <tbody>
@@ -51,6 +55,7 @@
                                     </td>
                                     <td>{{ $tax->name }}</td>
                                     <td>{{ $tax->rate_percentage }}</td>
+                                    @if (auth()->user()->hasRole('admin'))
                                     <td>
                                         <div class="btn-group">
                                             <a href="{{ route('panel.tax.edit', $tax->id) }}"
@@ -64,6 +69,7 @@
                                             </button>
                                         </div>
                                     </td>
+                                    @endif
                                 </tr>
                                 @empty
                                 <tr>

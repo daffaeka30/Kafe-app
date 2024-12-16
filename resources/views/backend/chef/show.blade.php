@@ -53,7 +53,9 @@
                     </div>
                     <div class="mt-3">
                         <a href="{{ route('panel.chef.index') }}" class="btn btn-secondary">Back to List</a>
-                        <a href="{{ route('panel.chef.edit', $chef->uuid) }}" class="btn btn-warning">Edit Chef</a>
+                        @if (auth()->user()->hasRole('admin'))
+                            <a href="{{ route('panel.chef.edit', $chef->uuid) }}" class="btn btn-warning">Edit Chef</a>
+                        @endif
                     </div>
                 </div>
             </div>

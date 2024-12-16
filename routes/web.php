@@ -22,6 +22,7 @@ use App\Http\Controllers\Backend\DashboardController;
 use App\Http\Controllers\Frontend\FrontendController;
 use App\Http\Controllers\Backend\ForecastingController;
 use App\Http\Controllers\Backend\RawMaterialController;
+use App\Http\Controllers\Backend\TestimonialController;
 use App\Http\Controllers\Backend\RawMaterialStockController;
 use App\Http\Controllers\Backend\RawMaterialUsageController;
 use App\Http\Controllers\Frontend\EventController as FrontendEventController;
@@ -31,6 +32,7 @@ Route::get('/', [FrontendController::class, 'index'])
 
 Route::get('/tentang-kami', [AboutController::class, 'index'])->name('frontend.about');
 Route::get('/layanan', [ServiceController::class, 'index'])->name('frontend.service');
+Route::post('/layanan', [ServiceController::class, 'store'])->name('frontend.service.store');
 Route::get('/acara', [FrontendEventController::class, 'index'])->name('frontend.event');
 Route::get('/menu', [MenuController::class, 'index'])->name('frontend.menu');
 Route::get('/hubungi', [ContactController::class, 'index'])->name('frontend.contact');
@@ -57,6 +59,10 @@ Route::prefix('panel')->middleware('auth')->group(function () {
 
     Route::resource('tax', TaxController::class)
         ->names('panel.tax');
+
+    Route::resource('testimonial', TestimonialController::class)
+        ->names('panel.testimonial');
+
 
     // Transaction Management
     Route::prefix('order')->name('panel.order.')->group(function () {

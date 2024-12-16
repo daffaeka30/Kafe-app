@@ -10,7 +10,16 @@ class SellingController extends Controller
 {
     public function __construct(
         private SellingService $sellingService
-    ) {}
+    ) 
+    {
+        $this->middleware(function ($request, $next) {
+            if (!$request->user()->isAdmin() && !$request->user()->isOwner() && !$request->user()->isPelanggan()) {
+                abort(403, 'Unauthorized action.');
+            }
+
+            return $next($request);
+        });
+    }
 
     /**
      * Display a listing of the resource.

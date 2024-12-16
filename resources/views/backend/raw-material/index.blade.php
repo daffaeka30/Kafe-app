@@ -13,8 +13,10 @@
                     <div class="bg-gradient-primary shadow-primary border-radius-lg pt-4 pb-3">
                         <div class="d-flex justify-content-between">
                             <h6 class="text-white text-capitalize ps-3">Daftar Bahan Baku</h6>
+                            @if (auth()->user()->hasRole('pegawai'))
                             <a href="{{ route('panel.raw-material.create') }}" class="btn btn-sm btn-primary me-3"><i
                                     class="fas fa-plus me-1"></i> Add</a>
+                            @endif
                         </div>
                     </div>
                 </div>
@@ -54,9 +56,11 @@
                                     <th
                                         class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
                                         Unit</th>
+                                    @if (auth()->user()->hasRole('pegawai'))
                                     <th
                                         class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
                                         Action</th>
+                                    @endif
                                 </tr>
                             </thead>
                             <tbody>
@@ -69,6 +73,7 @@
                                     <td>{{ $material->category->name }}</td>
                                     <td>{{ $material->stock }}</td>
                                     <td>{{ $material->unit }}</td>
+                                    @if (auth()->user()->hasRole('pegawai'))
                                     <td>
                                         <div class="d-flex justify-content-center">
                                             <a href="{{ route('panel.raw-material.edit', $material->uuid) }}"
@@ -80,9 +85,9 @@
                                                 data-uuid="{{ $material->uuid }}">
                                                 <i class="fas fa-trash-alt"></i>
                                             </button>
-
                                         </div>
                                     </td>
+                                    @endif
                                 </tr>
                                 @empty
                                 <tr>

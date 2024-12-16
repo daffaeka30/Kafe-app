@@ -11,9 +11,11 @@
                     <div class="bg-gradient-primary shadow-primary border-radius-lg pt-4 pb-3">
                         <div class="d-flex justify-content-between">
                             <h6 class="text-white text-capitalize ps-3">Event List</h6>
+                            @if (auth()->user()->hasRole('admin'))
                             <a href="{{ route('panel.event.create') }}" class="btn btn-sm btn-primary me-3">
                                 <i class="fas fa-plus me-1"></i> Add Event
                             </a>
+                            @endif
                         </div>
                     </div>
                 </div>
@@ -61,6 +63,7 @@
                                             <a href="{{ route('panel.event.show', $event->uuid) }}" class="btn btn-info btn-md me-1">
                                                 <i class="fas fa-eye"></i>
                                             </a>
+                                            @if (auth()->user()->hasRole('admin'))
                                             <a href="{{ route('panel.event.edit', $event->uuid) }}" class="btn btn-warning btn-md me-1">
                                                 <i class="fas fa-edit"></i>
                                             </a>
@@ -68,6 +71,7 @@
                                                 data-uuid="{{ $event->uuid }}">
                                                 <i class="fas fa-trash-alt"></i>
                                             </button>
+                                            @endif
                                         </div>
                                     </td>
                                 </tr>

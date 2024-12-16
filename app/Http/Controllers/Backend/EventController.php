@@ -15,7 +15,20 @@ class EventController extends Controller
     public function __construct(
         private EventService $eventService,
         private CategoryService $categoryService
-    ) {}
+    ) 
+    {
+        $this->middleware(function ($request, $next) {
+            if ($request->user()->isOwner() && !in_array($request->routeIs('panel.event.index', 'panel.event.show'), ['panel.event.index', 'panel.event.show'])) {
+                abort(403, 'Unauthorized action.');
+            }
+
+            if (!$request->user()->isOwner() && !$request->user()->isAdmin()) {
+                abort(403, 'Unauthorized action.');
+            }
+
+            return $next($request);
+        });
+    }
 
     /**
      * Display a listing of the resource.

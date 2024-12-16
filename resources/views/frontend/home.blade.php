@@ -27,6 +27,10 @@
     @include('frontend._chef-team')
     <!-- Team End -->
 
+    <!-- Testimonials Start -->
+    @include('frontend._testimonial')
+    <!-- Testimonials End -->
+
     <!-- Contact Start -->
     @include('frontend._contact')
     <!-- Contact End -->

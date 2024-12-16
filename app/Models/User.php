@@ -119,7 +119,7 @@ class User extends Authenticatable
      */
     public function isOwner()
     {
-        return $this->hasRole('pelamar');
+        return $this->hasRole('owner');
     }
 
     /**
