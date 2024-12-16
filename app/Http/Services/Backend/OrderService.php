@@ -6,8 +6,8 @@ use App\Models\Backend\Order;
 use App\Models\Backend\OrderDetail;
 use App\Models\Backend\Product;
 use App\Models\Backend\Tax;
-use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class OrderService
 {
@@ -114,24 +114,28 @@ class OrderService
         }
 
         DB::transaction(function () use ($order) {
-            $order->status = 'completed';
-            $order->save();
-
             // Create selling record
             $selling = $order->user->sellings()->create([
                 'date' => now(),
                 'total_price' => $order->total_price,
             ]);
 
-            // Create selling details
+            // Create selling details dengan tax dan discount
             foreach ($order->orderDetails as $detail) {
+                // Ambil nilai dari order detail
                 $selling->sellingDetails()->create([
                     'product_id' => $detail->product_id,
                     'quantity' => $detail->quantity,
                     'unit_price' => $detail->price,
+                    'tax_id' => $detail->tax_id,
+                    'discount' => $detail->discount,
                     'subtotal' => $detail->subtotal,
                 ]);
             }
+
+            // Update order status
+            $order->status = 'completed';
+            $order->save();
         });
 
         return $order;
