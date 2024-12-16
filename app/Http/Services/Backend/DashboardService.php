@@ -2,14 +2,15 @@
 
 namespace App\Http\Services\Backend;
 
-use Carbon\Carbon;
-use App\Models\User;
+use App\Models\Backend\ForecastingResult;
 use App\Models\Backend\Order;
 use App\Models\Backend\Product;
-use App\Models\Backend\Selling;
-use Illuminate\Support\Facades\DB;
 use App\Models\Backend\RawMaterial;
-use App\Models\Backend\ForecastingResult;
+use App\Models\Backend\Selling;
+use App\Models\User;
+use Carbon\Carbon;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class DashboardService
 {
@@ -202,23 +203,23 @@ class DashboardService
     {
         // Mengambil produk dengan stock rendah
         $lowStockProducts = Product::select(
-                'id',
-                'name',
-                'stock',
-                DB::raw("'product' as type"),
-                DB::raw("'pcs' as unit")
-            )
+            'id',
+            'name',
+            'stock',
+            DB::raw("'product' as type"),
+            DB::raw("'pcs' as unit")
+        )
             ->where('stock', '<=', 10)
             ->where('status', 'available');
 
         // Mengambil raw materials dengan stock rendah
         $lowStockMaterials = RawMaterial::select(
-                'id',
-                'name',
-                'stock',
-                DB::raw("'material' as type"),
-                'unit'
-            )
+            'id',
+            'name',
+            'stock',
+            DB::raw("'material' as type"),
+            'unit'
+        )
             ->where('stock', '<=', 10);
 
         // Menggabungkan keduanya dan ambil 5 item dengan stock terendah
@@ -267,5 +268,35 @@ class DashboardService
             ->orderBy('date')
             ->limit(5)
             ->get();
+    }
+
+    public function getCustomerDashboardData()
+    {
+        $user_id = Auth::id();
+
+        // Summary Data
+        $summary = [
+            'activeOrders' => Order::where('user_id', $user_id)
+                ->whereIn('status', ['pending', 'confirmed'])
+                ->count(),
+
+            'totalOrders' => Order::where('user_id', $user_id)
+                ->count(),
+
+            'totalSpent' => Order::where('user_id', $user_id)
+                ->where('status', 'completed')
+                ->sum('total_price'),
+
+            'latestOrder' => Order::where('user_id', $user_id)
+                ->latest()
+                ->first(),
+
+            'customerOrders' => Order::where('user_id', $user_id)
+                ->latest()
+                ->take(5)
+                ->get(),
+        ];
+
+        return $summary;
     }
 }
