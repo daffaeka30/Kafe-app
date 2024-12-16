@@ -12,9 +12,11 @@
                         <div class="d-flex justify-content-between align-items-center">
                             <h6 class="text-white text-capitalize ps-3">User Management</h6>
                             <div class="pe-3">
+                                @if (auth()->user()->role === 'owner')
                                 <a href="{{ route('panel.user.create') }}" class="btn btn-sm btn-light">
                                     <i class="material-icons text-sm">add</i> New User
                                 </a>
+                                @endif
                             </div>
                         </div>
                     </div>
@@ -132,7 +134,9 @@
                                     <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Role</th>
                                     <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Status</th>
                                     <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Created</th>
+                                    @if (auth()->user()->hasRole('owner'))
                                     <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Actions</th>
+                                    @endif
                                 </tr>
                             </thead>
                             <tbody>
@@ -159,6 +163,7 @@
                                             {{ $user->created_at->format('d M Y') }}
                                         </span>
                                     </td>
+                                    @if (auth()->user()->hasRole('owner'))
                                     <td class="align-middle">
                                         <div class="btn-group">
                                             <a href="{{ route('panel.user.edit', $user->uuid) }}"
@@ -177,6 +182,7 @@
                                             </button>
                                         </div>
                                     </td>
+                                    @endif
                                 </tr>
                                 @empty
                                 <tr>

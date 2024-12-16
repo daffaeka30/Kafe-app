@@ -14,7 +14,20 @@ class RawMaterialController extends Controller
     public function __construct(
         private RawMaterialService $rawMaterialService,
         private CategoryService $categoryService
-    ) {}
+    ) 
+    {
+        $this->middleware(function ($request, $next) {
+            if ($request->user()->isOwner() && !in_array($request->routeIs('panel.raw-material.index'), ['panel.raw-material.index'])) {
+                abort(403, 'Unauthorized action.');
+            }
+
+            if (!$request->user()->isOwner() && !$request->user()->isPegawai()) {
+                abort(403, 'Unauthorized action.');
+            }
+
+            return $next($request);
+        });
+    }
     /**
      * Display a listing of the resource.
      */

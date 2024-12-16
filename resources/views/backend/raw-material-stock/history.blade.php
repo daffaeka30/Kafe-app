@@ -78,7 +78,7 @@
                                     <td class="text-center">
                                         {{ ($stocks->currentPage() - 1) * $stocks->perPage() + $loop->iteration }}
                                     </td>
-                                    <td>{{ $stock->date->format('d M Y H:i') }}</td>
+                                    <td>{{ $stock->created_at->format('d M Y H:i') }}</td>
                                     <td>{{ $stock->rawMaterial->name }}</td>
                                     <td>{{ $stock->rawMaterial->category->name }}</td>
                                     <td>

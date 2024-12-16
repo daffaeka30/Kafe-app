@@ -149,13 +149,13 @@
                                                 </thead>
                                                 <tbody>
                                                     <tr>
-                                                        <td>Admin</td>
+                                                        <td>Owner</td>
                                                         <td>Full system access with all administrative privileges</td>
                                                         <td><span class="badge bg-danger">Full Access</span></td>
                                                     </tr>
                                                     <tr>
-                                                        <td>Owner</td>
-                                                        <td>Business owner with management access</td>
+                                                        <td>Admin</td>
+                                                        <td>Business admin with management access</td>
                                                         <td><span class="badge bg-warning">Management</span></td>
                                                     </tr>
                                                     <tr>

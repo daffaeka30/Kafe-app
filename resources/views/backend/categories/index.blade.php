@@ -13,8 +13,10 @@
                     <div class="bg-gradient-primary shadow-primary border-radius-lg pt-4 pb-3">
                         <div class="d-flex justify-content-between">
                             <h6 class="text-white text-capitalize ps-3">Daftar Kategori</h6>
+                            @if (auth()->user()->hasRole('admin'))
                             <a href="{{ route('panel.category.create') }}" class="btn btn-sm btn-primary me-3"><i
                                     class="fas fa-plus me-1"></i> Add</a>
+                            @endif
                         </div>
                     </div>
                 </div>
@@ -48,9 +50,11 @@
                                     <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
                                         Slug
                                     </th>
+                                    @if (auth()->user()->hasRole('admin'))
                                     <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
                                         Action
                                     </th>
+                                    @endif
                                 </tr>
                             </thead>
                             <tbody>
@@ -59,6 +63,7 @@
                                     <td>{{ $loop->iteration }}</td>
                                     <td>{{ $category->name }}</td>
                                     <td>{{ $category->slug }}</td>
+                                    @if (auth()->user()->hasRole('admin'))
                                     <td>
                                         <a href="{{ route('panel.category.edit', $category->uuid) }}"
                                             class="btn btn-info btn-md">
@@ -69,6 +74,7 @@
                                             <i class="fas fa-trash"></i>
                                         </button>
                                     </td>
+                                    @endif
                                 </tr>
                                 @empty
                                 <tr>

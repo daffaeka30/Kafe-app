@@ -24,11 +24,13 @@
                                     <a href="{{ route('panel.order.index', ['status' => 'cancelled']) }}"
                                         class="btn btn-sm btn-light {{ $status === 'completed' ? 'active' : '' }}">Cancelled</a>
 
+                                    @if (auth()->user()->hasRole('admin') || auth()->user()->hasRole('pelanggan'))
                                     <div class="ms-2">
                                         <a href="{{ route('panel.order.create') }}" class="btn btn-sm btn-dark">
                                             <i class="fas fa-plus me-1"></i> New Order
                                         </a>
                                     </div>
+                                    @endif
 
                                 </div>
                             </div>
@@ -90,7 +92,7 @@
                                                 <i class="fas fa-eye"></i>
                                             </a>
 
-                                            @if($order->canBeConfirmed())
+                                            @if(auth()->user()->isAdmin() && $order->canBeConfirmed())
                                             <form action="{{ route('panel.order.confirm', $order->uuid) }}" method="POST">
                                                 @csrf
                                                 @method('PUT')
@@ -112,7 +114,7 @@
                                                 </form>
                                             @endif
 
-                                            @if($order->canBeCancelled())
+                                            @if(auth()->user()->isAdmin() && $order->canBeCancelled())
                                             <form action="{{ route('panel.order.cancel', $order->uuid) }}" method="POST">
                                                 @csrf
                                                 @method('PUT')

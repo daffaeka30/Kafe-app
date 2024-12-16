@@ -29,4 +29,6 @@
 
 @include('frontend._testimonial')
 
+@include('frontend._form-testimonial')
+
 @endsection

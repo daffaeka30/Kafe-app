@@ -12,9 +12,11 @@
                         <div class="d-flex justify-content-between align-items-center">
                             <h6 class="text-white text-capitalize ps-3">Raw Material Usage</h6>
                             <div class="me-3">
+                                @if (auth()->user()->hasRole('pegawai'))
                                 <a href="{{ route('panel.raw-material-usage.create') }}" class="btn btn-sm btn-light">
                                     <i class="fas fa-plus me-1"></i> Record Usage
                                 </a>
+                                @endif
                                 <button type="button" class="btn btn-sm btn-light ms-2" data-bs-toggle="modal" data-bs-target="#filterModal">
                                     <i class="fas fa-filter me-1"></i> Filter
                                 </button>

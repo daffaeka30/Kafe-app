@@ -35,7 +35,9 @@
                     </div>
                     <div class="mt-3">
                         <a href="{{ route('panel.event.index') }}" class="btn btn-secondary">Back to List</a>
+                        @if (auth()->user()->hasRole('admin'))
                         <a href="{{ route('panel.event.edit', $event->uuid) }}" class="btn btn-warning">Edit Event</a>
+                        @endif
                     </div>
                 </div>
             </div>

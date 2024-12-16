@@ -24,11 +24,14 @@
                 </a>
             </li>
 
+            @if (Auth::user()->role == 'admin' || Auth::user()->role == 'owner' || Auth::user()->role == 'pegawai')
             {{-- Master Data --}}
             <li class="nav-item mt-3">
                 <h6 class="ps-4 ms-2 text-uppercase text-xs text-white font-weight-bolder opacity-8">Master Data</h6>
             </li>
+            @endif
 
+            @if (Auth::user()->role == 'admin' || Auth::user()->role == 'owner')
             <li class="nav-item">
                 <a class="nav-link text-white {{ request()->routeIs('panel.category.*') ? 'active bg-gradient-primary' : '' }}"
                     href="{{ route('panel.category.index') }}">
@@ -48,7 +51,9 @@
                     <span class="nav-link-text ms-1">Products (Menu)</span>
                 </a>
             </li>
+            @endif
 
+            @if (Auth::user()->role == 'pegawai' || Auth::user()->role == 'owner')
             <li class="nav-item">
                 <a class="nav-link text-white {{ request()->routeIs('panel.raw-material.*') ? 'active bg-gradient-primary' : '' }}"
                     href="{{ route('panel.raw-material.index') }}">
@@ -58,7 +63,9 @@
                     <span class="nav-link-text ms-1">Raw Materials</span>
                 </a>
             </li>
+            @endif
 
+            @if (Auth::user()->role == 'admin' || Auth::user()->role == 'owner')
             <li class="nav-item">
                 <a class="nav-link text-white {{ request()->routeIs('panel.chef.*') ? 'active bg-gradient-primary' : '' }}"
                     href="{{ route('panel.chef.index') }}">
@@ -88,7 +95,9 @@
                     <span class="nav-link-text ms-1">Taxes</span>
                 </a>
             </li>
+            @endif
 
+            @if (Auth::user()->role == 'admin' || Auth::user()->role == 'owner' || Auth::user()->role == 'pelanggan')
             {{-- Transaction Management --}}
             <li class="nav-item mt-3">
                 <h6 class="ps-4 ms-2 text-uppercase text-xs text-white font-weight-bolder opacity-8">Transactions</h6>
@@ -113,7 +122,22 @@
                     <span class="nav-link-text ms-1">Sales History</span>
                 </a>
             </li>
+            @endif
 
+            @if (Auth::user()->role == 'admin' || Auth::user()->role == 'owner')
+            <li class="nav-item">
+                <a class="nav-link text-white {{ request()->routeIs('panel.testimonial.*') ? 'active bg-gradient-primary' : '' }}"
+                    href="{{ route('panel.testimonial.index') }}">
+                    <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                        <i class="material-icons opacity-10">star_rate</i>
+                    </div>
+                    <span class="nav-link-text ms-1">Testimonials</span>
+                </a>
+            </li>
+            @endif
+
+
+            @if (Auth::user()->role == 'pegawai' || Auth::user()->role == 'owner')
             {{-- Inventory Management --}}
             <li class="nav-item mt-3">
                 <h6 class="ps-4 ms-2 text-uppercase text-xs text-white font-weight-bolder opacity-8">Inventory</h6>
@@ -153,12 +177,16 @@
                     <span class="nav-link-text ms-1">Material Forecasting</span>
                 </a>
             </li>
+            @endif
 
+            @if (Auth::user()->role == 'admin' || Auth::user()->role == 'owner' || Auth::user()->role == 'pegawai')
             {{-- Reports Section in Sidebar --}}
             <li class="nav-item mt-3">
                 <h6 class="ps-4 ms-2 text-uppercase text-xs text-white font-weight-bolder opacity-8">Reports</h6>
             </li>
+            @endif
 
+            @if (Auth::user()->role == 'admin' || Auth::user()->role == 'owner')
             {{-- Sales Reports --}}
             <li class="nav-item">
                 <a class="nav-link text-white {{ request()->routeIs('panel.report.sales.*') ? 'active bg-gradient-primary' : '' }}"
@@ -199,7 +227,9 @@
                     </ul>
                 </div>
             </li>
+            @endif
 
+            @if (Auth::user()->role == 'pegawai' || Auth::user()->role == 'owner')
             {{-- Inventory Reports --}}
             <li class="nav-item">
                 <a class="nav-link text-white {{ request()->routeIs('panel.report.inventory.*') ? 'active bg-gradient-primary' : '' }}"
@@ -234,7 +264,9 @@
                     </ul>
                 </div>
             </li>
+            @endif
 
+            @if (Auth::user()->role == 'admin' || Auth::user()->role == 'owner')
             {{-- Customer Reports --}}
             <li class="nav-item">
                 <a class="nav-link text-white {{ request()->routeIs('panel.report.customers.*') ? 'active bg-gradient-primary' : '' }}"
@@ -269,7 +301,9 @@
                     </ul>
                 </div>
             </li>
+            @endif
 
+            @if (Auth::user()->role == 'admin' || Auth::user()->role == 'owner')
             {{-- Settings --}}
             <li class="nav-item mt-3">
                 <h6 class="ps-4 ms-2 text-uppercase text-xs text-white font-weight-bolder opacity-8">Settings</h6>
@@ -284,6 +318,7 @@
                     <span class="nav-link-text ms-1">User Management</span>
                 </a>
             </li>
+            @endif
         </ul>
     </div>
     <div class="sidenav-footer position-absolute w-100 bottom-0 ">

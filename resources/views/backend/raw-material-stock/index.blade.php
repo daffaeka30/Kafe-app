@@ -13,9 +13,11 @@
                         <div class="d-flex justify-content-between align-items-center">
                             <h6 class="text-white text-capitalize ps-3">Low Stock Alert</h6>
                             <div class="me-3">
+                                @if (auth()->user()->hasRole('pegawai'))
                                 <a href="{{ route('panel.raw-material-stock.create') }}" class="btn btn-sm btn-light">
                                     <i class="fas fa-plus me-1"></i> Add Stock
                                 </a>
+                                @endif
                                 <a href="{{ route('panel.raw-material-stock.history') }}" class="btn btn-sm btn-light ms-2">
                                     <i class="fas fa-history me-1"></i> History
                                 </a>
@@ -35,7 +37,9 @@
                                     <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Current Stock</th>
                                     <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Unit</th>
                                     <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Status</th>
+                                    @if (auth()->user()->hasRole('pegawai'))
                                     <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Action</th>
+                                    @endif
                                 </tr>
                             </thead>
                             <tbody>
@@ -55,11 +59,13 @@
                                             <span class="badge badge-sm bg-gradient-warning">Low Stock</span>
                                         @endif
                                     </td>
+                                    @if (auth()->user()->hasRole('pegawai'))
                                     <td class="pt-4">
                                         <a href="{{ route('panel.raw-material-stock.create', ['material' => $material->id]) }}" class="btn btn-info btn-sm">
                                             <i class="fas fa-plus"></i> Stock
                                         </a>
                                     </td>
+                                    @endif
                                 </tr>
                                 @empty
                                 <tr>
@@ -100,7 +106,7 @@
                             <tbody>
                                 @forelse($stockHistory as $stock)
                                 <tr>
-                                    <td>{{ $stock->date->format('d M Y H:i') }}</td>
+                                    <td>{{ $stock->created_at->format('d M Y H:i') }}</td>
                                     <td>{{ $stock->rawMaterial->name }}</td>
                                     <td>
                                         <span class="badge badge-sm bg-gradient-{{ $stock->type === 'in' ? 'success' : 'danger' }}">

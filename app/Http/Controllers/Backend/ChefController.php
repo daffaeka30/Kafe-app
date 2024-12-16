@@ -10,7 +10,20 @@ use App\Http\Services\Backend\ChefService;
 
 class ChefController extends Controller
 {
-    public function __construct(private ChefService $chefService) {}
+    public function __construct(private ChefService $chefService) 
+    {
+        $this->middleware(function ($request, $next) {
+            if ($request->user()->isOwner() && !in_array($request->routeIs('panel.chef.index', 'panel.chef.show'), ['panel.chef.index', 'panel.chef.show'])) {
+                abort(403, 'Unauthorized action.');
+            }
+
+            if (!$request->user()->isOwner() && !$request->user()->isAdmin()) {
+                abort(403, 'Unauthorized action.');
+            }
+
+            return $next($request);
+        });
+    }
 
     /**
      * Display a listing of the resource.

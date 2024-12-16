@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers\Backend;
 
-use App\Http\Controllers\Controller;
-use App\Http\Services\Backend\DashboardService;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
+use App\Http\Services\Backend\DashboardService;
 
 class DashboardController extends Controller
 {
@@ -17,6 +18,11 @@ class DashboardController extends Controller
      */
     public function index()
     {
+        if (Auth::user()->role == 'pelanggan') {
+            $customerData = $this->dashboardService->getCustomerDashboardData();
+            return view('backend.dashboard.index', $customerData);
+        }
+
         $summary = $this->dashboardService->getSummaryData();
         $charts = $this->dashboardService->getChartData();
         $tables = $this->dashboardService->getTableData();
@@ -30,7 +36,6 @@ class DashboardController extends Controller
             ],
             $tables
         ));
-
     }
 
     /**

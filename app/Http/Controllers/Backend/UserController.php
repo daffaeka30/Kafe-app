@@ -12,7 +12,20 @@ class UserController extends Controller
 {
     public function __construct(
         private UserService $userService
-    ) {}
+    ) 
+    {
+        $this->middleware(function ($request, $next) {
+            if ($request->user()->isAdmin() && !in_array($request->routeIs('panel.user.index'), ['panel.user.index'])) {
+                abort(403, 'Unauthorized action.');
+            }
+
+            if (!$request->user()->isOwner() && !$request->user()->isAdmin()) {
+                abort(403, 'Unauthorized action.');
+            }
+
+            return $next($request);
+        });
+    }
 
     /**
      * Display a listing of the resource.

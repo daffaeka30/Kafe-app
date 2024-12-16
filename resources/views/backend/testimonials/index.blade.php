@@ -1,6 +1,6 @@
 @extends('backend.template.main')
 
-@section('title', 'Products')
+@section('title', 'Testimonial')
 
 @section('content')
 
@@ -12,31 +12,10 @@
                     <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
                         <div class="bg-gradient-primary shadow-primary border-radius-lg pt-4 pb-3">
                             <div class="d-flex justify-content-between">
-                                <h6 class="text-white text-capitalize ps-3">Product List</h6>
-                                @if (auth()->user()->hasRole('admin'))
-                                    <a href="{{ route('panel.product.create') }}" class="btn btn-sm btn-primary me-3">
-                                        <i class="fas fa-plus me-1"></i> Add
-                                    </a>
-                                @endif
+                                <h6 class="text-white text-capitalize ps-3">Daftar Testimonial</h6>
                             </div>
                         </div>
                     </div>
-
-                    @if (session('success'))
-                        <div class="alert alert-success alert-dismissible fade show mx-3 mt-3 text-white" role="alert">
-                            {{ session('success') }}
-                            <button type="button" class="btn-close text-white" data-bs-dismiss="alert"
-                                aria-label="Close"></button>
-                        </div>
-                    @endif
-
-                    @if (session('error'))
-                        <div class="alert alert-danger alert-dismissible fade show mx-3 mt-3 text-white" role="alert">
-                            {{ session('error') }}
-                            <button type="button" class="btn-close text-white" data-bs-dismiss="alert"
-                                aria-label="Close"></button>
-                        </div>
-                    @endif
 
                     <div class="card-body px-4 pb-2">
                         <div class="table-responsive p-0">
@@ -48,66 +27,41 @@
                                             No
                                         </th>
                                         <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                                            Name</th>
+                                            Invoice</th>
                                         <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                                            Category</th>
+                                            Rating</th>
                                         <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                                            Price</th>
+                                            Created At</th>
                                         <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                                            Status</th>
-                                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                                            Stock</th>
-                                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                                            Image
-                                        </th>
-                                        @if (auth()->user()->hasRole('admin'))
-                                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                                            Action
-                                        </th>
-                                        @endif
+                                            Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @forelse ($products as $product)
+                                    @forelse ($testimonials as $testimonial)
                                         <tr>
                                             <td>
-                                                {{ ($products->currentPage() - 1) * $products->perPage() + $loop->iteration }}
+                                                {{ ($testimonials->currentPage() - 1) * $testimonials->perPage() + $loop->iteration }}
                                             </td>
-                                            <td>{{ $product->name }}</td>
-                                            <td>{{ $product->category->name }}</td>
-                                            <td>Rp {{ number_format($product->price, 0, ',', '.') }}</td>
-                                            <td>
-                                                @if ($product->status == 'available')
-                                                    <span class="badge bg-success">
-                                                        {{ $product->status }}
-                                                    </span>
-                                                @else
-                                                    <span class="badge bg-danger">
-                                                        {{ $product->status }}
-                                                    </span>
-                                                @endif
-                                            </td>
-                                            <td>{{ $product->stock }}</td>
-                                            <td>
-                                                <img src="{{ asset('storage/' . $product->image) }}"
-                                                    alt="{{ $product->name }}" width="50">
-                                            </td>
-                                            @if (auth()->user()->hasRole('admin'))
+                                            <td>{{ $testimonial->selling->invoice }}</td>
+                                            <td>{{ $testimonial->rate }}</td>
+                                            <td>{{ $testimonial->created_at->format('d M Y H:i') }}</td>
                                             <td>
                                                 <div class="d-flex justify-content-center">
-                                                    <a href="{{ route('panel.product.edit', $product->uuid) }}"
+                                                    <a href="{{ route('panel.testimonial.show', $testimonial->uuid) }}"
                                                         class="btn btn-info btn-md me-1">
-                                                        <i class="fas fa-edit"></i>
+                                                        <i class="fas fa-eye"></i>
                                                     </a>
 
-                                                    <button class="btn btn-danger btn-md me-1" onclick="deleteProduct(this)"
-                                                        data-uuid="{{ $product->uuid }}">
-                                                        <i class="fas fa-trash-alt"></i>
-                                                    </button>
+                                                    @if (auth()->user()->hasRole('admin'))
+                                                        <button class="btn btn-danger btn-md me-1"
+                                                            onclick="deleteTestimonial(this)"
+                                                            data-uuid="{{ $testimonial->uuid }}">
+                                                            <i class="fas fa-trash-alt"></i>
+                                                        </button>
+                                                    @endif
 
                                                 </div>
                                             </td>
-                                            @endif
                                         </tr>
                                     @empty
                                         <tr>
@@ -118,7 +72,7 @@
                             </table>
                             {{-- pagination --}}
                             <div class="mt-3 justify-content-center" style="margin-left: 20px; margin-right: 20px;">
-                                {{ $products->links() }}
+                                {{ $testimonials->links() }}
                             </div>
                         </div>
                     </div>
@@ -132,7 +86,7 @@
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
         <script>
-            const deleteProduct = (e) => {
+            const deleteTestimonial = (e) => {
                 let uuid = e.getAttribute('data-uuid')
 
                 Swal.fire({
@@ -147,7 +101,7 @@
                     if (result.value) {
                         $.ajax({
                             type: "DELETE",
-                            url: `/panel/product/${uuid}`,
+                            url: `/panel/testimonial/${uuid}`,
                             headers: {
                                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
                             },

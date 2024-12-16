@@ -253,7 +253,7 @@
                     <div class="row mt-4">
                         <div class="col-12">
                             <div class="d-flex justify-content-end gap-2">
-                                @if($order->canBeConfirmed())
+                                @if(auth()->user()->isAdmin() && $order->canBeConfirmed())
                                 <form action="{{ route('panel.order.confirm', $order->uuid) }}" method="POST">
                                     @csrf
                                     @method('PUT')
@@ -264,7 +264,7 @@
                                 </form>
                                 @endif
 
-                                @if($order->canBeCancelled())
+                                @if(auth()->user()->isAdmin() && $order->canBeCancelled())
                                 <form action="{{ route('panel.order.cancel', $order->uuid) }}" method="POST">
                                     @csrf
                                     @method('PUT')

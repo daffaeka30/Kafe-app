@@ -14,7 +14,20 @@ class OrderController extends Controller
 {
     public function __construct(
         private OrderService $orderService
-    ) {}
+    ) 
+    {
+        $this->middleware(function ($request, $next) {
+            if ($request->user()->isOwner() && !in_array($request->routeIs('panel.order.index', 'panel.order.show'), ['panel.order.index', 'panel.order.show'])) {
+                abort(403, 'Unauthorized action.');
+            }
+
+            if (!$request->user()->isAdmin() && !$request->user()->isOwner() && !$request->user()->isPelanggan()) {
+                abort(403, 'Unauthorized action.');
+            }
+
+            return $next($request);
+        });
+    }
 
     /**
      * Display a listing of the resource.

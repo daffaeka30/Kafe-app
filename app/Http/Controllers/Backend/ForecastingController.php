@@ -15,7 +15,20 @@ class ForecastingController extends Controller
 {
     public function __construct(
         private ForecastingService $forecastingService
-    ) {}
+    ) 
+    {
+        $this->middleware(function ($request, $next) {
+            if ($request->user()->isOwner() && !in_array($request->routeIs('panel.forecasting.index', 'panel.forecasting.history', 'panel.forecasting.accuracy'), ['panel.forecasting.index', 'panel.forecasting.history', 'panel.forecasting.accuracy'])) {
+                abort(403, 'Unauthorized action.');
+            }
+
+            if (!$request->user()->isOwner() && !$request->user()->isPegawai()) {
+                abort(403, 'Unauthorized action.');
+            }
+
+            return $next($request);
+        });
+    }
 
     /**
      * Display a listing of the resource.
