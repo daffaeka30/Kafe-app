@@ -190,7 +190,11 @@
                                                     <td>Rp {{ number_format($detail->subtotal, 0, ',', '.') }}</td>
                                                     <td>
                                                         @if($detail->tax)
-                                                            Rp {{ number_format($detail->subtotal * $detail->tax->rate / 100, 0, ',', '.') }}
+                                                            @php
+                                                                $afterDiscount = $detail->subtotal - ($detail->discount ?? 0);
+                                                                $taxAmount = $afterDiscount * $detail->tax->rate / 100;
+                                                            @endphp
+                                                            Rp {{ number_format($taxAmount, 0, ',', '.') }}
                                                             <small class="text-muted">({{ $detail->tax->rate }}%)</small>
                                                         @else
                                                             -
