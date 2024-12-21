@@ -1,3 +1,10 @@
+## Kelompok 1
+1. Muhammad Faiz Aqil Fathoni (Backend, Frontend Helper)
+2. Daffa Eka Putri (Frontend, Backend Helper)
+3. Muh. Alif Anhar (Project Manager)
+4. Sony Chandra Maulana (Frontend, Backend Helper)
+5. Nadila Safitri (Tidak ada, tapi mengerjakan hak akses, itupun belum selesai...dan diselesaikan oleh Daffa Eka Putri).
+
 ## How To Install??
 
 - composer install
