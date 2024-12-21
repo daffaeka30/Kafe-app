@@ -1,4 +1,4 @@
-## Kelompok 1
+## Kelompok 1 (Sistem Penjuaan & Peramalan Bahan Baku Kafe Berbasis Web)
 1. Muhammad Faiz Aqil Fathoni (Backend, Frontend Helper)
 2. Daffa Eka Putri (Frontend, Backend Helper)
 3. Muh. Alif Anhar (Project Manager)
