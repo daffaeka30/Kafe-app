@@ -65,7 +65,7 @@
                                             <button class="btn btn-danger btn-md me-1"
                                                     onclick="deleteTax(this)"
                                                     data-id="{{ $tax->id }}">
-                                                <i class="fas fa-trash"></i>
+                                                <i class="fas fa-trash-alt"></i>
                                             </button>
                                         </div>
                                     </td>

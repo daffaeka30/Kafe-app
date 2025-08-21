@@ -16,26 +16,26 @@ class UserSeeder extends Seeder
 
         User::factory()->createMany([
             [
-                'name' => 'Fei Fei',
-                'email' => 'feifeifry@gmail.com',
+                'name' => 'Pegawai',
+                'email' => 'pegawai@gmail.com',
                 'password' => bcrypt('password'),
                 'role' => 'pegawai',
             ],
             [
-                'name' => 'Fey',
-                'email' => 'feithemornstar@gmail.com',
+                'name' => 'Admin',
+                'email' => 'admin@gmail.com',
                 'password' => bcrypt('password'),
                 'role' => 'admin',
             ],
             [
-                'name' => 'Tumbal Proyek 1',
-                'email' => 'anontester69@gmail.com',
+                'name' => 'Owner',
+                'email' => 'owner@gmail.com',
                 'password' => bcrypt('password'),
                 'role' => 'owner',
             ],
             [
-                'name' => 'Tumbal Proyek 2',
-                'email' => 'root.networkscience@gmail.com',
+                'name' => 'Pelanggan',
+                'email' => 'pelanggan@gmail.com',
                 'password' => bcrypt('password'),
                 'role' => 'pelanggan',
             ],

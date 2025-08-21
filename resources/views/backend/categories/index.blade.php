@@ -71,7 +71,7 @@
                                         </a>
                                         <button type="button" class="btn btn-danger btn-md"
                                             data-uuid="{{ $category->uuid }}" onclick="deleteCategory(this)">
-                                            <i class="fas fa-trash"></i>
+                                            <i class="fas fa-trash-alt"></i>
                                         </button>
                                     </td>
                                     @endif

@@ -1,6 +1,6 @@
 @extends('backend.template.main')
 
-@section('title', 'Sale Detail')
+@section('title', Auth::user()->role == 'pelanggan' ? 'Order Detail' : 'Sale Detail')
 
 @section('content')
 <div class="container-fluid py-4">
@@ -10,7 +10,7 @@
                 <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
                     <div class="bg-gradient-primary shadow-primary border-radius-lg pt-4 pb-3">
                         <div class="d-flex justify-content-between align-items-center">
-                            <h6 class="text-white text-capitalize ps-3">Sale Detail - {{ $selling->invoice }}</h6>
+                            <h6 class="text-white text-capitalize ps-3">{{ Auth::user()->role == 'pelanggan' ? 'Order Detail' : 'Sale Detail' }} - {{ $selling->invoice }}</h6>
                             <div class="me-3">
                                 <a href="{{ route('panel.selling.index') }}" class="btn btn-sm btn-light">
                                     <i class="fas fa-arrow-left me-1"></i> Back

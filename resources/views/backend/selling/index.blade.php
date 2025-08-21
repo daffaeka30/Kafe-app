@@ -1,6 +1,6 @@
 @extends('backend.template.main')
 
-@section('title', 'Sales History')
+@section('title', Auth::user()->role == 'pelanggan' ? 'Order History' : 'Sales History')
 
 @section('content')
 <div class="container-fluid py-4">
@@ -10,7 +10,7 @@
                 <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
                     <div class="bg-gradient-primary shadow-primary border-radius-lg pt-4 pb-3">
                         <div class="d-flex justify-content-between align-items-center">
-                            <h6 class="text-white text-capitalize ps-3">Sales History</h6>
+                            <h6 class="text-white text-capitalize ps-3">{{ Auth::user()->role == 'pelanggan' ? 'Order History' : 'Sales History' }}</h6>
                             <div class="pe-3">
                                 <button type="button" class="btn btn-sm btn-light" data-bs-toggle="modal" data-bs-target="#filterModal">
                                     <i class="fas fa-filter me-1"></i> Filter
